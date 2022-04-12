@@ -1,0 +1,7 @@
+# Pycharm
+.idea
+
+# VS Code
+.vscode/
+*.code-workspace
+.pytest*

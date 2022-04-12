@@ -1,0 +1,17 @@
+#JSGF V1.0;
+grammar dicts.INVESTMENT_ACCOUNT;
+
+public <INVESTMENT_ACCOUNT> = (
+
+	TFSA {tsfa} |
+	(Tax-Free Savings Account) {tsfa} |
+	RRSP {rrsp} |
+	(Registered Retirement Savings Plan) {rrsp} |
+	RESP {resp} |
+	(Registered Education Savings Plan) {resp} |
+	LIF {lif} |
+	(Life Income Fund) {lif} |
+	LIRA {lira} |
+	(Locked-In Retirement Account) {lira}
+
+);

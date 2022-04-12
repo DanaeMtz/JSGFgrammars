@@ -1,0 +1,10 @@
+#JSGF V1.0;
+grammar dicts.BANKING_ACCOUNT;
+
+public <BANKING_ACCOUNT> = (
+
+	(Checking Account) {checking_account} |
+	(Banking Account) {checking_account} | 
+	(Current Account) {checking_account}  
+
+);

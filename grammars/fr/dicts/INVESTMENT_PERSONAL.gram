@@ -1,0 +1,18 @@
+#JSGF V1.0;
+grammar dicts.INVESTMENT_ACCOUNT;
+
+public <INVESTMENT_ACCOUNT> = (
+
+	CELI {celi} |
+	(compte d'épargne libre d'impôt ) {celi} |
+	REER {reer} |
+	(régime-enregistré d'épargne retraite) {reer} |
+	REEE {reee} |
+	R trois E {reee} |
+	(régime enregistré d'épargne-études ) {reee} |
+	FRV {frv} |
+	(fonds de revenu viager) {frv} |
+	CRI {cri} |
+	(compte de retraite immobilisé ) {cri}
+
+);

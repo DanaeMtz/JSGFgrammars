@@ -1,0 +1,12 @@
+#JSGF V1.0;
+grammar dicts.BANKING_ACCOUNT;
+
+public <BANKING_ACCOUNT> = (
+	(compte chèques) {checking_account} |
+    (compte de banque) {checking_account} |
+    (compte courant) {checking_account} |
+    (compte épargne) {checking_account} |
+    (compte d'épargne) {checking_account} |
+    (compte progressif) {checking_account} |
+	(compte bancaire) {checking_account}  
+);

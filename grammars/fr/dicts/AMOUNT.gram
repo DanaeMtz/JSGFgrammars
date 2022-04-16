@@ -1,0 +1,17 @@
+#JSGF V1.0;
+grammar dicts.AMOUNT;
+
+public <AMOUNT> = (
+
+	100 dollars | 
+	1000 dollars | 
+	200 dollars | 
+	20000 dollars | 
+	300 dollars | 
+	3000 dollars | 
+	400 dollars | 
+	4000 dollars | 
+	500 dollars | 
+	5000 dollars
+
+);

@@ -1,0 +1,9 @@
+#JSGF V1.0;
+grammar invest;
+import <dicts.INVESTMENT_PERSONAL.*>;
+import <dicts.TRANSACTIONAL_PERSONAL .*>;
+import <dicts.AMOUNT.*>;
+
+<investment_personal> = <INVESTMENT_PERSONAL>{INVESTMENT_PERSONAL};
+<transactional_personal> = <TRANSACTIONAL_PERSONAL>{TRANSACTIONAL_PERSONAL};
+<amount> = <AMOUNT>{AMOUNT};

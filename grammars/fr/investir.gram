@@ -1,0 +1,30 @@
+#JSGF V1.0;
+grammar invest;
+import <dicts.INVESTMENT_PERSONAL.*>;
+import <dicts.TRANSACTIONAL_PERSONAL .*>;
+import <dicts.AMOUNT.*>;
+
+// entities 
+<investment_personal> = <INVESTMENT_PERSONAL>{INVESTMENT_PERSONAL};
+<transactional_personal> = <TRANSACTIONAL_PERSONAL>{TRANSACTIONAL_PERSONAL};
+<amount> = <AMOUNT>{AMOUNT};
+<periodicity> = ( à chaque semaine | à chaque deux semaines | mensuelles );
+
+//action verbs
+
+<action_mix> = ( faire un dépôt | faire un transfert | effectuer un transfert);
+<action_mix_mont> = ( ajouter | contribuer | cotiser | faire transférer | rajouter | transférer );
+
+
+<action_dans> = ( déplacer | déposer | épargner | faire déposer | faire prélever | investir | mettre | placer);
+<action_syst> = ( ajouter un prélèvement systématique | faire de l'épargne systématique | programmer des virements );
+<action_mont> = ( déposer | mettre | placer );
+
+<money> = ( de l'argent | un montant | une somme | mes points );
+<money_de> = ( d'argent | de mes points | de fonds | de sous );
+
+// <rule_0> = <action_mix>[ ( <money_de> | de <money> ) ] (dans mon | à mon) <transactional_personal> [à partir de mon <transactional_personal>]
+// <rule_1> = <action_mix_mont>[ ( <amount>|<money> ) ] (dans mon | à mon) <transactional_personal> [à partir de mon <transactional_personal>]
+<rule_1> = ( <action_mix> [ ( <money_de> | de <money> ) ] | <action_mix_mont>[ ( <amount>|<money> ) ] ) (dans mon | à mon) <transactional_personal> [à partir de mon <transactional_personal>]
+
+<rule_2> = ( <action_dans> | <action_syst> [<periodicity>] | <action_mont> (<amount>|<money>) ) dans mon <transactional_personal> [à partir de mon <transactional_personal>]

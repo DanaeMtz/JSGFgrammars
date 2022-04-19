@@ -1,0 +1,9 @@
+#JSGF V1.0;
+grammar open_account;
+import <dicts.INVESTMENT_PERSONAL.*>;
+
+public <op_acc> = (<action> un | ouverture d'un )[nouveau] compte <investment_personal>;
+
+<action> = (créer | obtenir | ouvrir);
+
+<investment_personal> = <INVESTMENT_PERSONAL>{INVESTMENT_PERSONAL};

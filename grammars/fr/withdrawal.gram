@@ -1,28 +1,32 @@
 #JSGF V1.0;
 grammar invest;
-import <dicts.INVESTMENT_PERSONAL.*>;
-import <dicts.TRANSACTIONAL_PERSONAL .*>;
 import <dicts.AMOUNT.*>;
+import <dicts.INVESTMENT_PERSONAL.*>;
+import <dicts.TRANSACTIONAL_PERSONAL.*>;
 
+public <make_withdrawal> = ( <rule_mix> | <rule_dans> ) <transactional_personal>
+                            à partir de mon <investment_personal>;
+
+public <make_withdrawal2> = <action_with> ( <amount> | <money_plu> ) de mon <investment_personal> 
+                            [(pour les mettre dans mon | et les mettre dans mon | et les déposer dans mon) <transactional_personal> ];
+public <make_withdrawal3> = faire un retrait [ <money_de> | de <amount> ] de mon <investment_personal> 
+                              [(pour le mettre dans mon | et le mettre dans mon | et le déposer dans mon) <transactional_personal>] ;                         
+
+public <make_withdrawal_vendre> = vendre ( des | les ) fonds de mon <investment_personal>;
+
+<rule_mix>  = <action_mix_mont> ( <money_sin> | <money_plu> | <amount> ) (vers mon | dans mon | à mon);
+<rule_dans> = <action_dans> ( <money_del> | <money_sin> | <money_plu> ) dans mon;
+
+<action_mix_mont> = ( ajouter | faire transférer | rajouter | transférer );
+<action_dans> = ( déplacer | déposer | faire déposer | faire prélever | mettre );
+<action_with> = ( enlever | prendre | récuperer | retirer | sortir);
+
+<money_sin> = (un montant | une somme | de l'argent);
+<money_plu> = ( des sous | des fonds);
+<money_de> = ( d'argent | de fonds );
+<money_del> = ( de l'argent | de fonds );
+ 
+//entities with tags
+<amount> = <AMOUNT>{AMOUNT};
 <investment_personal> = <INVESTMENT_PERSONAL>{INVESTMENT_PERSONAL};
 <transactional_personal> = <TRANSACTIONAL_PERSONAL>{TRANSACTIONAL_PERSONAL};
-<amount> = <AMOUNT>{AMOUNT};
-
-
-<action> = ( enlever | prendre | récuperer | retirer | sortir | transférer | faire transférer | faire déposer )
-<action3> = (retrait | faire un transfert | faire un dépôt | effectuer un transfert | faire un retrait)
-
-<money>    = (de l'argent|un montant|une somme|des fonds)
-<money_de> = ( d'argent | de mes points | de fonds | de sous );
-
-<rule_1> = (<action> [ <money> | <amount> ] | <action3> [ <money_de> | de <amount> ]) de mon <investment_personal> [(pour mettre dans mon | et mettre dans mon | et déposer dans mon) <investment_personal> ]
-<rule_2> = (<action> [ <money> | <amount> ] | <action3> [ <money_de> | de <amount> ]) de mon <investment_personal> [(à mon |vers mon) <transactional_personal>]
-
-
-vendre (des fonds|les fonds) de mon <investment_personal> 
-
-
-
-
-
-

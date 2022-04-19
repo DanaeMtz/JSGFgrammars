@@ -1,71 +1,47 @@
 #JSGF V1.0;
 grammar invest;
-import <dicts.INVESTMENT_PERSONAL.*>;
-import <dicts.TRANSACTIONAL_PERSONAL .*>;
 import <dicts.AMOUNT.*>;
+import <dicts.INVESTMENT_PERSONAL.*>;
+import <dicts.TRANSACTIONAL_PERSONAL.*>;
 
+public <make_investment> = ( <rule_mix> | <rule_dans> ) <investment_personal> 
+                            [à partir de mon <transactional_personal>];
+public <make_investment2> = <action_depl> [<money_del>] de mon <transactional_personal> 
+                            (à mon | vers mon) <investment_personal>;
+
+public <make_investment3> = <action_pren> 
+                                    [ ( <money_del> | <amount> ) ] 
+                                    de mon <transactional_personal> 
+                                    ( pour mettre dans mon | et le mettre dans mon ) <investment_personal>;
+
+public <make_investment_acheter> = acheter un (celi | reer);
+
+public <make_investment_echanger> = échanger mes points (pour mon | pour investir dans mon | pour une cotisation) (celi | reer);                                    
+
+
+<rule_mix> = (<action_mix> [( <money_de> | de <amount> )] | 
+             <action_mix_mont> ( <money> | <amount> )) (vers mon | dans mon | à mon);
+
+<rule_dans> = (<action_dans> [ ( <money_del> | <money> ) ] | 
+            <action_syst> [ <periodicity> ] | 
+            <action_mont> ( <amount> | <money> )) dans mon;
+
+<action_mix> = ( faire un dépôt | faire un transfert | effectuer un transfert);
+<action_mix_mont> = ( ajouter | contribuer | cotiser | faire transférer | rajouter | transférer );
+
+<action_depl> = ( déplacer | déposer | faire déposer | faire un dépôt | tranférer | faire un transfert | effectuer un transfert);
+<action_pren> = (prendre | tranférer | faire transférer);
+<action_dans> = ( déplacer | déposer | épargner | faire déposer | faire prélever | investir | mettre | placer);
+<action_syst> = ( ajouter un prélèvement systématique | faire de l'épargne systématique | programmer des virements );
+<action_mont> = ( déposer | mettre | placer );
+
+<money> = ( de l'argent | un montant | une somme | mes points );
+<money_de> = ( d'argent | de mes points | de fonds );
+<money_del> = ( de l'argent | un montant | une somme );
+
+<periodicity> = ( à chaque semaine | à chaque deux semaines | à chaque mois ){PERIODICITY};
+
+//entities with tags
+<amount> = <AMOUNT>{AMOUNT};
 <investment_personal> = <INVESTMENT_PERSONAL>{INVESTMENT_PERSONAL};
 <transactional_personal> = <TRANSACTIONAL_PERSONAL>{TRANSACTIONAL_PERSONAL};
-<amount> = <AMOUNT>{AMOUNT};
-
-<action_1> = ( cotiser | déposer | épargner | faire un dépôt | faire un transfert | investir | placer | transférer );
-<action_2> = ( contribuer | cotiser | déposer | faire un dépôt | faire une contribution | transférer );
-<action_3> = ( déposer | mettre | placer );
-<action_4> = ( ajouter | contribuer | déplacer | déposer | épargner | faire déposer | faire prélever | faire transférer | investir | mettre | placer | rajouter | transférer );
-<action_5> = ( effectuer un transfert | faire un dépôt | faire un transfert );
-<action_6> = ( effectuer un transfert | faire un dépôt | faire un transfert | prendre | transférer );
-<action_7> = ( déposer | faire déposer | faire transférer | prendre | transférer )
-<action_sys_inv> = ( programmer des virements | faire de l'épargne systématique | ajouter un prélèvement systématique );
-
-<money_expr_1> = ( de l'argent | un montant | une somme | mes points );
-<money_expr_2> = ( d'argent | de mes points | de fonds | de sous );
-<money_expr_3> = ( d'argent | de fonds | de sous );
-<money_expr_4> = ( de l'argent | un montant | une somme );
-
-<periodicity> = (à chaque semaine | à chaque deux semaines | mensuelles);
-
-// <ss1_s1> = <action_1> dans mon <investment_personal>;
-// <ss1_s3> = <action_3><money_expr_1> dans mon <investment_personal>;
-// <ss1_s8> = <action_sys_inv> dans mon <investment_personal>;
-// <ss5_s1> = <action_sys_inv><periodicity> dans mon <investment_personal>;
-// <ss4_s3> = <action_3><amount> dans mon  <investment_personal>[à partir de mon <transactional_personal>];
-// <ss3_s5> = <action_3><money_expr_3> dans mon <investment_personal>[à partir de mon <investment_personal>];
-
-<rule_1> = (
-            <action_3>(<money_expr_1> | <amount> | <money_expr_3>) |
-            <action_1> | 
-            <action_sys_inv>[<periodicity>]
-            )
-            dans mon <investment_personal>[ à partir de mon <transactional_personal> ]
-
-// <ss1_s4> = <action_4><money_expr_1>( dans mon | à mon )<investment_personal>
-// <ss4_s2> = <action_4><amount>( dans mon | à mon )<investment_personal>[ à partir de mon <transactional_personal> ]
-// <ss3_s4> = <action_4><money_expr_4>( dans mon | à mon )<transactional_personal>[à partir de mon <investment_personal>]
-
-<rule_2> = <action_4>
-            (
-            <money_expr_1> |
-            <amount> |
-            <money_expr_4> |
-            ) ( dans mon | à mon )<investment_personal>[ à partir de mon <transactional_personal> ]
-
-// <ss3_s2> = <action_4><money_expr_4> de mon <transactional_personal> à mon <investment_personal>
-// <ss3_s1> = <action_6> de mon <transactional_personal> pour mettre dans mon <investment_personal>
-// <ss3_s3> = <action_7><money_expr_4> de mon <transactional_personal> (pour mettre dans mon | et de le mettre dans mon) <investment_personal>
-// <ss4_s1> = <action_7><amount> de mon <transactional_personal> (pour mettre dans mon | et de le mettre dans mon) <investment_personal>
-
-<rule_3> = (
-            (<action_4> | <action_7> )<money_expr_4> | 
-             <action_6>
-            ) de mon <transactional_personal> ( à mon | pour mettre dans mon | et de le mettre dans mon ) <investment_personal>
-
-
-// <ss1_s5> = <action_5><money_expr_2>( vers mon  | à mon )<investment_personal>
-// <ss2_s3> = <action_5> de <amount>( vers mon  | à mon | dans mon )<investment_personal>
-
-<rule_4> = <action_5> ( <money_expr_2> | de <amount>)( vers mon | à mon | dans mon )<investment_personal>
-
-           
-<ss1_s6> = acheter un ( celi | reer )
-<ss1_s7> = échanger mes points ( pour mon | pour investir dans mon | pour une cotisation )( celi | reer )
-<ss1_s2> = <action_2> à mon <investment_personal>

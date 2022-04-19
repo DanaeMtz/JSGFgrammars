@@ -1,7 +1,7 @@
 #JSGF V1.0;
-grammar dicts.BANKING_ACCOUNT;
+grammar dicts.TRANSACTIONAL_PERSONAL;
 
-public <BANKING_ACCOUNT> = (
+public <TRANSACTIONAL_PERSONAL> = (
 	(compte chèques) {checking_account} |
     (compte de banque) {checking_account} |
     (compte courant) {checking_account} |

@@ -7,3 +7,22 @@ import <dicts.AMOUNT.*>;
 <investment_personal> = <INVESTMENT_PERSONAL>{INVESTMENT_PERSONAL};
 <transactional_personal> = <TRANSACTIONAL_PERSONAL>{TRANSACTIONAL_PERSONAL};
 <amount> = <AMOUNT>{AMOUNT};
+
+
+<action> = ( enlever | prendre | récuperer | retirer | sortir | transférer | faire transférer | faire déposer )
+<action3> = (retrait | faire un transfert | faire un dépôt | effectuer un transfert | faire un retrait)
+
+<money>    = (de l'argent|un montant|une somme|des fonds)
+<money_de> = ( d'argent | de mes points | de fonds | de sous );
+
+<rule_1> = (<action> [ <money> | <amount> ] | <action3> [ <money_de> | de <amount> ]) de mon <investment_personal> [(pour mettre dans mon | et mettre dans mon | et déposer dans mon) <investment_personal> ]
+<rule_2> = (<action> [ <money> | <amount> ] | <action3> [ <money_de> | de <amount> ]) de mon <investment_personal> [(à mon |vers mon) <transactional_personal>]
+
+
+vendre (des fonds|les fonds) de mon <investment_personal> 
+
+
+
+
+
+

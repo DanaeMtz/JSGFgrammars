@@ -1,18 +1,20 @@
 #JSGF V1.0;
-grammar invest;
+grammar withdrawl;
 import <dicts.AMOUNT.*>;
 import <dicts.INVESTMENT_PERSONAL.*>;
 import <dicts.TRANSACTIONAL_PERSONAL.*>;
 
-public <make_withdrawal> = ( <rule_mix> | <rule_dans> ) <transactional_personal>
+public <withdrawl> = <make_withdrawal1> | <make_withdrawal2> | <make_withdrawal3> | <make_withdrawal_vendre>;
+
+<make_withdrawal1> = ( <rule_mix> | <rule_dans> ) <transactional_personal>
                             à partir de mon <investment_personal>;
 
-public <make_withdrawal2> = <action_with> ( <amount> | <money_plu> ) de mon <investment_personal> 
+<make_withdrawal2> = <action_with> ( <amount> | <money_plu> ) de mon <investment_personal> 
                             [(pour les mettre dans mon | et les mettre dans mon | et les déposer dans mon) <transactional_personal> ];
-public <make_withdrawal3> = (faire un retrait | faire un transfert) [ <money_de> | de <amount> ] de mon <investment_personal> 
+<make_withdrawal3> = (faire un retrait | faire un transfert) [ <money_de> | de <amount> ] de mon <investment_personal> 
                               (pour le mettre dans mon | et le mettre dans mon | et le déposer dans mon) <transactional_personal> ;                         
 
-public <make_withdrawal_vendre> = vendre ( des | les ) fonds de mon <investment_personal>;
+<make_withdrawal_vendre> = vendre ( des | les ) fonds de mon <investment_personal>;
 
 <rule_mix>  = <action_mix_mont> ( <money_sin> | <money_plu> | <amount> ) (vers mon | dans mon | à mon);
 <rule_dans> = <action_dans> ( <money_del> | <money_sin> | <money_plu> ) dans mon;

@@ -4,19 +4,21 @@ import <dicts.AMOUNT.*>;
 import <dicts.INVESTMENT_PERSONAL.*>;
 import <dicts.TRANSACTIONAL_PERSONAL.*>;
 
-public <make_investment> = ( <rule_mix> | <rule_dans> ) <investment_personal> 
+
+public <invest> = <make_investment1> | <make_investment2> | <make_investment3> | <make_investment_acheter> | <make_investment_echanger>;
+
+<make_investment1> = ( <rule_mix> | <rule_dans> ) <investment_personal> 
                             [à partir de mon <transactional_personal>];
-public <make_investment2> = <action_depl> [<money_del>] de mon <transactional_personal> 
+<make_investment2> = <action_depl> [<money_del>] de mon <transactional_personal> 
                             (à mon | vers mon) <investment_personal>;
 
-public <make_investment3> = <action_pren> 
-                                    [ ( <money_del> | <amount> ) ] 
+<make_investment3> = <action_pren> [ ( <money_del> | <amount> ) ] 
                                     de mon <transactional_personal> 
                                     ( pour mettre dans mon | et le mettre dans mon ) <investment_personal>;
 
-public <make_investment_acheter> = acheter un (celi | reer);
+<make_investment_acheter> = acheter un (celi | reer);
 
-public <make_investment_echanger> = échanger mes points (pour mon | pour investir dans mon | pour une cotisation) (celi | reer);                                    
+<make_investment_echanger> = échanger mes points (pour mon | pour investir dans mon | pour une cotisation) (celi | reer);                                    
 
 
 <rule_mix> = (<action_mix> [( <money_de> | de <amount> )] | 

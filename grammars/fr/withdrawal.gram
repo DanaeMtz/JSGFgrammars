@@ -9,8 +9,8 @@ public <make_withdrawal> = ( <rule_mix> | <rule_dans> ) <transactional_personal>
 
 public <make_withdrawal2> = <action_with> ( <amount> | <money_plu> ) de mon <investment_personal> 
                             [(pour les mettre dans mon | et les mettre dans mon | et les déposer dans mon) <transactional_personal> ];
-public <make_withdrawal3> = faire un retrait [ <money_de> | de <amount> ] de mon <investment_personal> 
-                              [(pour le mettre dans mon | et le mettre dans mon | et le déposer dans mon) <transactional_personal>] ;                         
+public <make_withdrawal3> = (faire un retrait | faire un transfert) [ <money_de> | de <amount> ] de mon <investment_personal> 
+                              (pour le mettre dans mon | et le mettre dans mon | et le déposer dans mon) <transactional_personal> ;                         
 
 public <make_withdrawal_vendre> = vendre ( des | les ) fonds de mon <investment_personal>;
 
@@ -18,13 +18,13 @@ public <make_withdrawal_vendre> = vendre ( des | les ) fonds de mon <investment_
 <rule_dans> = <action_dans> ( <money_del> | <money_sin> | <money_plu> ) dans mon;
 
 <action_mix_mont> = ( ajouter | faire transférer | rajouter | transférer );
-<action_dans> = ( déplacer | déposer | faire déposer | faire prélever | mettre );
-<action_with> = ( enlever | prendre | récuperer | retirer | sortir);
+<action_dans> = ( déplacer | déposer | faire déposer | mettre );
+<action_with> = ( enlever | prendre | récuperer | retirer | sortir | faire prélever | prélever);
 
 <money_sin> = (un montant | une somme | de l'argent);
 <money_plu> = ( des sous | des fonds);
 <money_de> = ( d'argent | de fonds );
-<money_del> = ( de l'argent | de fonds );
+<money_del> = ( de l'argent | des fonds );
  
 //entities with tags
 <amount> = <AMOUNT>{AMOUNT};

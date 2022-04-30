@@ -2,8 +2,12 @@
 grammar open_account;
 import <dicts.INVESTMENT_PERSONAL.*>;
 
-public <op_acc> = (<action> un | ouverture d'un )[nouveau] compte <investment_personal>;
+public <open_account> =  <op_acc> | <op_acc_ouv> | <op_acc_nou>;
 
-<action> = (créer | obtenir | ouvrir);
+<op_acc> = <action> un <investment_personal>
+<op_acc_ouv> = ouverture d'un <investment_personal>
+<op_acc_nou> = nouveau <investment_personal>
+
+<action> = (avoir | créer | obtenir | ouvrir);
 
 <investment_personal> = <INVESTMENT_PERSONAL>{INVESTMENT_PERSONAL};

@@ -16,17 +16,17 @@ public <invest> = <make_investment1> | <make_investment2> | <make_investment3> |
                                     de mon <transactional_personal> 
                                     ( pour mettre dans mon | et le mettre dans mon ) <investment_personal>;
 
-<make_investment_acheter> = acheter un (celi | reer);
+<make_investment_acheter> = acheter un <investment_personal>;
 
-<make_investment_echanger> = échanger mes points (pour mon | pour investir dans mon | pour une cotisation) (celi | reer);                                    
+<make_investment_echanger> = échanger mes points (pour mon | pour investir dans mon | pour une cotisation) <transactional_personal>;                                    
 
 
 <rule_mix> = (<action_mix> [( <money_de> | de <amount> )] | 
              <action_mix_mont> ( <money> | <amount> )) (vers mon | dans mon | à mon);
 
 <rule_dans> = (<action_dans> [ ( <money_del> | <money> ) ] | 
-            <action_syst> [ <periodicity> ] | 
-            <action_mont> ( <amount> | <money> )) dans mon;
+//             <action_syst> [ <periodicity> ] | 
+               <action_mont> ( <amount> | <money> )) dans mon;
 
 <action_mix> = ( faire un dépôt | faire un transfert | effectuer un transfert);
 <action_mix_mont> = ( ajouter | contribuer | cotiser | faire transférer | rajouter | transférer );
@@ -34,14 +34,14 @@ public <invest> = <make_investment1> | <make_investment2> | <make_investment3> |
 <action_depl> = ( déplacer | déposer | faire déposer | faire un dépôt | tranférer | faire un transfert | effectuer un transfert);
 <action_pren> = (prendre | tranférer | faire transférer);
 <action_dans> = ( déplacer | déposer | épargner | faire déposer | faire prélever | investir | mettre | placer);
-<action_syst> = ( ajouter un prélèvement systématique | faire de l'épargne systématique | programmer des virements );
+//<action_syst> = ( ajouter un prélèvement systématique | faire de l'épargne systématique | programmer des virements );
 <action_mont> = ( déposer | mettre | placer );
 
 <money> = ( de l'argent | un montant | une somme | mes points );
 <money_de> = ( d'argent | de mes points | de fonds );
 <money_del> = ( de l'argent | un montant | une somme );
 
-<periodicity> = ( à chaque semaine | à chaque deux semaines | à chaque mois ){PERIODICITY};
+//<periodicity> = ( à chaque semaine | hebdomadaires | à chaque deux semaines | à chaque mois ){PERIODICITY};
 
 //entities with tags
 <amount> = <AMOUNT>{AMOUNT};

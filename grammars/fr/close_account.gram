@@ -1,0 +1,12 @@
+#JSGF V1.0;
+grammar close_account;
+import <dicts.INVESTMENT_PERSONAL.*>;
+
+public <close_account> =  <cl_acc> | <cl_acc_nv>;
+
+<cl_acc> = <action> mon <investment_personal>
+<cl_acc_nv> = (annulation | fermeture) de mon <investment_personal>
+
+<action> = (annuler | canceller | fermer);
+
+<investment_personal> = <INVESTMENT_PERSONAL>{INVESTMENT_PERSONAL};

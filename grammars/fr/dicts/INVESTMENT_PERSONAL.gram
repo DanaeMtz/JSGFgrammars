@@ -10,14 +10,14 @@ public <INVESTMENT_PERSONAL> = (
 	(régime-enregistré d'épargne retraite) {RRSP} |
 	(compte d'épargne-retraite) {RRSP} |
 	(reee) {RESP} |
-	(R trois E) {RESP} 
+	(R trois E) {RESP} |
 	(régime enregistré d'épargne-études) {RESP} |
 	(régime d'épargne de mes enfants) {RESP} |
 	(compte d'épargne pour les études) {RESP} |
 	ferr {RRIF} |
 	(fonds de revenu de retraite) {RRIF} |
 	(fonds enregistré de revenu de retraite) {RRIF} |
-	(FRV)) {LIF} |
+	(FRV) {LIF} |
 	(fonds de revenu viager) {LIF} |
 	(cri) {LIRA} | 
 	(compte de retraite immobilisé) {LIRA} 

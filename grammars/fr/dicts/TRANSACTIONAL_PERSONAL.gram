@@ -6,7 +6,6 @@ public <TRANSACTIONAL_PERSONAL> = (
     (compte de banque) {checking_account} |
     (compte courant) {checking_account} |
     (compte épargne) {checking_account} |
-    (compte d'épargne) {checking_account} |
     (compte progressif) {checking_account} |
 	(compte bancaire) {checking_account}  
 );

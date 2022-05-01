@@ -4,7 +4,7 @@ import <dicts.AMOUNT.*>;
 import <dicts.INVESTMENT_PERSONAL.*>;
 import <dicts.TRANSACTIONAL_PERSONAL.*>;
 
-public <withdrawl> = <make_withdrawal1> | <make_withdrawal2> | <make_withdrawal3> | <make_withdrawal_vendre>;
+public <withdrawl> = [<greeting>] (<make_withdrawal1> | <make_withdrawal2> | <make_withdrawal3> | <make_withdrawal_vendre>);
 
 <make_withdrawal1> = ( <rule_mix> | <rule_dans> ) <transactional_personal>
                             à partir de mon <investment_personal>;
@@ -28,6 +28,8 @@ public <withdrawl> = <make_withdrawal1> | <make_withdrawal2> | <make_withdrawal3
 <money_de> = ( d'argent | de fonds );
 <money_del> = ( de l'argent | des fonds );
  
+<greeting> = (je voulais | je voudrais | j'aimerais | je veux | j'appelle pour | c'est pour | pouvez-vous m'aider à);
+
 //entities with tags
 <amount> = <AMOUNT>{AMOUNT};
 <investment_personal> = <INVESTMENT_PERSONAL>{INVESTMENT_PERSONAL};

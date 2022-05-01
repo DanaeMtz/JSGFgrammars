@@ -1,0 +1,18 @@
+#JSGF V1.0;
+grammar no_intent;
+import <dicts.INVESTMENT_PERSONAL.*>;
+import <dicts.TRANSACTIONAL_PERSONAL.*>;
+
+// Include fragments in the training data is recommended by Nuance, those fragment should be added and annotated in the NO_INTENT intent.
+
+public <no_intent> = <escalate_agent> | <fragments_acct> 
+
+<escalate_agent> = [ <greeting> ] (parler à un | discuter avec un) <command>;
+<fragments_acct> = (dans mon | sur mon | vers mon | de mon) (<investment_personal> | <transactional_personal>);
+
+<greeting> = (je voulais | je voudrais | j'aimerais | je veux | j'appelle pour | c'est pour | pouvez-vous m'aider à);
+
+//entities with tags
+<command> = (agent | humain | opérateur | personne | représentant){COMMAND};
+<investment_personal> = <INVESTMENT_PERSONAL>{INVESTMENT_PERSONAL};
+<transactional_personal> = <TRANSACTIONAL_PERSONAL>{TRANSACTIONAL_PERSONAL};

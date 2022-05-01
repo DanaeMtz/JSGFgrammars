@@ -5,7 +5,7 @@ import <dicts.INVESTMENT_PERSONAL.*>;
 import <dicts.TRANSACTIONAL_PERSONAL.*>;
 
 
-public <invest> = <make_investment1> | <make_investment2> | <make_investment3> | <make_investment_acheter> | <make_investment_echanger>;
+public <invest> = [<greeting>](<make_investment1> | <make_investment2> | <make_investment3> | <make_investment_acheter> | <make_investment_echanger>);
 
 <make_investment1> = ( <rule_mix> | <rule_dans> ) <investment_personal> 
                             [à partir de mon <transactional_personal>];
@@ -42,6 +42,8 @@ public <invest> = <make_investment1> | <make_investment2> | <make_investment3> |
 <money_del> = ( de l'argent | un montant | une somme );
 
 //<periodicity> = ( à chaque semaine | hebdomadaires | à chaque deux semaines | à chaque mois ){PERIODICITY};
+
+<greeting> = (je voulais | je voudrais | j'aimerais | je veux | j'appelle pour | c'est pour | pouvez-vous m'aider à);
 
 //entities with tags
 <amount> = <AMOUNT>{AMOUNT};

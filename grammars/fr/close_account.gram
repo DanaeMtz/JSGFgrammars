@@ -2,11 +2,13 @@
 grammar close_account;
 import <dicts.INVESTMENT_PERSONAL.*>;
 
-public <close_account> =  <cl_acc> | <cl_acc_nv>;
+public <close_account> = <cl_acc> | <cl_acc_nv>;
 
-<cl_acc> = <action> mon <investment_personal>;
+<cl_acc> =  [<greeting>] <action> mon <investment_personal>;
 <cl_acc_nv> = (annulation | fermeture) de mon <investment_personal>;
 
 <action> = (annuler | canceller | fermer);
+<greeting> = (je voulais | je voudrais | j'aimerais | je veux | j'appelle pour | c'est pour | pouvez-vous m'aider à);
 
+//entities with tags
 <investment_personal> = <INVESTMENT_PERSONAL>{INVESTMENT_PERSONAL};

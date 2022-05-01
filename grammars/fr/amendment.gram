@@ -2,7 +2,7 @@
 grammar make_amendment;
 import <dicts.INVESTMENT_PERSONAL.*>;
 
-public <make_amendment> =  <mk_am> | <mk_am_mt> | <mk_am>;
+public <make_amendment> = [<greeting>](<mk_am> | <mk_am_mt> | <mk_am>);
 
 <mk_am> = <action> <object> <syst> (dans mon | de mon) <investment_personal>;
 <mk_am_am> = <action_am> <object_am> <syst_pl> (dans mon | de mon) <investment_personal>;
@@ -19,4 +19,7 @@ public <make_amendment> =  <mk_am> | <mk_am_mt> | <mk_am>;
 <syst_pl> = (périodiques | automatiques | systématiques);
 <syst_inv> = ( mon épargne systématique | mes dépôts systématiques | ma cotisation automatique | mon prélèvement automatique);
 
+<greeting> = (je voulais | je voudrais | j'aimerais | je veux | j'appelle pour | c'est pour | pouvez-vous m'aider à);
+
+//entities with tags
 <investment_personal> = <INVESTMENT_PERSONAL>{INVESTMENT_PERSONAL};

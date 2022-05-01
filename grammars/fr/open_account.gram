@@ -4,6 +4,8 @@ import <dicts.INVESTMENT_PERSONAL.*>;
 
 public <op_acc> = (<action> un | ouverture d'un )[nouveau] <investment_personal>;
 
-<action> = (créer | obtenir | ouvrir);
+<action> = [<greeting>] (créer | obtenir | ouvrir);
+<greeting> = (je voulais | je voudrais | j'aimerais | je veux | j'appelle pour | c'est pour | pouvez-vous m'aider à);
 
+//entities with tags
 <investment_personal> = <INVESTMENT_PERSONAL>{INVESTMENT_PERSONAL};

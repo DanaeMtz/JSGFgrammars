@@ -2,7 +2,7 @@
 grammar request_balance;
 import <dicts.INVESTMENT_PERSONAL.*>;
 
-public <request_balance> =  <req_bal> | <req_bal_com> | <req_bal_com2>;
+public <request_balance> = ( <req_bal> | <req_bal_com> | <req_bal_com2>);
 
 <req_bal> = <action> ((le solde de mon | le montant qui se trouve dans mon) <investment_personal> |
                      mon solde <investment_personal>);
@@ -10,6 +10,9 @@ public <request_balance> =  <req_bal> | <req_bal_com> | <req_bal_com2>;
 <req_bal_com> = combien (d'argent il reste dans mon | d'argent j'ai dans mon | que j'ai dans mon) <investment_personal>;
 <req_bal_com2> = j'ai combien (d'argent dans mon | dans mon | sur mon) <investment_personal>;
 
-<action> = ( avoir | c'est quoi | consulter | quel est | savoir | vérifier );
+<action> = [<greeting>]( avoir | c'est quoi | consulter | quel est | savoir | vérifier );
 
+<greeting> = (je voulais | je voudrais | j'aimerais | je veux | j'appelle pour | c'est pour | pouvez-vous m'aider à);
+
+//entities with tags
 <investment_personal> = <INVESTMENT_PERSONAL>{INVESTMENT_PERSONAL};

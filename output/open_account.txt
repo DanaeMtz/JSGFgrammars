@@ -1,99 +1,76 @@
-créer un [ferr](INVESTMENT_PERSONAL)
-créer un nouveau [régime d'épargne de mes enfants](INVESTMENT_PERSONAL)
-créer un [reee](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [reer](INVESTMENT_PERSONAL)
-ouvrir un [compte d'épargne-retraite](INVESTMENT_PERSONAL)
-obtenir un [ferr](INVESTMENT_PERSONAL)
-ouvrir un [R trois E](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [cri](INVESTMENT_PERSONAL)
-ouvrir un [fonds enregistré de revenu de retraite](INVESTMENT_PERSONAL)
-obtenir un [fonds enregistré de revenu de retraite](INVESTMENT_PERSONAL)
-ouverture d'un [compte d'épargne libre d'impôt](INVESTMENT_PERSONAL)
-ouverture d'un [régime d'épargne de mes enfants](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [compte de retraite immobilisé](INVESTMENT_PERSONAL)
-ouvrir un nouveau [cri](INVESTMENT_PERSONAL)
-ouvrir un [FRV](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [compte d'épargne libre d'impôt](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [régime enregistré d'épargne-études](INVESTMENT_PERSONAL)
-ouvrir un nouveau [ferr](INVESTMENT_PERSONAL)
-créer un nouveau [cri](INVESTMENT_PERSONAL)
-créer un nouveau [celi](INVESTMENT_PERSONAL)
-obtenir un [FRV](INVESTMENT_PERSONAL)
-ouverture d'un [compte d'épargne pour les études](INVESTMENT_PERSONAL)
-créer un nouveau [R trois E](INVESTMENT_PERSONAL)
-créer un nouveau [régime-enregistré d'épargne retraite](INVESTMENT_PERSONAL)
-créer un nouveau [fonds enregistré de revenu de retraite](INVESTMENT_PERSONAL)
-ouvrir un nouveau [régime d'épargne de mes enfants](INVESTMENT_PERSONAL)
-créer un [R trois E](INVESTMENT_PERSONAL)
-obtenir un nouveau [fonds enregistré de revenu de retraite](INVESTMENT_PERSONAL)
-ouverture d'un [FRV](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [FRV](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [fonds enregistré de revenu de retraite](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [fonds de revenu de retraite](INVESTMENT_PERSONAL)
-créer un [compte d'épargne libre d'impôt](INVESTMENT_PERSONAL)
-ouverture d'un [compte d'épargne-retraite](INVESTMENT_PERSONAL)
-ouvrir un [celi](INVESTMENT_PERSONAL)
-obtenir un [compte d'épargne libre d'impôt](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [compte libre d'impôt](INVESTMENT_PERSONAL)
-obtenir un nouveau [fonds de revenu de retraite](INVESTMENT_PERSONAL)
-ouvrir un [régime enregistré d'épargne-études](INVESTMENT_PERSONAL)
-ouverture d'un [compte de retraite immobilisé](INVESTMENT_PERSONAL)
-obtenir un nouveau [régime d'épargne de mes enfants](INVESTMENT_PERSONAL)
-ouverture d'un [fonds de revenu de retraite](INVESTMENT_PERSONAL)
-obtenir un nouveau [celi](INVESTMENT_PERSONAL)
-obtenir un nouveau [ferr](INVESTMENT_PERSONAL)
-ouverture d'un [compte libre d'impôt](INVESTMENT_PERSONAL)
-ouvrir un [reee](INVESTMENT_PERSONAL)
-ouverture d'un [fonds de revenu viager](INVESTMENT_PERSONAL)
-ouverture d'un [R trois E](INVESTMENT_PERSONAL)
-créer un [fonds de revenu de retraite](INVESTMENT_PERSONAL)
-créer un nouveau [fonds de revenu viager](INVESTMENT_PERSONAL)
-ouvrir un nouveau [compte d'épargne libre d'impôt](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [R trois E](INVESTMENT_PERSONAL)
-ouverture d'un [fonds enregistré de revenu de retraite](INVESTMENT_PERSONAL)
-obtenir un [R trois E](INVESTMENT_PERSONAL)
-obtenir un nouveau [compte libre d'impôt](INVESTMENT_PERSONAL)
-obtenir un [celi](INVESTMENT_PERSONAL)
-ouvrir un nouveau [régime-enregistré d'épargne retraite](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [compte d'épargne-retraite](INVESTMENT_PERSONAL)
-ouvrir un [fonds de revenu viager](INVESTMENT_PERSONAL)
-obtenir un nouveau [régime enregistré d'épargne-études](INVESTMENT_PERSONAL)
-obtenir un [fonds de revenu de retraite](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [ferr](INVESTMENT_PERSONAL)
-créer un [fonds de revenu viager](INVESTMENT_PERSONAL)
-créer un [cri](INVESTMENT_PERSONAL)
-créer un nouveau [reee](INVESTMENT_PERSONAL)
-obtenir un nouveau [compte d'épargne-retraite](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [celi](INVESTMENT_PERSONAL)
-obtenir un [compte d'épargne-retraite](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [reee](INVESTMENT_PERSONAL)
-ouverture d'un [reee](INVESTMENT_PERSONAL)
-obtenir un nouveau [reer](INVESTMENT_PERSONAL)
-ouverture d'un [régime enregistré d'épargne-études](INVESTMENT_PERSONAL)
-créer un nouveau [compte d'épargne-retraite](INVESTMENT_PERSONAL)
-créer un [compte de retraite immobilisé](INVESTMENT_PERSONAL)
-obtenir un nouveau [FRV](INVESTMENT_PERSONAL)
-obtenir un [fonds de revenu viager](INVESTMENT_PERSONAL)
-ouverture d'un nouveau [régime d'épargne de mes enfants](INVESTMENT_PERSONAL)
-obtenir un [régime-enregistré d'épargne retraite](INVESTMENT_PERSONAL)
-créer un nouveau [compte d'épargne libre d'impôt](INVESTMENT_PERSONAL)
-créer un nouveau [reer](INVESTMENT_PERSONAL)
-obtenir un [reer](INVESTMENT_PERSONAL)
-obtenir un nouveau [compte d'épargne libre d'impôt](INVESTMENT_PERSONAL)
-créer un [FRV](INVESTMENT_PERSONAL)
-obtenir un [reee](INVESTMENT_PERSONAL)
-ouvrir un [compte d'épargne pour les études](INVESTMENT_PERSONAL)
-ouvrir un [fonds de revenu de retraite](INVESTMENT_PERSONAL)
-créer un [celi](INVESTMENT_PERSONAL)
-ouverture d'un [cri](INVESTMENT_PERSONAL)
-créer un nouveau [compte de retraite immobilisé](INVESTMENT_PERSONAL)
-ouvrir un nouveau [celi](INVESTMENT_PERSONAL)
-obtenir un nouveau [compte d'épargne pour les études](INVESTMENT_PERSONAL)
-créer un [régime-enregistré d'épargne retraite](INVESTMENT_PERSONAL)
-ouverture d'un [régime-enregistré d'épargne retraite](INVESTMENT_PERSONAL)
-créer un [régime d'épargne de mes enfants](INVESTMENT_PERSONAL)
-ouverture d'un [celi](INVESTMENT_PERSONAL)
-créer un nouveau [fonds de revenu de retraite](INVESTMENT_PERSONAL)
-créer un nouveau [FRV](INVESTMENT_PERSONAL)
-ouvrir un [régime-enregistré d'épargne retraite](INVESTMENT_PERSONAL)
-ouverture d'un [ferr](INVESTMENT_PERSONAL)
+c'est pour obtenir un fonds de revenu de retraite
+créer un régime-enregistré d'épargne retraite
+je voudrais ouvrir un compte d'épargne pour les études
+ouvrir un nouveau compte d'épargne-retraite
+obtenir un nouveau compte de retraite immobilisé
+ouverture d'un nouveau celi
+pouvez-vous m'aider à ouvrir un nouveau ferr
+ouverture d'un nouveau compte d'épargne pour les études
+ouverture d'un R trois E
+ouverture d'un compte d'épargne pour les études
+obtenir un compte d'épargne libre d'impôt
+ouverture d'un fonds enregistré de revenu de retraite
+obtenir un nouveau cri
+j'aimerais créer un nouveau fonds enregistré de revenu de retraite
+pouvez-vous m'aider à créer un fonds de revenu de retraite
+ouverture d'un reee
+j'appelle pour ouvrir un nouveau compte d'épargne-retraite
+créer un compte libre d'impôt
+ouverture d'un FRV
+ouverture d'un nouveau régime-enregistré d'épargne retraite
+créer un nouveau reee
+ouverture d'un nouveau reee
+ouverture d'un nouveau compte d'épargne-retraite
+obtenir un compte de retraite immobilisé
+pouvez-vous m'aider à ouvrir un nouveau compte d'épargne pour les études
+obtenir un fonds de revenu viager
+j'aimerais ouvrir un celi
+ouvrir un nouveau ferr
+ouverture d'un compte libre d'impôt
+je veux ouvrir un nouveau compte de retraite immobilisé
+ouvrir un nouveau fonds enregistré de revenu de retraite
+créer un nouveau ferr
+ouverture d'un nouveau fonds de revenu de retraite
+c'est pour créer un régime d'épargne de mes enfants
+créer un fonds de revenu viager
+ouvrir un nouveau compte d'épargne libre d'impôt
+je voudrais créer un nouveau compte d'épargne libre d'impôt
+j'appelle pour créer un nouveau cri
+ouverture d'un celi
+pouvez-vous m'aider à obtenir un fonds de revenu viager
+ouverture d'un fonds de revenu viager
+c'est pour obtenir un nouveau reee
+créer un nouveau compte d'épargne-retraite
+obtenir un nouveau régime enregistré d'épargne-études
+obtenir un nouveau FRV
+ouverture d'un régime-enregistré d'épargne retraite
+j'aimerais créer un nouveau régime d'épargne de mes enfants
+je voudrais ouvrir un compte libre d'impôt
+ouverture d'un nouveau cri
+ouverture d'un reer
+ouverture d'un nouveau compte de retraite immobilisé
+je veux obtenir un nouveau ferr
+ouverture d'un compte d'épargne-retraite
+je voudrais obtenir un nouveau compte d'épargne-retraite
+ouverture d'un nouveau fonds de revenu viager
+ouverture d'un fonds de revenu de retraite
+c'est pour obtenir un nouveau compte d'épargne libre d'impôt
+pouvez-vous m'aider à créer un compte d'épargne libre d'impôt
+ouverture d'un régime enregistré d'épargne-études
+ouverture d'un compte de retraite immobilisé
+pouvez-vous m'aider à obtenir un nouveau compte libre d'impôt
+créer un nouveau celi
+créer un celi
+je voudrais obtenir un FRV
+créer un fonds enregistré de revenu de retraite
+obtenir un nouveau régime d'épargne de mes enfants
+je voulais créer un R trois E
+je voulais créer un fonds de revenu viager
+c'est pour obtenir un R trois E
+c'est pour ouvrir un nouveau reee
+j'aimerais ouvrir un régime enregistré d'épargne-études
+je voulais obtenir un reee
+créer un ferr
+ouverture d'un nouveau reer
+je voudrais obtenir un nouveau compte libre d'impôt
+j'appelle pour créer un nouveau régime enregistré d'épargne-études

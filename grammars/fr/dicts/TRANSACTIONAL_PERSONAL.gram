@@ -2,10 +2,15 @@
 grammar dicts.TRANSACTIONAL_PERSONAL;
 
 public <TRANSACTIONAL_PERSONAL> = (
-	(compte chèques) {checking_account} |
-    (compte de banque) {checking_account} |
-    (compte courant) {checking_account} |
-    (compte épargne) {checking_account} |
-    (compte progressif) {checking_account} |
-	(compte bancaire) {checking_account}  
+
+	(compte chèques) {chequing account} |
+    (compte de banque) {chequing account} |
+    (compte courant) {chequing account} |
+    (compte épargne) {chequing account} |
+    (compte progressif) {chequing account} |
+	(compte bancaire) {chequing account} |
+    (compte épargne) {savings account} |
+    (compte d'épargne) {savings account} |
+    (marge de crédit) {line of credit} 
+
 );

@@ -3,24 +3,23 @@ grammar dicts.INVESTMENT_PERSONAL;
 
 public <INVESTMENT_PERSONAL> = (
 
-	CELI {celi} |
-//	(compte d'épargne libre d'impôt) {celi} |
-//	(compte libre d'impôt) {celi} |
-	REER {reer} |
-//	(régime-enregistré d'épargne retraite) {reer} |
-//	(compte d'épargne-retraite) {reer} |
-//	REEE {reee} |
-	R trois E {reee} 
-//	(régime enregistré d'épargne-études) {reee} |
-//	(régime d'épargne de mes enfants) {reee} |
-//	(régime d'épargne de mes enfants) {reee} |
-//	(compte d'épargne pour les études) {reee} |
-//	FERR {ferr} |
-//	(fonds de revenu de retraite) {ferr} |
-//	(fonds enregistré de revenu de retraite) {ferr} |
-//	FRV {frv} |
-//	(fonds de revenu viager) {frv} |
-//	CRI {cri} | 
-//	(compte de retraite immobilisé) {cri}
+	(celi) {TFSA} |
+	(compte d'épargne libre d'impôt) {TFSA} |
+	(compte libre d'impôt) {TFSA} |
+	(reer) {RRSP} |
+	(régime-enregistré d'épargne retraite) {RRSP} |
+	(compte d'épargne-retraite) {RRSP} |
+	(reee) {RESP} |
+	(R trois E) {RESP} 
+	(régime enregistré d'épargne-études) {RESP} |
+	(régime d'épargne de mes enfants) {RESP} |
+	(compte d'épargne pour les études) {RESP} |
+	ferr {RRIF} |
+	(fonds de revenu de retraite) {RRIF} |
+	(fonds enregistré de revenu de retraite) {RRIF} |
+	(FRV)) {LIF} |
+	(fonds de revenu viager) {LIF} |
+	(cri) {LIRA} | 
+	(compte de retraite immobilisé) {LIRA} 
 
 );

@@ -46,3 +46,10 @@ Please refer to [JSGF](https://www.w3.org/TR/jsgf) and [jsgf-gen](https://github
 ├── README.md
 └── .gitignore
 ```
+
+## Action verbs par intent 
+
+| Intent     | Verb in French |
+|------------|------------|
+| Invest  | déposer, mettre, placer, déplacer, épargner |
+

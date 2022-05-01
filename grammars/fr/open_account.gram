@@ -2,7 +2,7 @@
 grammar open_account;
 import <dicts.INVESTMENT_PERSONAL.*>;
 
-public <op_acc> = (<action> un | ouverture d'un )[nouveau] compte <investment_personal>;
+public <op_acc> = (<action> un | ouverture d'un )[nouveau] <investment_personal>;
 
 <action> = (créer | obtenir | ouvrir);
 

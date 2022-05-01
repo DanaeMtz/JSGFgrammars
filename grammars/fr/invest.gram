@@ -18,7 +18,7 @@ public <invest> = <make_investment1> | <make_investment2> | <make_investment3> |
 
 <make_investment_acheter> = acheter un <investment_personal>;
 
-<make_investment_echanger> = échanger mes points (pour mon | pour investir dans mon | pour une cotisation) <transactional_personal>;
+<make_investment_echanger> = échanger mes points (pour mon | pour investir dans mon | pour une cotisation) <investment_personal>;
 
 
 <rule_mix> = (<action_mix> [( <money_de> | de <amount> )] | 

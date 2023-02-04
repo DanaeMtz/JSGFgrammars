@@ -1,0 +1,20 @@
+#JSGF V1.0;
+grammar info_close_account;
+import <dicts.CARD.*>;
+import <dicts.REF_THING.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+public <info_close_account> = (<info_fermer> | <comment_fermer>);
+
+<info_fermer> = [<voudrais_savoir> | <dis_moi>] <comment_faire> pour <fermer> <compte_produit>;
+
+<comment_fermer> = <je_voudrais> <fermer> <compte_produit> <comment_faire>;
+
+<compte_produit> = (un (<TRANSACTIONAL_account> | <INVESTMENT_account> | <compte_kw>) |  la <card> | <card_ref> | <account_ref>);
+
+//entities with tags
+<card> = <CARD>{CARD};
+
+// TODO: add examples using the entities: PACKAGE_ENTERPRISE

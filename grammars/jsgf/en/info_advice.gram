@@ -1,0 +1,41 @@
+#JSGF V1.0;
+grammar info_advice;
+import <common.faq.*>;
+
+public <info_advice> = <anacc_raison_0> | <anacc_raison_1> | <anacc_raison_2> | <anacc_raison_3> | <anacc_raison_4> |
+                       <anacc_raison_5> | <anacc_raison_6> | <anacc_raison_7> | <anacc_raison_8> | <anacc_raison_9>;
+
+
+
+//anacc_raison_0: Info-Conseil sur produits/ services d'investissement
+<anacc_raison_0> = <chatbot_faq_372>;
+
+//anacc_raison_1: Info-générale sur produit/service
+<anacc_raison_1> = <chatbot_faq_102> | <chatbot_faq_160> | <chatbot_faq_217> | <chatbot_faq_229> | <chatbot_faq_230> | <chatbot_faq_231> | <chatbot_faq_327> | <chatbot_faq_401> | <chatbot_faq_405> | <chatbot_faq_407>;
+
+//anacc_raison_2: Info-fonctionnement de la carte
+<anacc_raison_2> = <chatbot_faq_137> | <chatbot_faq_273> | <chatbot_faq_274>;
+
+//anacc_raison_3: Info-une transaction/solde/relevé
+<anacc_raison_3> = <chatbot_faq_144> | <chatbot_faq_190> | <chatbot_faq_191> | <chatbot_faq_192>;
+
+//anacc_raison_4: Info-suivi sur une demande/opération
+<anacc_raison_4> = <chatbot_faq_275>;
+
+//anacc_raison_5: Info-frais / taux d'interet
+<anacc_raison_5> = <chatbot_faq_398> | <chatbot_faq_402> | <chatbot_faq_406> | <chatbot_faq_408> | <chatbot_faq_409>;
+
+//anacc_raison_6: Info-incapable faire une opération
+<anacc_raison_6> = <chatbot_faq_107> | <chatbot_faq_332> | <chatbot_faq_337> | <chatbot_faq_361>;
+
+//anacc_raison_7: Info-soutien virement interac
+<anacc_raison_7> = <chatbot_faq_111> | <chatbot_faq_112> | <chatbot_faq_113> | <chatbot_faq_114> | <chatbot_faq_121> | <chatbot_faq_122> | <chatbot_faq_124> | <chatbot_faq_212> | <chatbot_faq_306> | <chatbot_faq_309>;
+
+//anacc_raison_8: Info-soutien paiement de facture
+<anacc_raison_8> = <chatbot_faq_115> | <chatbot_faq_116> | <chatbot_faq_127> | <chatbot_faq_130>;
+
+//anacc_raison_9: Info-programme de récompense
+<anacc_raison_9> = <chatbot_faq_142> | <chatbot_faq_143>;
+
+
+

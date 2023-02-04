@@ -1,0 +1,20 @@
+#JSGF V1.0;
+grammar change_product_feature;
+import <dicts.TRANSACTIONAL.*>;
+import <dicts.PRODUCT_FEATURE.*>;
+import <dicts.PACKAGE.*>;
+import <dicts.CHANGE_FEATURE.*>;
+import <dicts.REF_THING.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+public <change_product_feature> = (
+	<request_to> <change> ( [a|the|an|my] (<feature>|<package>) | <package_ref> ) [ (to|on|from) my <transactional> account | (on|from) <account_ref> ] [<please>] |
+	I (have|got) a <transactional> account and <request_to> <change> ( [a|the|an|my] (<feature>|<package>) | <package_ref> ) [<please>]	
+);
+
+<transactional> = <TRANSACTIONAL>{TRANSACTIONAL};
+<feature> = <PRODUCT_FEATURE>{PRODUCT_FEATURE};
+<package> = <PACKAGE>{PACKAGE};
+<change> = <CHANGE_FEATURE>{CHANGE_FEATURE};

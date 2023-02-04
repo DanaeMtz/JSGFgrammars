@@ -1,0 +1,45 @@
+#JSGF V1.0;
+grammar withdrawal;
+import <dicts.AMOUNT.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+public <withdrawal> = [<je_voudrais>] (
+        <make_withdrawal1> |
+        <make_withdrawal2> |
+        <make_withdrawal3> |
+        <make_withdrawal_vendre>
+    ) [s'il vous plaît];
+
+<make_withdrawal1> = (
+        <transferer_montant_vers> |
+        <deplacer_montant_dans>
+    ) <TRANSACTIONAL_account> à partir de mon <INVESTMENT_account>;
+
+<make_withdrawal2> = <deplacer_de> ( <amount> | <money_plu> ) de mon <INVESTMENT_account> [
+        (
+            pour les mettre dans mon |
+            et les mettre dans mon |
+            et les déposer dans mon
+        ) <TRANSACTIONAL_account> ];
+
+<make_withdrawal3> = (<faire_retrait> | <faire_transfert>) [<money_de> | de <amount>] de mon <INVESTMENT_account> (
+        pour le mettre dans mon |
+        et le mettre dans mon |
+        et le déposer dans mon
+    ) <TRANSACTIONAL_account> ;
+
+<make_withdrawal_vendre> = vendre (des | les) fonds de mon <INVESTMENT_account>;
+
+<transferer_montant_vers>  = <transferer> ( <money_sin> | <money_plu> | <amount> ) (vers mon | dans mon | à mon);
+<deplacer_montant_dans> = <deplacer_dans> ( <money_del> | <money_sin> | <money_plu> ) dans mon;
+
+<money_sin> = (un montant | une somme | de l'argent);
+<money_plu> = (des sous | des fonds);
+<money_de> = ( d'argent | de fonds);
+<money_del> = (de l'argent | des fonds);
+
+
+//entities with tags
+<amount> = <AMOUNT>{AMOUNT};

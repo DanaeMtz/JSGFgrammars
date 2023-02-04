@@ -1,0 +1,13 @@
+#JSGF V1.0;
+grammar globals.repeat;
+import <dicts.COMMAND.*>;
+import <common.generic.*>;
+
+public <repeat> = <interrogative> | <imperative> | <repeat_imperative>{COMMAND};
+
+<interrogative> = (pouvez-vous <repeat_infinitive>{COMMAND} [s'il vous plaît] |
+peux-tu <repeat_infinitive>{COMMAND}  [s'il te plaît]);
+
+<imperative> = (<repeat_imperative> {COMMAND} [moi] [ça] [<svp>]);
+
+// SAMPLES UNDER NO_INTENT

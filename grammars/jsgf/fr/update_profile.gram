@@ -1,0 +1,29 @@
+#JSGF V1.0;
+grammar update_profile;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+import <dicts.CARD.*>;
+import <dicts.PROFILE_ITEM.*>;
+import <dicts.TRANSACTIONAL.*>;
+
+public <update_profile> = (/2/<changement> | /2/<changer> | /1/<changement_faire>)[s'il vous plaît] | [(pourriez vous|(peux|pourrais) tu) [m'aider à]] (/2/<changement> | /2/<changer> | /1/<changement_faire>);
+
+<changement> = (
+        [<je_voudrais>] faire | nous avons) 
+		un changement (d' <profile_elision>| de (mon|notre) ([numéro de] <profile_numbered>|<profile_names>|<profile_general>)) [<sur_carte>|de mon <TRANSACTIONAL_account>];
+               
+<changement_faire> = (nous avons | j'ai | on a) un changement (d' <profile_elision>| de (mon|notre) ([numéro de]  <profile_numbered>|<profile_names>|<profile_general>)) à faire [<sur_carte>];
+
+<changer> = [<je_voudrais>] [faire] (<modifier>|un mise à jour de) (l' <profile_elision>| (mon|notre|le) ([numéro de] <profile_numbered>|<profile_names>|<profile_general>)) [(de l'entreprise | de la compagnie)];
+
+<card> = <CARD>{CARD};
+<account> = <TRANSACTIONAL_account>{TRANSACTIONAL};
+<profile> = <PROFILE_ITEM>{PROFILE_ITEM};
+<profile_numbered> = <PROFILE_ITEM_NUMBERS>{PROFILE_ITEM};
+<profile_names> = <PROFILE_ITEM_NAMES>{PROFILE_ITEM};
+<profile_general> = <PROFILE_ITEM_GENERAL>{PROFILE_ITEM};
+<profile_elision> = <PROFILE_ITEMG_ELISION>{PROFILE_ITEM};
+
+// TODO: add examples with the entities : NUMBER, POSTAL_CODE, ORDINAL_NUMBER, YESNO
+// 2nd pass: added profile items based on discussions with Ahmed and audio listening 

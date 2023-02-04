@@ -1,0 +1,14 @@
+#JSGF V1.0;
+grammar globals.main_menu;
+import <dicts.COMMAND.*>;
+
+public <main_menu> = (
+        <command_menu_verb> |
+        [come back to the] <command_menu_obj>
+    ) [please];
+
+//entities with tags
+<command_menu_verb> = (<MAIN_MENU_verb>){COMMAND};
+<command_menu_obj> = (<MAIN_MENU_object>){COMMAND};
+
+// SAMPLES UNDER NO_INTENT

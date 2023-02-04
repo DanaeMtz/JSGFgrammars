@@ -1,0 +1,11 @@
+#JSGF V1.0;
+grammar globals.options;
+import <dicts.COMMAND.*>;
+
+public <options> = <interrogative> | <imperative>;
+
+<imperative> = ((donnez | donne | dites | dis) moi| réentendre) les <OPTIONS>{COMMAND};
+
+<interrogative> = (quelles sont les (options){COMMAND} | quels sont les (choix){COMMAND});
+
+// SAMPLES UNDER NO_INTENT

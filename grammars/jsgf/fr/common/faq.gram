@@ -1,0 +1,985 @@
+#JSGF V1.0;
+grammar common.faq;
+
+
+//chatbot_faq_102: Afficher ma nouvelle carte de crédit 
+public <chatbot_faq_102> =
+	ça fait déjà une semaine que j'ai ma nouvelle mastercard pourquoi elle n'est pas affichée | 
+	combien de temps ca prend avant de voir ma nouvelle carte de crédit dans ma banque en ligne | 
+	comment ajouter ma carte de crédit à mon compte bancaire | 
+	comment ajouter ma carte mastercard echo remise | 
+	comment ajouter macredit à mes comptes | 
+	comment ajouter une carte de crédit | 
+	comment faire pour ajouter une carte de crédit à mon compte | 
+	comment faire pour ajouter une carte de crédit | 
+	comment faire pour changer le numéro de ma carte de crédit qui est affichée | 
+	comment faire pour que ma carte de crédit apparaissent sur mon compte banque nationale en ligne | 
+	comment puis-je metre ma carte de crédit sur mon compte card elle ne figure pas sur mon compte | 
+	est-ce que ma nouvelle carte de crédit va s'afficher automatiquement sur mon portail | 
+	je dois attendre combien de temps après avoir changer ma carte de crédit pour la voir dans le portail | 
+	je veux faire un paiement sur ma nouvelle carte de crédit ca va prendre combien de temps avant de la voir | 
+	nouvelle carte de crédit quoi faire pour changer le numéro dans l'application mobile | 
+	nouvelle mastercard pouvez-vous me dire dans combien de temps elle va s'afficher en ligne | 
+	si je vois pas ma carte de crédit sur mes comptes comment je fais pour la rajouter | 
+	vais-je pouvoir accéder bientôt à ma nouvelle mastercard en ligne;
+
+//chatbot_faq_107: Impossible de faire un virement ou payer une facture
+public <chatbot_faq_107> =
+	pourquoi je suis pas capable de faire virement interac | 
+	pourquoi autant de problèmes à effectuer des paiements ou des virements depuis une semaine | 
+	pourquoi depuis plusieurs jours je n'arrive pas à payer mes factures | 
+	pourquoi est-ce que je n'arrive pas à payer mes impots à revenu québec alors que je l'ai toujours fait | 
+	pourquoi est-ce que je ne peux pas faire de virement interac | 
+	pourquoi je n'arrive pas à faire le virement international il y a interruption et ça m'indique probleme 202 | 
+	pourquoi je ne peux effectuer des paiements de facture | 
+	pourquoi je ne suis pas capable de payer ma facture | 
+	pourquoi l'application paye facture ne fonctionne pas | 
+	pourquoi mon virement interac est-il bloqué | 
+	pourquoi ne puis-je envoyer un de l'argent | 
+	pourquoi ne puis-je pas payer des factures | 
+	y a t-il un probleme j'essaie payer facture et ça fonctionne pas;
+
+//chatbot_faq_111: Ajouter un nouveau destinataire
+public <chatbot_faq_111> =
+	comment ajouter un destinataire qui n'est pas de la BNC | 
+	comment activer la fonction ajouter un destinataire | 
+	comment ajouter client à interac | 
+	comment ajouter quelqu'un pour envoyer de l'argent | 
+	comment ajouter quelqu'un pour un transfert | 
+	comment ajouter un destinataire | 
+	comment ajouter un destinataire publique |  
+	comment ajouter un nouveau destinataire | 
+	comment enregistrer un destinataire pour un envoi interac | 
+	comment faire pour ajouter une personne pour les transfers | 
+	comment puis-je ajouter un destinataire  | 
+	où se trouve l'onglet pour ajouter un destinataire de virement;
+
+//chatbot_faq_112: Modifier ou supprimer un destinataire
+public <chatbot_faq_112> =
+	comment ajouter une adresse à un destinataire existant |
+	comment ajouter une deuxième adresse courriel à un destinataire |
+	comment annuler des destinataires compte des envois |
+	comment changer l'adresse courriel d'un destinataire |
+	comment changer un email d'un destinataire |
+	comment corriger l'adresse de messagerie d'un destinataire |
+	comment corriger le courriel d'un destinataire |
+	comment enlève t-on un destinataire pour un envoi d'argent |
+	comment enlever un destinataire dans la section envoie interac |
+	comment enlever le cellulaire du destinataire pour le remplacer par une adresse e-mail |
+	comment enlever ou corriger un destinataire pour un virement interac |
+	comment enlever un bénéficiaire de virement interac |
+	comment enlever un contact |
+	comment enlever un destinataire |
+	comment enlever un destinataire dans envoyer de l'argent |
+	comment enlever un destinataire dans la liste d'argent tranférer |
+	comment enlever un destinataire dans la liste envoyer de l'argent |
+	comment enlever un destinataire dans le virement interac |
+	comment enlever un destinataire de la liste envoyer de l'argent |
+	comment enlever un nom dans la liste de destinataires dans evoyer de l'argent |
+	comment enlever une erreur sur un destinataire et même l'enlever |
+	comment est-ce que je peut canceller un destinataire pour les virement interac |
+	comment est-ce que je peux supprimer un destinataire |
+	comment faire pour annuler des destinataire |
+	comment faire pour corriger adresse courriel destinataire pour virement interac |
+	comment faire pour corriger un adresse sur un contact interac |
+	comment faire pour enlever un destinataire de ma liste d'envois d'argent |
+	comment faire pour supprimer un destinataire |
+	comment faire une modification d'un destinataire |
+	comment fait-on pour supprimer un destinataire interac |
+	comment je fais pour corriger une information à un destinataire |
+	comment je fais pour enlever des noms sur le site de virement autres personnes |
+	comment je fais pour supprimé des destinataires de virement interac |
+	comment je fais pour supprimer des gens pour les virements interac et entre client |
+	comment je peux enlever un destinataire |
+	comment je peux supprimer des contacts dans l'espace virement bancaire à une autre personne |
+	comment je peux supprimer mon destintaire |
+	comment je peux supprimer un destinataire |
+	comment je retire une personne des destinataire |
+	comment modifer un destinataire interac |
+	comment modifier l'adresse d'un destinataire |
+	comment modifier l'adresse email d une personne pour lui envoyer de l'argent |
+	comment modifier le courriel d'un destinataire déjà ajouter sur la liste |
+	comment modifier les destinataires interac |
+	comment modifier les infos des personne à qui j'envoye de l'argent |
+	comment modifier ou supprimer un destinataire |
+	comment modifier un destinataire |
+	comment modifier un destinataire pour virement interac |
+	comment modifier un recipient |
+	comment on fait pour supprimer un destinataire de notre liste |
+	comment on fait pour enlever des destinataires dans l'onglet envoyer |
+	comment peut-on supprimer un destinataire dans la liste de virement interact |
+	comment puis-je effacer un destinataire pour envoyer des fonds |
+	comment puis-je enlever un destinataire de mon compte |
+	comment puis-je enlever un nom dans mes destinataires |
+	comment puis-je supprimer un destinataire pour un transfert interac |
+	comment retirer un destinataire |
+	comment retirer un destinataire interac |
+	comment retirer un destinataire qui est dans ma liste actuelle |
+	comment retirer un nom envoyer de l'argent |
+	comment supprimer destinataire |
+	comment supprimer le nom d'une personne dans la liste des destinataires pour envoyer de l'argent |
+	comment supprimer un contact dans la liste des destinataires | 
+	comment supprimer un destinataire |
+	comment supprimer un destinataire fait par erreur |
+	comment supprimer un destinataire interac |
+	comment supprimer un destinataire lors d'un envoie d'argent |
+	est-ce que je peux modifier mon destinataire |
+	lorsque je fais un envoi interac comment faire pour modifier l'adresse courriel d'une personne déjà crée |
+	pourriez-vous me dire comment canceller un destinataire |
+	pourriez-vous me dire comment je peux retirer une personne de ma liste de transfert interac |
+	pouvez-vous m'aider à apporter un changement à mon destinataire |
+	pouvez-vous m'aider à supprimer un de mes destinataires;
+
+//chatbot_faq_113: Annuler un Virement Interac
+public <chatbot_faq_113> =
+	comment être certaine que mon premier virement sera bien annulé | 
+	comment annuler un virement |
+	comment annuler cette transaction |
+	comment annuler le transfert qui ne s'est pas rendu à la personne |
+	comment annuler les frais de 3,50 $ pour un virement si c'est le destinataire qui a échoué |
+	comment annuler un transfert internet |
+	comment annuler un virement |
+	comment annuler un virement à une autre personne |
+	comment annuler un virement débit |
+	comment annuler un virement interac |
+	comment annuler une transaction d'envoi d'argent |
+	comment annuler virement interac par courriel |
+	comment canceller un envoi |
+	comment canceller un virement |
+	comment est ce que je peut canceller un transfer interac fait hier |
+	comment faire canceller un virement |
+	comment faire pour annuler un transfert |
+	comment faire pour annuler un transfert autre personne |
+	comment faire pour annuler un transfert de fonds qui n'a pas encore été encaissé | 
+	comment faire pour annuler un virement interac ou j'ai fait une erreur d'adresse |
+	comment faire pour inverser un virement interac |
+	comment fais ton pour annuler un virement sur email |
+	comment je fais pour annuler la demande d'envoyer de l'argent à un destinataire étant donné que j'ai excédé le monant permis pour la journée |
+	comment je peux annuler mom interac |
+	comment le montant a-t-il pu être débité de mon compte si l'adresse n'est pas la bonne |
+	comment on annule un virement |
+	comment puis-je annuler ce transfert qui a été fait au mauvais destinataire |
+	comment puis-je annuler la transaction du 8 juin pour que le montant de 1145 $ lui soit acheminé et que je n'aie pas à le payer deux fois | 
+	comment puis-je canceller un virement que j'ai fait à une personne | 
+	comment récupérer un transfert d'argent dont le montant est trop élevé |
+	comment rappeler un virement interac |
+	comment supprimer un virement interac |
+	est-ce possible d'annuler un envoi d'argent ou il faut attendre la période de 30 jours pour le retour | 
+	est-ce qu'il y a des frais d'annulation de virement puisque c'est le destinataire qui n'a pas répondu correctement |
+	est-ce qu'il y a des frais pour annuler le virement |
+	est-ce que je peux annuler une transaction interac |
+	j'ai fait un transfer interac qui n'a pas pu être accepté comment je fais pour le canceler |
+	pourquoi ai-je des frais d'annulation pour un virement interac qui n'a pas été transmis au destinataire |
+	pourquoi des frais d'annulation de virement interac |
+	pourquoi des frais de 3,50 $ me sont imposé après récupérer un virement échu |
+	pourquoi des frais de 3,50 $ pour annuler un virement quand j'ai le gros plan bancaire |
+	pourquoi j'arrive pas à annuler le virement interac |
+	pourquoi y a-t-il des frais d'annulation pour un virement interac |
+	que faire pour annuler un transfère d'argent que j'ai fait |
+	vais-je avoir des frais si j'annule un virement interac et que je recommence |
+	y aura t-il des frais si je supprime mon virement interac |
+	y aura-t-il des frais si j'annule parce que le destinataire a échoué de répondre à la question de sécurité |
+	y aura-t-il des frais considérant que c'est le destinataire qui l'a refusé en laissant le délai expirer;
+
+//chatbot_faq_114: Accepter ou refuser un Virement Interac
+public <chatbot_faq_114> =
+	je me demande pourquoi que mon transfère interac ne se transfère pas |
+	comment accepter automatiquement un versement |
+	comment accepter ou refuser un virement interac |
+	comment accepter un virement |
+	comment accepter un virement interac |
+	comment accepter un virement sur mon téléphone |
+	comment accepter un virements dautre personnes |
+	comment aller chercher un virement qu'une personne ma envoyé |
+	comment déposer dans mon compte un virement interac recu |
+	comment déposer un transfert bancaire |
+	comment déposer un transfert dans mon compte |
+	comment déposer un transfert interac |
+	comment déposer un virement interac dans mon compte |
+	comment dois-je procéder pour réfuser un virement |
+	comment encaisser un virement interac |
+	comment faire pour recevoir un transfert d'argent |
+	comment faire pour recevoir un virement interac par numéro de téléphone |
+	comment faire pour voir qu'une personne ma fait un virement |
+	comment faire quand une personne me transfert de l'argent pour l'encaiser ou déposer |
+	comment je fait pour accepter un virement vers mon compte personnel |
+	comment je récupère l'argent interac |
+	comment puis-je accepter un virement à partir de mon compte en ligne |
+	comment puis-je déposer les fonds d'un transfert bancaire |
+	comment recevoir des revirement interac ou bancaire |
+	comment recevoir le virement que quelqu'un m'a fait |
+	comment recevoir un transfert de fonds |
+	comment recevoir un versement interac |
+	comment recevoir un virement interac |
+	je reçois un montant avec interac comment |
+	où je vais pouvoir accepter une transaction interac |
+	quelqu'un veut m'envoyer des fonds comment les recevoir |
+	si je reçois un virement interac dans mon adresse courriel est-ce qu-il est déposée dans mon compte courant;
+
+//chatbot_faq_115: Payer une facture en ligne
+public <chatbot_faq_115> =
+	comment doit-on payer le renouvellement du permis de conduire | 
+	comment envoyer compte de taxe scolaire |
+	comment faire pour payer une facture |
+	comment faire un paiement |
+	comment faire un paiement de facture |
+	comment je paie une facture | 
+	comment je peux payer une facture |
+	comment payer hydro-québec |
+	comment payer hydro-québec via BNC |
+	comment payer mes factures en ligne |
+	comment payer une facture |
+	comment payer une facture en ligne |
+	comment payer une facture une fois que toutes les données sont entrées |
+	comment payer une nouvelle facture |
+	comment puis-je payer une facture |
+	comment régler une facture sur BNC |
+	est-ce qu'il y a un problème avec le site je ne peux pas faire de paiement de facture |
+	est-ce que je peux toujours payer des factures en ligne |
+	où dois-je aller pour payer une facture  |
+	où est-ce que je peux payer une facture |
+	où est-ce que je vois ma facture mastercard pour pouvoir la payer;
+
+//chatbot_faq_116: Ajouter un nouveau fournisseur pour payer une facture
+public <chatbot_faq_116> =
+	comment ça fonctionne l'ajout de facture |
+	comment ajouter saaq |
+	comment ajouter un fournisseur |
+	comment ajouter un nouveau fournisseur pour payer une facture |
+	comment enregistrer une facture |
+	comment faire pour ajouter capital one à ma liste de bénéficiaires |
+	comment inscrire une facture |
+	comment on ajoute un fournisseur |
+	comment payer une facture avec un nouveau fournisseur |
+	comment puis-je ajouter un fournisseur personnel |
+	comment enregistrer une nouvelle facture à payer |
+	est-ce possible d'ajouter l'unique assurances générales à mes fournisseurs pour effectuer un paiement |
+	pourquoi je peux pas entrer un fournisseur |
+	quand on fait un paiement post daté à un fournisseur est-ce que vous avez déjà le numéro de compte du fournisseur |
+	quand tu inscris un fournisseur pour faire des paiements est-ce que c'est l'adresse de la banque ou l'adresse du fournisseur |
+	comment ajouter un nouveau fournisseur dans mon système |
+	comment puis-je faire pour ajouter mon compte entreprise comme fournisseur dans mon compte personnel pour faire des virements |
+	est-ce que la liste des fournisseurs sur votre site est à jour;
+
+//chatbot_faq_121: Envoyer un rappel pour un virement en attente
+public <chatbot_faq_121> =
+	comment envoyer un rappel pour un virement en attente |
+	comment envoyer un rappel pour un virement interac déjà envoyé |
+	comment envoyer un rappel pour un virement que j'ai effectué |
+	comment faire pour envoyer le lien pour un virement interac |
+	comment rappeler à quelqu'un de prendre mon virement interac |
+	est-ce que j'ai un rappel de virements en cours |
+	je peux avoir un rappel pour mes virements |
+	je peux renvoyer un rappel pour un virement interac pas encore accepté;
+
+//chatbot_faq_122: Voir si mon destinataire a accepté mon virement
+public <chatbot_faq_122> =
+	allez-vous m'avertir lorsque mon virement interac va être accepté |
+	comment déterminer si le destinataire a reçu le virement |
+	comment je sais qu'un virement interac est bien reçu par la personne à qui je l'ai envoyé |
+	comment je sais qu'un virement interac est encaissé par le destinataire |
+	comment je sais si mon virement interac a été accepté |
+	comment savoir que mon virement a été accepté |
+	comment savoir si le virement interac que j'ai fait a bien été reçu |
+	comment savoir si le virement que j'ai envoyé a été accepté |
+	comment savoir si mon destinataire a accepté mon virement |
+	comment voir si une personne a accepté mon virement interac |
+	est-ce que je reçois une confirmation lorsque mon virement interac est reçu par le destinataire |
+	est-ce que je suis averti quand un destinataire encaisse mon virement interac |
+	j'ai envoyé un interac est-ce que je recois une notification quand l'argent a été accepté |
+	j'aimerais savoir si le virement que j'ai effectué hier a été accepté |
+	je veux savoir si mon virement à mon ami est arrivé |
+	mon virement as-tu marché |
+	mon virement est-il passé |
+	où est-ce que je peux voir si mon interac a été accepté |
+	puis-je savoir si mon virement interac a été réclamé par le destinataire |
+	si j'envoie un virement interac comment je sais qu'il est reçu |
+	suis-je averti si mon virement interac est refusé;
+
+//chatbot_faq_124: Les frais de virement
+public <chatbot_faq_124> =
+	c'est combien si la personne est avec une autre institution financière |
+	combien ça coûte de faire un virement interac |
+	est-ce que je dois payer pour un virement |
+	est-ce que le virement interac est gratis |
+	pourquoi ai-je payé des frais transactionnels si j'ai un forfait transactions illimités |
+	pourquoi jai un frais de 2,00 $ pour interac |
+	pourquoi je paie des frais dadministratioin interac |
+	pourquoi le frais de transaction de 1,50 $ dans mon compte de banque |
+	pourquoi le virement interact est payant avec la BNC |
+	que sont les frais fixes |
+	si je fais un virement sur un compte desjardins il y aura des frais |
+	si je suis employé à la BNC est-ce que les virements interac sont payants |
+	est-ce vous chargez de frais pour un virement interac |
+	y a-t-il toujours des frais sur virement interac |
+	y a-t-il des frais associés au service du transfert électronique |
+	y a-t-il des frais pour faire un virement |
+	y a-t-il frais frais pour un virement interac |
+	y a-t-il un frais pour recevoir un virement interac;
+
+//chatbot_faq_127: Modifier ou supprimer une facture en ligne
+public <chatbot_faq_127> =
+	comment annuler un paiement de facture anticipe |
+	comment arrêter un paiement mensuel à hydro-québec |
+	comment changer la date pour un paiement céduler à une autre date |
+	comment enlever les factures inutiles |
+	comment enlever une compagnie dans mes factures à payer il y a seulement ajout |
+	comment enlever une facture |
+	comment enlever une facture qui est déjà inscrite sur mon site de la BNC | 
+	comment enlever une mauvaise facture de ma liste de paiement à venir |
+	comment fait-on pour modifier un numéro de carte de crédit déjà ajouté dans mes factures |
+	comment modifier  un paiement deja prévu |
+	comment modifier le montant d'un prélèvement automatique |
+	comment modifier ou supprimer une facture en ligne |
+	comment modifier un paiement postdaté en ligne |
+	comment modifier une facture |
+	comment modifier une facture en ligne |
+	comment retirer une facture |
+	comment retirer une facture de ma liste de factures |
+	comment voir les post daté |
+	où dois-je voir pour les paiements post datés |
+	que faire pour annuler une facture définitivement;
+
+//chatbot_faq_130: Modifier une facture déjà payée
+public <chatbot_faq_130> =
+	comment annuler le paiement le plus récent qui apparaît dans historique de paiement |
+	comment annuler ou corriger un montant de de facture payer |
+	comment annuler un paiement |
+	comment annuler un paiement de facture effectuer par erreur |
+	comment annuler un paiement de facture erroné |
+	comment annuler un paiement de facture que j'ai fait aujourd'hui | 
+	comment annuler un paiement fait a la saaq avec pas le bon numéro d'avis |
+	comment annuler un payment déjà fait |
+	comment canceller un achat sur ma carte de crédit |
+	comment canceller un paiement que je viens d'effectué |
+	comment faire pour corriger un montant pour une facture que j'ai payée en ligne |
+	comment j'annule une facture déjà payée |
+	comment puis-je canceller le paiement d'une facture que je viens de faire ou changer le montant |
+	est-ce possible d'annuler un paiement que je viens de faire |
+	est-ce possible de canceller un paiement de factures qui vient tout juste d'être fait |
+	est-ce que je peux annuler un paiement de facture qui a été fait |
+	est-ce que je peux annuler un paiement que j'ai fait ce matin |
+	est-ce que je peux canceller l'achat de cartes cadeaux |
+	est-ce que je peux renverser un paiement de facture |
+	qu'arrive-t-il si je me trompe lors d'un paiement de facture |
+	qu'est-ce que je fais si j'ai pas payé la bonne facture |
+	qu'est-ce que je fais si j'ai pas payé le bon montant |
+	quoi faire si j'ai payé la mauvaise facture en ligne;
+
+//chatbot_faq_137: Voir le détail de ma carte de crédit en ligne
+public <chatbot_faq_137> =
+	comment est-ce que je peux voir mes dernières dépenses sur ma carte de crédit |
+	comment je vois les transactions de carte de crédit |
+	comment je vois mes points |
+	comment puis-je voir mon relevé de compte de ma carte de crédit |
+	comment puis-je voir mes transactions en ligne pour ma carte de crédit |
+	comment savoir mes points accumulés |
+	comment voir mes dernières transactions de ma carte de crédit |
+	comment voir mes transaction sur ma carte de crédit |
+	comment voir quelles transactions ont été faites avec ma mastercard |
+	est-ce que je peux voir l'historiques de mes transactions mastercard |
+	j'ai combien de points mastercard | 
+	où est-ce que je peux voir mes points accumulés avec ma carte de crédit |
+	où se trouve le détail de ma carte de crédit en ligne |
+	où trouver les informations sur ma carte de crédit |
+	puis-je avoir l'heure d'une transaction sur ma carte de crédit |
+	quand dois-je payer ma carte de crédit |
+	quelle est ma date de facturation;
+
+//chatbot_faq_142: Utiliser les points de ma carte de crédit
+public <chatbot_faq_142> =
+	ai-je des points avec ma carte |
+	combien de points de ma carte de credit |
+	combien puis-je avoir en argent pour remboursement de voyage pour 177419 points |
+	comment échanger les points de ma carte de crédit |
+	comment échanger mes points pour des cadeaux |
+	comment convertir mes points mastercard |
+	comment faire pour récupérer en argent les sommes des points accumulé sur ma carte de crédit |
+	comment j'achète avec mes points de récompense |
+	comment je fais pour payer ma carte mastercard avec mes points |
+	comment je fais pour voir mes points mastercard |
+	comment on fait pour changer nos points sur les cartes de crédit |
+	comment payé le solde de ma carte de crédit avec les points |
+	comment puis-je rembourser ma carte de crédit avec mes points récompenses |
+	comment transférer mes point de mastercard |
+	comment utiliser les points de ma carte de crédit |
+	est-ce encore possible d'utiliser les points de la carte de crédit pour me procurer des REER |
+	où dépenser mes points |
+	où est ce que j'accède au programme de récompense de ma carte de credit | 
+	où est-ce que je peux trouver la boutique pour commander avec mes points mastercard |
+	où je vais pour boutique récompenses à la carte |
+	où retrouve-t-on l'icone récompense |
+	où sont mes points récompense |
+	où trouver les récompenses mastercard |
+	puis-je me servir de mes points remise pour payer ma mastercard |
+	quoi faire avec mes points;
+
+//chatbot_faq_143: Utiliser la remise en argent de carte Echo
+public <chatbot_faq_143> =
+	comment utiliser la remise en argent de carte echo |
+	j'ai une carte echo comment puis-je obtenir mon cashback |
+	c'est où pour avoir mon argent remise echo;
+
+//chatbot_faq_144: Voir la limite de ma carte de débit
+public <chatbot_faq_144> =
+	combien on peu retirer avec carte guichet |
+	comment savoir mes limites quotidiennes |
+	comment vérifier la limite quotidienne de la carte de débit |
+	comment voir la limite de ma carte débit |
+	est-ce que j'ai une limite de montant par paiement ou par jour avec un paiement débit par carte | 
+	est-ce qu'il y a un montant maximum pour un paiement effectué par une carte débit |
+	est-ce qu'il y a un montant maximun pour le retrait au guichet |
+	je me demandais comment savoir ma limite de retrait quotidienne |
+	la limite de retrait et la limite d'envoi c'est la même chose |
+	où je peux trouver la limite de ma carte de débit en ligne |
+	où je peux trouver ma limite d'achat quotidienne |
+	pourquoi ma carte débit affiche limite excédée |
+	quel est le maximum que je peut retirer avec ma carte débit dans une journée |
+	quel est ma limite d'achat avec ma carte de débits |
+	quel est mon montant de retrait quotidien |
+	quelle est la limite d'achat quotidienne de ma carte débit |
+	quelle est la limite de ma carte banquaire |
+	quelle est la limite maximum d'achat avec ma carte client en une journée | 
+	quelle est la limite quotidienne permise avec la carte débit |
+	quelle est ma limite au guichet |
+	quelle est ma limite de retrait dans un guichet automatique |
+	quelle la limite quotidienne de ma carte de débit;
+
+//chatbot_faq_160: Retirer des fonds de mon CPG en ligne
+public <chatbot_faq_160> =
+	c'est-tu possible de prendre les fonds de mon CPG |
+	comment faire pour prendre l'argent dans mon CPG |
+	comment on fait pour racheter un CPG rachetable |
+	comment retirer des fonds de mon CPG en ligne |
+	est-ce que je peux retirer l'argent du CPG non enregistré avant maturité |
+	je peux tu retirer l'argent sur mon CPG |
+	on peut-tu prendre les fonds sur mon CPG |
+	si je veux faire un rachat partiel d'un CPG est-ce que je peux le faire via telnat;
+
+//chatbot_faq_190: Voir les détails d'une transaction
+public <chatbot_faq_190> =
+	comment ajouter des commentaires dans le détail de la transaction |
+	comment faire pour voir mes transactions sur ma carte de crédit au cours des 6 et 12 derniers mois |
+	comment faire pour voir qui a fait la transation |
+	comment je fait pour aller voir la raison d un paiment passer dans mon compte |
+	comment je peux voir dans quel magasin j'ai fait une transaction |
+	comment je peux voir mes dernières transaction en direct |
+	comment puis-je savoir mes transaction en direct de ma carte de crédit mastercard |
+	comment voir les informations d'une transaction |
+	je me demandais s'il était possible de voir nos transactions de carte de crédit sur l'application de la banque nationale |
+	puis-je avoir plus de détails sur un prélèvement qu'il y a eu dans mon compte|
+	qu'est-ce que la transaction mobile québec |
+	quels sont les détails d'une transaction et comment faire pour les voir en ligne;
+
+//chatbot_faq_191: Chercher une transaction précise en ligne
+public <chatbot_faq_191> =
+	comment puis-je trouver une transaction précise |
+	comment puis-je vérifier mes transactions précédentes |
+	comment rechercher une transaction précise en ligne |
+	est-ce qu'il est possible de chercher pour de transactions |
+	est-ce qu'il y a des filtres à appliquer sur la liste de transaction pour en trouver une en particulier |
+	est-ce qu'il y a une barre de recherche pour explorer mes transactions passées |
+	est-ce qu'il y a une façon d'obtenir de voir un paiment que j'ai fait dans le passé |
+	est-ce qu'il y a une façon de chercher une transaction que j'ai faite |
+	est-ce qu'il y a une façon pour voir une transaction que j'ai fait |
+	est-ce qu'il y a une option  de chercher parmi mes transactions |
+	est-ce que je peux regarder une transaction spécifique |
+	où je pourrais trouver une transaction passée |
+	où trouver une transaction que j'ai déjà faite |
+	ou est situé le mot transaction sans attente produit et services |
+	ou je peux trouver des details sur un paiement qui a déjà passé;
+
+//chatbot_faq_192: En savoir plus sur une transaction douteuse
+public <chatbot_faq_192> =
+	comment annuler des transactions sur mastercard |
+	comment arrêter une transaction sur ma carte de credit |
+	comment faire pour savoir dans le compte chèque à qui un paiement a été fait | 
+	comment obtenir plus d'informations sur une transaction faite sur ma carte mastercard qui me semble erronée |
+	comment puis faire une annulation de prix sur ma carte de credit |
+	je detecte une operation bizarre sur mon relevé serait-il possible de verifier |
+	je me questionne sur une dépense sur ma mastercard que je n'ai pas fait comment savoir si c'est une fraude |
+	je ne reconnais pas une transaction dans mon relevé qu'est-ce que je dois faire | 
+	pourquoi j'ai des frais de 800 $ |
+	pourquoi je suis à moins 320 $ dans mon compte |
+	pourriez-vous m'expliquer quel est ce montant du 15 mai prélevé dans ma marge de crédit hypothécaire  |
+	pouvez-vous me dire à qui j'ai fait un paiement interactif de 500 $ ce matin |
+	pouvez-vous me dire quelle est cette dépense | 
+	qu'elle est cette transaction |
+	quel est cette transaction libellée marchandises autorisées |
+	quelle est cette transaction de 25,56 $ ssq assurance vie |
+	quelqu'un fait des achats autre que moi comment faire cesser |
+	quoi faire si je vois une transaction que je ne reconnais pas dans mon compte en ligne |
+	si je veux contester un achat que j'aie fait hier comment je procède |
+	une transaction a été portée sur ma carte de crédit sans mon autorisation que faire pour me rembourser;
+
+//chatbot_faq_212: Virement Interac non réclamé
+public <chatbot_faq_212> =
+	comment récupérer mon virement |
+	comment affectuer le dépôt des fonds d'un virement interac qui n'a pas été encaissé |
+	comment annuler un virement interac non réclamé |
+	comment faire pour récupérer un virement interac expiré et redéposez les fonds dans mon compte |
+	comment faire pour redéposer des fonds lorsqu'un transfert bancaire à été annulée  |
+	comment faire pour redéposez les fonds dans votre compte BNC d'un virement interac non réclamé |
+	comment je dois faire pour redéposer les fonds d'un virement qui est expiré |
+	comment puis-je récupérer mon virement fait a une adresse invalide |
+	comment réclamer les fonds envoyer par interac |
+	comment récupérer des fonds non acceptés avec le numéro de référence reçu par courriel | 
+	comment récupérer un montant envoyer et non réclamé |
+	comment récupérer un montant qui n'a pas été accepté par virement |
+	comment recevoir l'argent de la transaction qui na pas fonctionnée |
+	comment recevoir un transfert interac refusé  |
+	comment reclamer les fonds qui n'ont été réclamés |
+	comment recuperer le fond non-réclamer par virement interac |
+	comment redéposer un transfert intéract qui a été annulé |
+	comment redéposer mes fonds interac |
+	comment redéposer un virement interac |
+	comment redéposer un virement interac qui n'as pas été déposé |
+	comment redéposez des fonds non reclamés dans votre compte banque nationale |
+	comment redeposer des fonds dans mon compte |
+	comment remettre les fonds dans mon compte sur un paiement interac pas accepté |
+	comment reprendre l'argent qui n'est pas parvenu au destinataire |
+	comment reprendre un virement refusé |
+	est-ce que un virement qui tombe échu se redepose automatiquement dans notre compte |
+	pourquoi mon virement interact est mis en attente |
+	que faire avec envois en attente refusés;
+
+//chatbot_faq_217: Acheter des fonds communs de placement avec BNI
+public <chatbot_faq_217> =
+	c'est quoi que je peux acheter dans mes fonds |
+	je peux-tu voir la liste des fonds disponibles à l'achat |
+	quels sont les fond disponible a l'achat |
+	peux-tu afficher tous les fonds que je peux acheter |
+	comment investir dans portefeuille bni |
+	comment acheter des fonds communs de placement |
+	comment acheter des fonds |
+	est-ce que je peux acheter de fonds en ligne;
+
+//chatbot_faq_229: Vendre des fonds de mon REER
+public <chatbot_faq_229> =
+	comment je fais pour prendre mon REER |
+	est-ce possible de faire un transfère de mon compte REER pour payer ma mastercard |
+	pourquoi je ne peux pas vendre les fonds de mon REER |
+	comment vendre les fonds de mon REER |
+	je peux-tu vendre les fonds de mon REER |
+	c'est-tu possible de vendre les fonds de mon REER;
+
+//chatbot_faq_230: Vendre des fonds de mon CRI
+public <chatbot_faq_230> =
+	est-ce que je peux faire des transactions sur les fonds que je détiens dans mon CRI |
+	comment effectuer une vente dans mon CRI |
+	comment faire des transactions dans un CRI |
+	est-ce que c'est possible d'échanger des fonds dans mon CRI |
+	bonjour est-ce qu'il est possible de vendre des parts détenues dans un CRI |
+	pourquoi je ne peux pas vendre les fonds de mon CRI |
+	comment vendre les fonds de mon CRI |
+	je peux-tu vendre les fonds de mon CRI |
+	c'est-tu possible de vendre les fonds de mon CRI;
+
+//chatbot_faq_231: Acheter des fonds de mon FERR/FRV
+public <chatbot_faq_231> =
+	c'est-tu possible d'acheter des fonds dans mon FRV | 
+	c'est-tu possible d'acheter les fonds de mon FERR |
+	comment acheter les fonds de mon FERR |
+	comment acheter plus des fonds de mon FRV |
+	je peux-tu acheter les fonds à partir de de mon FERR |
+	je peux-tu acheter les fonds à partir de mon FRV |
+	pourquoi je ne peux pas acheter de fonds dans mon FERR |
+	pourquoi je ne peux pas acheter les fonds détenus dans mon FRV |
+	pourquoi je ne peux pas faire d'achat de fonds dans mon compte FERR |
+	pourquoi je ne peux pas faire d'achats des fonds de mon FRV;
+
+//chatbot_faq_273: Mastercard – Assurance paiement carte de crédit
+public <chatbot_faq_273> =
+	avez-vous l'assurance paiement mastecard |
+	c'est quoi l'assurance paiement mastercard |
+	est-ce qu'il y a une façon de s'assurer que mes paiments mastercard sont faits même si je tombe malade |
+	est-ce que je peux assurer les paiements sur ma mastercard |
+	est-ce que je peux avoir une assurance pour les paiements de ma carte de crédit |
+	est-ce que mon assurance paiement carte de crédit mastercard est applicable |
+	offrez-vous une assurance paiement pour les mastercards;
+
+//chatbot_faq_274: Payer ma carte de crédit
+public <chatbot_faq_274> =
+	combien de temps ça prend pour largent rentre dans la carte de crédit quand on paye le solde |
+	combien de temps pour les paiements de carte de crédits |
+	combien de temps prend un paiement de carte de crédit |
+	comment faire paiement sur marge de crédit |
+	comment faire pour payer ma carte de crédit en ligne via mon compte cheque |
+	comment je fais un paiement sur ma carte de crédit |
+	comment on peut transférer le montant de mon compte chèque dans la carte de crédit |
+	comment payer le solde de la carte de crédit |
+	comment payer le solde de ma carte de crédit |
+	comment payer ma carte de crédit |
+	comment payer ma carte mastercard |
+	comment payer ma mastercard |
+	comment payer une carte crédit mastercard |
+	comment payer une facture de carte crédit |
+	comment recharger sa carte de crédit |
+	comment tranferer de lagent de mon compte cheque vers ma carte mastercard |
+	comment transférer de mon compte chèque a carte de crédit instantanément |
+	comment transferer de l'argent compte cheque a ma mastercard |
+	comment trouve t'on le numéro de compte d une carte de crédit |
+	comment virer de l'argent sur applicationvmobile sur mastercard macrédit |
+	j'aimerais savoir si vous pouvez connecter mon compte cheque a ma carte de crédit afin que je puisse payer par virement |
+	peux-tu m'aider à payer ma carte de crédit |
+	quel fournisseur je dois choisir pour payer ma carte master card platine  |
+	quelle est la différence entre payer une facture de carte de crédit et transférer de l'argent sur ma carte de crédit;
+
+//chatbot_faq_275: Dépôt direct – Suivi de ma demande
+public <chatbot_faq_275> = 
+	est-ce que mon dépôt direct de l'ARC est bien établi pour ce compte |
+	suis-je inscrite pour le dépôt direct de la subvention d'urgence de l'ARC |
+	suis-je inscrit pour le dépôt direct de la subvention d'urgence de l'agence de revenue canada |
+	où trouver mon numéro de confirmation d'adhésion au dépôt direct de l'ARC |
+	où je peux trouver mon numéro de confirmation d'adhésion au dépôt direct de l'agence de revenue canada |
+	est-ce que ma demande d'adhésion au dépôt direct a fonctionné |
+	la BNC a-t-elle la confirmation de mon adhésion au dépôt direct de l'agence de revenue canada;
+
+//chatbot_faq_306: À propos du virement international
+public <chatbot_faq_306> =
+	c'est quoi un virement international en ligne | 
+	dans quels pays est-ce que je peux envoyer de l'argent |
+	est-ce possible de faire un virement au liechtenstein |
+	où puis-je envoyer de l'argent |
+	pourquoi il n'y a pas le pays où je veux envoyer de l'argent |
+	qu'est-ce qu'un virement international en ligne |
+	qu'est-ce que le transfert international |
+	quel sont les frais de virement international |
+	un virement international en ligne c'est quoi |
+	vers quel pays est-ce que je peux faire virement international en ligne;
+
+//chatbot_faq_309: Faire un virement international
+public <chatbot_faq_309> =
+	c'est où qu'il faut cliquer pour faire un virement international sur l'app |
+	c'est où sur l'appli que je peux faire un virement international |
+	c'est possible d'envoyer de l'argent à l'international avec l'application |
+	c'est quoi les étapes pour virer de l'argent vers un autre pays avec téléphone intelligent |
+	comment envoyer de l'argent à l'étranger  |
+	comment envoyer de l'argent dans mon pays d'origine |
+	comment envoyer de l'argent dans une banque aux usa |
+	comment envoyer des fonds au portugal avec l'application |
+	comment est-ce possible de faire un virement international en ce moment |
+	comment faire faire un virement international dans l'application mobile | 
+	comment faire un transfert à l'international |
+	comment faire un transfert international |
+	comment faire un virement à l'étranger à partir de l'app |
+	comment faire un virement à l'international |
+	comment faire un virement du canada vers inde  |
+	comment faire un virement en france |
+	comment faire un virement interac sur un compte international | 
+	comment faire un virement international |
+	comment faire une transaction internationale |
+	comment faire virement international sur mon compte banque en ligne |
+	comment fonctionnent les virements internationaux |
+	comment je fais pour envoyer de l'argent à l'étranger |
+	comment je peux envoyer l'argent de façon internationale |
+	comment m'inscrire à virements internationaux |
+	comment peux-je faire de televirement à la zone euro |
+	comment puis-je faire un transfer international |
+	comment puis-je faire un virement à l'international |
+	comment puis-je transferer de l'argent aux états unis |
+	comment transférer de l'argent à l'international |
+	est-ce qu'il est possible de faire des virements à l'international à partir de mon compte |
+	est-ce qu'on peut faire des virements à l'étranger en ligne |
+	est-ce que je peux faire un transfert international |
+	est possible de virer de l'argent d'un compte au canada à un compte en europe |
+	est-ce possible de faire un transfert de fonds internationale wire transfer via le site web BNC |
+	est-ce possible de faire un virement à l'international |
+	est-ce que c'est possible de virer des sous aux états-unis sur l'app |
+	est-ce que je peux envoyer de l'argent par interac à l'international |
+	est-ce que je peux faire un transfert de fonds à quelqu'un qui vit dans un autre pays avec mon cell |
+	est-ce que je peux faire un transfert interact vers la france |
+	est-ce que je peux faire un virement international |
+	est-ce que je peux faire un virement international a partir de mon compte |
+	est-ce que je peux faire un virement international dans l'application mobile |
+	est-ce que je peux faire un virement vers l'espagne | 
+	est-ce que je peux faire une virement international à partir de mon cell |
+	est-ce que je peux transférer de l'argent au compte de ma cousine aux usa ou lui envoyer par interac de l'argent via son courriel |
+	est-il possible de faire des virements à l'international |
+	est-il possible de faire un télévirement international par internet |
+	est-il possible de faire un transfert international en ligne |
+	j'aimerais avoir des renseignements sur un envoi d'argent au royaume uni |
+	je fais comment pour virer de l'argent à l'étranger | 
+	je ne trouve pas comment envoyé un virement à l'étranger avec mon cellulaire |
+	puis-je envoyer de l'argent en devise étrangère suédoise par exemple |
+	quelle est la procédure pour envoyer de l'argent en europe sur l'application banque nationale |
+	comment faire un transfert d'argent vers l'étranger;
+
+//chatbot_faq_327: Retirer de l'argent de mon CELI
+public <chatbot_faq_327> =
+	comment enlever de l'argent du CELI pour le mettre au compte chèque |
+	comment faire pour retirer un montant d'argent de mon compte CELI |
+	comment faire pour transférer un montant de mon CELI dans ma marge hypothécaire tout-en-un |
+	comment faire un transfere d'argent de mon CELI dans mon compte |
+	comment fermer mon CELI |
+	comment je peux retirer de l'argent depuis mon compte CELI |
+	comment puis je transféré l'argent de mon compte CELI a mon compte courant |
+	comment puis-je transférer de l'argent de mon CELI vers mon compte courant |
+	comment retirer de l'argent de mon CELI |
+	comment retirer de l'argent de mon compte CELI |
+	comment retirer un CELI |
+	comment télécharger de l'argent de mon compte CELI a mon compte chèques |
+	comment tansfert de largent de conpte CELI a mon comte chèque |
+	comment transférer argent du CELI a un autre compte |
+	comment transférer de l'argent de mon CELI dans un autre compte |
+	comment transferer de l'argent de mon compte CELI a mon compte chèque |
+	dois-je parler avec quelqu'un pour retirer un CELI |
+	est-ce que je peux trasnférer de l'argent de mon CELI vers mon REER |
+	est-ce que sur le portail il est possible de transférer de l'argent de mon CELI vers mon conte chèque |
+	j'aimerais sortir des celli pour un achat comment faire |
+	puis-je faire un virement de mon CELI à mon compte courant;
+
+//chatbot_faq_332: Débits préautorisés sur une carte de crédit bloquée
+public <chatbot_faq_332> =
+	est-ce que les paiements préautorisés passent sur ma carte de crédit si elle est bloquée | 
+	j'ai bloquée ma carte de crédit qu'est-ce qui se passe avec les débits préautorisés | 
+	ma facture à venir est censé passer sur ma mastercard qui est maintenant bloquée est-ce que ça va marcher | 
+	si je débloque ma carte de crédit est-ce que les paiements programmés vont passer à nouveau | 
+	qu'est-ce qui se passe avec les paiements programmées qui doivent sur ma carte de crédit que j'ai bloquée | 
+	ma carte de crédit a été bloquée pour fraude est-ce que les débits préautorisés vont passer pareil;
+
+//chatbot_faq_337: Impossible d'ajouter un destinataire
+public <chatbot_faq_337> =
+	mon ajout de destinataire est verrouillé pourquoi |
+	l'ajout de destinataires pour les virements interac est bloqué |
+	mon accès pour ajouter un destinataire virement interac est bloqué pouvez-vous m'aider |
+	comment activer la section ajout un destinataire |
+	comment réactiver l'ajout de destinataire |
+	comment restorer l'ajout de destinataire |
+	est-ce que je dois absolument vous appeler pour réactiver l'option d'ajout de destinataire ou si on peut le faire autrement |
+	l'option pour ajouter un destinataire semble bloquée comment la débloquer |
+	ma fonction ajouter un destinaire est désactivée comment puis-je la réactiver |
+	pourquoi l'option ajouter un destinataire est bloqué |
+	pourquoi mon ajoût destinataire est verrouillé |
+	pourquoi mon option d'ajouter un destinataire est bloqué;
+
+//chatbot_faq_361: Remplacer ma carte de crédit bloquée 
+public <chatbot_faq_361> =
+	comment débloquer ma mastercard pour pouvoir faire des achats |
+	comment faire une demande pour un remplacement |
+	comment fait-on pour avoir une nouvelle carte mastercard elle est expirée |
+	comment puis-je demander une nouvelle carte de crédit sans la bloquer |
+	comment puis-je remplacer ma carte de crédit et ma carte bancaire elles sont endommagé et les puces ne fonctionnent plus |
+	comment réparer ma carte de crédit mastercard |
+	comment réparer ma carte mastercard |
+	est-ce possible de recevoir une nouvelle carte |
+	est-ce que ma carte est bloquée |
+	ma carte de crédit a fondue est-ce que je peut la remplacer et garder le même numéro |
+	ma carte de crédit mastercard est endomagé est-ce que je peut garder le même numéro |
+	pourquoi ma carte de crédit est bloquée en ligne;
+
+//chatbot_faq_372: Prendre un rendez-vous
+public <chatbot_faq_372> =
+	comment prendre rendez-vous avec un conseiller |
+	comment prendre un rendez-vous à ma succursale |
+	comment prendre un rendez-vous |
+	est-possible que quelqu'un me rappelle |
+	est-que quelqu'un peut m'appeler pour discuter verbalement puisque l'assistance virtuel a ses limites |
+	est-il possible de prendre rendez-vous avec un conseiller au lieu d'attendre au téléphone |
+	peux-tu m'appeler |
+	pouvez-vous demander à quelqu'un de m'appeler |
+	pouvez-vous m'appeler |
+	quelqu'un peut il me rappeller |
+	quelqu'un peut me rappeler;
+
+//chatbot_faq_398: Taux des marges de crédit
+public <chatbot_faq_398> =
+	comment puis-je connaître mon taux d'intérêt sur mon tout-en-un |
+	est-ce qu'il serait possible de connaître le taux d'intérêt de ma marge |
+	marge de crédit hypothécaire quel est le taux |
+	marge de crédit hypothécaire quel est mon taux d intérêt |
+	où trouver le taux de ma marge personnelle |
+	quel est le taux actuel de ma marge de crédit hypotéquaire |
+	quel est le taux d'intérêt de ma marge |
+	quel est le taux d'intérêt de ma marge |
+	quel est le taux d'intérêt en vigueur sur ma marge de crédit |
+	quel est le taux d'intérêt sur la marge de crédit |
+	quel est le taux de ma marge de crédit;
+
+//chatbot_faq_401: Taux de change des devises
+public <chatbot_faq_401> =
+	combien est le taux de change us |
+	comment trouver le taux de change |
+	où sont les taux de change de la banque sur son site web |
+	où trouver le taux de change devises |
+	ou puis-je trouver les taux de change pour acheter des pesos mexicain |
+	quel est le taux de change |
+	quel est le taux de change actuel pour euro |
+	quel est le taux de change d'argent américain en canadien |
+	quel est le taux de change des devises en ligne |
+	quel est le taux de change en ce moment |
+	quel est le taux de change pour convertir argent canadien en argent us |
+	quels sont les taux de change étrangers de la BNC actuellement;
+
+//chatbot_faq_402: Taux d'intérêt d'un CPG
+public <chatbot_faq_402> =
+	à quel endroit voit-on les taux sur la tablette pour les CPG |
+	placer un CPG à quel taux |
+	quel est le taux d'intérêt pour un CPG aujourd'hui |
+	quel est le taux pour CPG en ce moment court et long terme |
+	quel sont les taux de placements pour les CPG |
+	un placement CPG un an à quel taux;
+
+//chatbot_faq_405: Annuler le renouvellement de mon CPG
+public <chatbot_faq_405> =
+	je ne veux plus renouveller mon CPG comment faire |
+	je fais comment pour annuler le renouvellement de mon CPG |
+	mon CPG a été renouvelé automatiquement comment puis-je l'annuler;
+
+//chatbot_faq_406: Les cartes de crédit Banque Nationale
+public <chatbot_faq_406> =
+	à quoi sert une carte de crédit |
+	avez-vous des cartes de crédit avec remise |
+	c'est quoi la différence entre la carte allure et la macrédit |
+	c'est quoi les frais annuels pour vos mastercards |
+	comment ça marche la carte de crédit |
+	comment ca fonctionne une carte de crédit |
+	comment utiliser ma carte de crédit |
+	est-ce que c'est la macredit qui a le plus faible taux d'intérêt |
+	est-ce que certaines de vos cartes de crédit n'ont pas de frais annuels |
+	j'aimerais qu'on m'explique le fonctionnement d'une carte de crédit |
+	je devrais prendre quelle carte de crédit |
+	je nai jamais eu de carte de crédit et jaimerais savoir comment ça marche |
+	je ne sais pas quelle carte de crédit choisir pouvez-vous m'aider |
+	la carte de crédit je l'utilise comment |
+	la carte world elite done quel avantage |
+	laquelle de vos cartes de crédit à le plus petit taux d'intérêt |
+	laquelle de vos cartes de crédit est la plus avantageuse |
+	lesquelles de vos cartes de crédit offrent une remise |
+	peux-tu m'aider à choisir une carte de crédit |
+	qu'est-ce que la world elite a de plus que la mastercard world |
+	quelle carte de crédit serait la plus avantageuse pour moi |
+	quelle cartes de crédit vous avez |
+	quelle mastercard a pas de frais annuels |
+	quelles cartes de crédit proposez vous |
+	quelles sont les spécificités de la carte allure |
+	quels sont vos choix de mastercard |
+	question sur les difference entre les carte de crédit |
+	si je paye avec ma carte de crédit est-ce que je fois la rembourser tout de suite |
+	si je rembourse ma carte de crédit au complet est-ce que je dois payer des intérêts pareil |
+	une carte de crédit ça sert à quoi;
+
+//chatbot_faq_407: Renouveler mon CPG
+public <chatbot_faq_407> =
+	comment renouveller un CPG dans un REER |
+	est-il possible de renouveler un CPG en ligne;
+
+//chatbot_faq_408: Frais de marge de crédit
+public <chatbot_faq_408> =
+	à part les intérêts est-ce qu'il y a des frais à payer sur une marge tout-en-un |
+	c'est quoi les frais à payer pour une marge de crédit personnelle |
+	c'est quoi les frais d'une marge de crédit |
+	c'est quoi les frais mensuels pour une marge manoeuvre personnelle |
+	c'est quoi les frais pour avoir une marge de crédit |
+	est-ce qu'il faut payer à chaque mois pour garder une marge de crédit ouverte |
+	est-ce qu'il y a des frais de gestion pour une marge de crédit |
+	est-ce qu'il y a des frais juste pour avoir un compte de marge de crédit |
+	est-ce qu'on doit payer des frais de gestion lorsqu'on a une marge de crédit |
+	est-ce que c'est normal d'avoir des frais mensuels de 7,95 $ sur ma marge de crédit tout-en-un |
+	est-ce que j'ai des frais mensuels à payer pour ma marge de crédit |
+	j'ai des frais à chaque mois sur ma marge de crédit hypothécaire pourquoi |
+	j'ai une ligne de crédit est-ce que si je ne l'utilise pas je dois pareil payer |
+	j'ai une marge de crédit tout en un c'est normal que je paye des frais à chaque mois |
+	j'aimerais avoir de l'information sur les frais associés à ma marge manoeuvre personnelle |
+	pourquoi j'ai un frais à chaque mois sur ma marge de crédit alors que je l'utilise pas |
+	pourquoi ma marge de crédit hypothécaire me coute des frais à chaque mois |
+	quels sont les différents frais reliés à une marge de crédit |
+	quels sont les frais associés à une marge de crédit personnelle |
+	y a-t-il des frais de gestion sur les marge de crédit |
+	y a-t-il des frais à payer à chaque mois pour vos marges de crédit;
+
+//chatbot_faq_409: Connaître les frais de mon compte
+public <chatbot_faq_409> =
+	à quoi correspond frais de transactions excedentaires |
+	c'est quoi des frais de transactions excedentaires |
+	cest quoi les frais transactions excédentaires |
+	combien ça coute les frais de comptes chez BNC |
+	combien de transactions interac peut-on faire par mois sans avoir à payer de frais d'administration |
+	combien doit être le montant du solde banque pour ne pas avoir de frais bancaire |
+	combien je dois payer pour les frais de compte |
+	comment changer mon nombre de transaction par mois pour pas avoir de frais |
+	comment connaitre les frais associés à mon compte |
+	comment je fais pour avoir plus d'informations sur une charge |
+	comment réduire les frais fixes |
+	depuis quand je dois payer des frais fixe |
+	est ce que j'ai des frais bancaires  |
+	est-ce possible de diminuer les frais fixes d'administration sur mon compte soit 5,95 $ |
+	expliquez les frais fixes |
+	frais de transaction c'est quoi |
+	frais inhabituel 11 janvier pourquoi |
+	j ai des frais de 23,13 $ chargé a mon compte le 24 decembre effectué par un numero finnissant par 2566 | 
+	j'ai un frais de 45 $ dans mes transactions quel est ce frais |
+	j'ai un frais que je sais pas pourquoi dans mon compte du 13 janvier 2022 de 1,50 $ |
+	j'aimerais savoir ce quoi le 114 $ qui la banque a débité de mon compte |
+	j'aimerais savoir pour quelle raison j'ai des frais fixes de 12,95 $ à mon compte alors qu'il n'y en avait pas avant |
+	j'aimerais savoir pourquoi on me charge certains mois 2 fois le 2,50 $ de frais et d'autres mois 1 fois 2,50 $  |
+	jaimerai savoir pourquoi jai des frais de transaction excedentaire de 23,75 $ |
+	je me demande encore pourquoi j'ai des frais 7,95 $ le 8 février dans mon comptes |
+	je ne comprends pas pourquoi j'ai des frais de 7,50 $ dans le compte |
+	je souhaite savoir pourquoi j'ai des frais fixes de 9,95 $ dans mon compte |
+	je veux savoir c'est quoi un frais fixes de 5,95 $ |
+	je veux savoir pourquoi j'ai eux des frais de 2,50 $ dans mon compte |
+	je voudrais à quoi correspond les frais de 1,50 $ chargé à mon compte |
+	le 16 avril j ai des frais fixes pourquoi |
+	le 26 août j'ai 3,00 $ de frais bancaires pourquoi |
+	les frais fixe d 21$ correspondent à quoi exactement |
+	mon compte ça coute combien |
+	pouquoi ais-je des frais fixe de 15,95 $ alors que mon solde est de plus de 1000 $ |
+	pour mes comptes bancaires combien je dois payer |
+	pour quelle raison ai-je des frais bancaires de 1,50 $ |
+	pour quoi vous avez fait le 7 decembre un retrait 23,95 $ pour des frais fixe |
+	pour un compte cheque  quel minimum $ conserver  pour pas de frais |
+	pour une carte de credit comment payer moins de frais |
+	pourqu'oi les frais d'interest de 4,29 $ porte a mon compte de cheque |
+	pourquoi  frais bancaires de 2,00 $ j'ai un forfait le connecté |
+	pourquoi ai-je des frais de 10,95 $ par mois depuis le mois d'octobre |
+	pourquoi ai-je des frais fixes dans comptes chèques |
+	pourquoi ai-je des frais fixes de 12,95 $ mensuellement |
+	pourquoi des frais | 
+	pourquoi des frais bancaire |
+	pourquoi des frais de 5 $ mensuel |
+	pourquoi des frais de transaction de 5 $ le 26-07-2021 |
+	pourquoi des frais excédentaires de 10,00 $ en plus des frais fixes je comprends pas |
+	pourquoi des frais excedentaires |
+	pourquoi des frais fixes de 5,95 $ je n'ai jamais payé pour ça |
+	pourquoi frais 4,00 $ le 6 août |
+	pourquoi frais banque |
+	pourquoi frais de transaction de 1,5 $ le 22 avril 2021 |
+	pourquoi frais transaction |
+	pourquoi il y a des frais bancaire de 10,95 $ 12 mai avec le montant qui est sur mon compte |
+	pourquoi il y a des frais fixes prélevé de 0,51 $ |
+	pourquoi j ai eu 23,95 $ de frais fixe le 22 mars ce qui n'est jamais arrive |
+	pourquoi j'ai 2,26 $ de frais pour le forfait minimaliste |
+	pourquoi j'ai des frais |
+	pourquoi j'ai des frais de transaction bancaires de 1,50 $ le 24 décembre |
+	pourquoi j'ai des frais excédentaires car cela e nouveau pour moi |
+	pourquoi j'ai des frais j'ai 61 ans et on m'a dit qu'on les enlever depuis mes 60 ans |
+	pourquoi j'ai payé des frais fixes sur mon compte épargne |
+	pourquoi je dois payer 3,75 $ de frais de transaction exédentaire |
+	pourquoi je paie des frais fixes sur mon compte |
+	pourquoi je paye 45 $ de frais dans mon compte épargne |
+	pourquoi je paye des frais dans mon compte |
+	pourquoi les frais bancaires de 2,50 $ à chaque mois |
+	pourquoi les frais fixes de 2,37 $ en date du 22 avril 2021 |
+	pourquoi me charger des frais |
+	pourquoi on me charge des frais interac alors que j'ai le forfait le total |
+	pourquoi y a-t-il des frais |
+	pouvez vous me dire combien  de transactions que j'ai droit pour pas payer des frais |
+	pouvez-vous me dire pourquoi je paye des frais de 3,95 $ |
+	qu'est-ce que les frais fixes |
+	qu'est qu'un frais fixe |
+	qu'est-ce que les frais correctifs  |
+	que sont les frais fixes |
+	que sont les frais fixes de 12,95 $ |
+	que veut dire dépenses principales 30 derniers jours frais 73,92 $ |
+	quel est ce frais fixe |
+	quel est le montant à avoir sur son compte chèques pour ne pas avoir de frais |
+	quel est le montant mensuel des frais qui s'appliquent pour les retraits et les paiement avec ma carte bancaire de débit |
+	quel solde minimum dois-je garder dans mon compte de cheque pour ne pas avoir de frais |
+	quels sont les frais a quelqu'un qui n'est pas un client de la banque nationale |
+	question à propos des frais charger a mon compte de 28,97 $ pourquoi |
+	question frais sur compte epargne |
+	question sur frais fixes |
+	question sur les frais |
+	questions sur des frais sur un compte |
+	y a-t-il des frais qui ont été prélevés;

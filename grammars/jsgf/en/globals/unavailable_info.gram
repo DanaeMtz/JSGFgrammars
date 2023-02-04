@@ -1,0 +1,7 @@
+#JSGF V1.0;
+grammar globals.unavailable_info;
+import <dicts.COMMAND.*>;
+
+public <unavailable_info> = [sorry] <UNAVAILABLE_INFO>{COMMAND};
+
+// SAMPLES UNDER NO_INTENT

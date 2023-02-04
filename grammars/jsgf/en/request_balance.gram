@@ -1,0 +1,35 @@
+#JSGF V1.0;
+grammar request_balance;
+import <dicts.CARD.*>;
+import <dicts.REF_THING.*>;
+import <common.generic.*>;
+import <common.products.*>;
+import <common.operations.*>;
+
+
+public <request_balance> = (<product_balance> | <request_balance1> | <request_balance2>);
+
+<product_balance> = (
+        <request_to> <know> |
+        [<request_to>] <get> |
+        (can I | could I) <get>
+    )
+    the [current] (
+        [<balance_type>] (balance|limit|credit) of my <card> |
+        balance of ( my (<INVESTMENT_account> | <TRANSACTIONAL_account> | <account_kw>) | <account_ref>)
+    ) [please];
+
+<request_balance1> = <request_to> <know> <the_balance> [please];
+
+<request_balance2> = [[<could_you>] [please] <tell_me>] <the_balance>;
+
+<the_balance> = (
+    [(what | how much) is] the [current] balance <on_my_investment> |
+    (what | how much) I have <on_my_investment> |
+    the [current] [<balance_type>] (balance|limit|credit) of my <card>
+);
+
+<on_my_investment> = ((in | on | into) ( my (<INVESTMENT_account> | <TRANSACTIONAL_account> | <account_kw>) | <account_ref>));
+
+
+// TODO: add examples using the entities: FINANCING_ENTERPRISE

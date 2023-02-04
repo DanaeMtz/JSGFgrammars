@@ -1,0 +1,27 @@
+#JSGF V1.0;
+grammar info_subscribe;
+import <dicts.FINANCING.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+public <info_subscribe> = (<info_ouvrir> | <comment_ouvrir>);
+
+<info_ouvrir> = [<je_voudrais>] <obtenir_financement> <comment_faire>;
+
+<comment_ouvrir> = [<voudrais_savoir> | <dis_moi>] <comment_faire> pour <obtenir_financement>;
+
+<obtenir_financement> = (
+        <ouvrir> un [nouveau] <compte> |
+        obtenir ((une|un) <financing> | du financement) |
+        faire une demande d'ouverture de <compte>
+);
+
+<compte> = (<TRANSACTIONAL_account> | <INVESTMENT_account> | <compte_kw>);
+
+
+// entities with tags
+<financing> = <FINANCING>{FINANCING};
+
+// demande d'information pour adhérer à un produit entreprise. 
+// Ouvrir un compte bancaire entreprise, obtenir du financement comment ça fonctionne?

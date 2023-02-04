@@ -1,0 +1,72 @@
+#JSGF V1.0;
+grammar common.generic;
+
+
+
+//// GENERIC/GREETING ////
+
+public <je_voudrais> =
+    <je_veux> [juste]|
+    j'appelle pour |
+    j'appellais pour|
+    [moi] c'est [juste] pour |
+    [moi] (ça|ce|cela) serait pour |
+    pouvez-vous m'aider à |
+    (j'ai | j'aurais) besoin de |
+    est-ce [que c'est] possible de |
+    j'essaie de;
+
+public <je_veux> = (
+        je (voulais | voudrais | veux) |
+        j'aimerais
+    );
+
+public <je_voudrais_que> =
+    <je_veux> [juste] que|
+    j'appelle pour que|
+    j'appellais pour que|
+    [moi] c'est [juste] pour que|
+    [moi] (ça|ce|cela) serait pour que|
+    pouvez-vous m'aider à ce que|
+    (j'ai | j'aurais) besoin que|
+    est-ce [que c'est] possible que;
+
+public <jai_dit> = (<je_veux> | j'ai (dit | demandé));
+
+public <voudrais_savoir> = (
+    <je_voudrais> savoir |
+    je me (demande | demandais) |
+    (j'ai | j'aurais) besoin de savoir
+);
+
+public <comment_faire> = (
+    comment (
+        on fait [ça]|
+        se fait [ça] |
+        (je (peux | pourrais) | puis je) faire [ça] |
+        est-ce que je peux faire [ça]
+        faire [ça]|
+        procéder |
+        ça (fonctionne | se fait | marche)
+    )  |
+    ça prend quoi |
+    la procédure |
+    qu'est-ce que ça prend  |
+    quels documents ça me prend |
+    (que faut-il | quoi | ce qu'il faut) faire
+);
+
+public <dis_moi> = (dis | dites) moi;
+public <donne_moi> = <je_veux> | donne moi | peux tu me donner;
+public <svp> = s'il vous plaît | si possible;
+
+public <dans_preps> = (dans | sur | vers | de | pour);
+public <vers_preps> = (dans | sur | vers );
+public <mon> = mon | le | un;
+public <mes> = mes | des | les;
+public <ma> = ma | la | une;
+
+public <avertir> = avertir | notifier | raconter |  faire un avertissement | faire une notification |
+	signaler | faire signe;
+	
+public <incapable> = je (n'arrive pas à | ne peux pas | ne suis pas capable de | suis incapable de);

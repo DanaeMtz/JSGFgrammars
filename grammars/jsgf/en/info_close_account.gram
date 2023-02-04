@@ -1,0 +1,15 @@
+#JSGF V1.0;
+grammar info_close_account;
+import <dicts.CARD.*>;
+import <dicts.REF_THING.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+public <info_close_account> = <info_cancel>;
+
+<info_cancel> =  [[<could_you>] <tell_me>] <how_to> <close> (<my_account> | <account_ref> | <card_ref>);
+
+<my_account> = (my | the) (<account_kw> | <INVESTMENT_account> | <TRANSACTIONAL_account> | <card>);
+
+<card> = <CARD>{CARD};

@@ -1,0 +1,15 @@
+#JSGF V1.0;
+grammar amendment;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+import <dicts.TRANSACTION.*>;
+import <dicts.REF_THING.*>;
+
+
+public <amendment> = [<request_to>] <amend> <deposit> [<of_my_investment>];
+
+<deposit> = [the] [automatic | systematic] (<TRANSACTION_NOUN_PL>{TRANSACTION} | contributions);
+
+<of_my_investment> = (of | into | in | for) ( [my] (<INVESTMENT_account>|<TRANSACTIONAL_account>) | <account_ref> );
+

@@ -1,0 +1,29 @@
+#JSGF V1.0;
+grammar dicts.PRODUCT_FEATURE;
+
+public <PRODUCT_FEATURE> = (
+	<PRODUCT_FEATURE_BOOLEAN> |
+	//<PRODUCT_FEATURE_HOLDER> |
+	<PRODUCT_FEATURE_VALUE>
+);
+
+public <PRODUCT_FEATURE_BOOLEAN> = 
+	(package){PACKAGE}|
+    (overdraft protection){OVERDRAFT_PROTECTION}|
+    (protection against overdraft){OVERDRAFT_PROTECTION}|
+    (insufficient funds protection){OVERDRAFT_PROTECTION}|
+    (protection against insufficient funds){OVERDRAFT_PROTECTION}|
+	(overdraft){OVERDRAFT_PROTECTION}
+;
+
+public <PRODUCT_FEATURE_HOLDER> = 
+	(husband){ACCOUNT_HOLDER}|
+	(wife){ACCOUNT_HOLDER}|
+	(partner){ACCOUNT_HOLDER}|
+	(better half){ACCOUNT_HOLDER}|
+	(account holder){ACCOUNT_HOLDER}
+;
+
+public <PRODUCT_FEATURE_VALUE> =
+	(deposit withdrawal){DEPOSIT_WITHDRAWAL}
+;

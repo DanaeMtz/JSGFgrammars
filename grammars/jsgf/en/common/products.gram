@@ -1,0 +1,29 @@
+#JSGF V1.0;
+grammar common.products;
+import <dicts.TRANSACTIONAL.*>;
+import <dicts.INVESTMENT.*>;
+import <dicts.CARD.*>;
+import <dicts.FINANCING.*>;
+import <dicts.POINTS.*>;
+
+
+
+//// PRODUCTS ////
+
+public <credit_card_points> = (<card> <points> | <points> from <card>);
+public <an_account> = ( /3/ a [new] (<INVESTMENT_account> | <TRANSACTIONAL_account>) | /1/ (an | a new) account );
+public <money> = [the | some] (money | fund | funds);
+public <investment> = investment | investments;
+public <balance_type> = (available | used | outstanding);
+public <account_kw> = (/4/ account | /1/ plan | /1/ fund);
+public <points> = <POINTS>{POINTS};
+
+//// ENTITIES ////
+
+public <TRANSACTIONAL_account> = <TRANSACTIONAL>{TRANSACTIONAL} <account_kw>;
+public <INVESTMENT_account> = (/2/ <INVESTMENT_ind>{INVESTMENT} [<account_kw>] | /1/ <INVESTMENT_dep>{INVESTMENT} <account_kw>);
+
+public <card> = <CARD>{CARD};
+public <loc> = <LOC>{FINANCING};
+public <mortgage> = <MORTGAGE>{FINANCING};
+public <loan> = <LOAN>{FINANCING};

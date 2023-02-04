@@ -1,0 +1,33 @@
+#JSGF V1.0;
+grammar dicts.TRANSACTIONAL;
+
+public <TRANSACTIONAL> = (
+
+	(chèques) {CHEQUING_ACCOUNT} |
+    (de banque) {CHEQUING_ACCOUNT} |
+    (courant) {CHEQUING_ACCOUNT} |
+    (progressif) {CHEQUING_ACCOUNT} |
+	(bancaire) {CHEQUING_ACCOUNT} |
+    (en banque) {CHEQUING_ACCOUNT} |
+    (épargne) {SAVINGS_ACCOUNT} |
+    (d'épargne) {SAVINGS_ACCOUNT} |
+    (transactionnel){CHEQUING_NO_INTEREST} | 
+    (affaires){CHEQUING_NO_INTEREST} |
+    (d'affaires){CHEQUING_NO_INTEREST} |
+    (bancaire pour ma compagnie){CHEQUING_NO_INTEREST} |
+    (bancaire pour une entreprise){CHEQUING_NO_INTEREST} |
+    (bancaire [pour mon | de mon] entreprise){CHEQUING_NO_INTEREST} |
+    (de compagnie){CHEQUING_NO_INTEREST} |
+    (commercial){CHEQUING_NO_INTEREST} |
+    (professionnel) {CHEQUING_NO_INTEREST} |
+    (commercial pour l'entreprise){CHEQUING_NO_INTEREST} |
+    (entreprise){CHEQUING_NO_INTEREST} |
+    (chèque commercial){CHEQUING_NO_INTEREST} |
+    (courant entreprise){CHEQUING_NO_INTEREST} |
+    (transactionnel en US){CHEQUING_CURRENCY} |
+    (en devise américaine){CHEQUING_CURRENCY} |
+    (de compagnie pour les états unis){CHEQUING_US} |
+    (américain) {CHEQUING_US} |
+    (US dans mon compte entreprise){CHEQUING_US}
+
+);

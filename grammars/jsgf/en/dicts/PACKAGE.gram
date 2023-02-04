@@ -1,0 +1,12 @@
+#JSGF V1.0;
+grammar dicts.PACKAGE;
+
+public <PACKAGE> = (
+    (ePackage){E_PACKAGE}|
+    (electronic package){E_PACKAGE}|
+    (package 20){PACKAGE_20}|
+    (package 35){PACKAGE_35}|
+    (package 50){PACKAGE_50}|
+    (package 75){PACKAGE_75}|
+    (package 100){PACKAGE_100}
+);

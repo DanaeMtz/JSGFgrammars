@@ -1,0 +1,770 @@
+#JSGF V1.0;
+grammar common.faq;
+
+
+//chatbot_faq_102: Afficher ma nouvelle carte de crédit 
+public <chatbot_faq_102> =
+	how can I add my mastercard so I can see it online |
+	how do I add an NBC mastercard to my app |
+	how do I change my credit card number online |
+	how I connect my credit card ro my account |
+	I have a new credit card number how do I change it online so I can make payments from my chequing |
+	how to add my mastercard to the business banking I dont know where I can see the transactions online;
+
+//chatbot_faq_107: Impossible de faire un virement ou payer une facture
+public <chatbot_faq_107> =
+	can you tell me why I can not use the money in my account at the moment |
+	how come I can't make transfers |
+	how come I can't pay my bills online |
+	I can't make transfers or pay my bills what do I do |
+	sending a transfer isn't working why not |
+	what do I do if I can't pay my bill online |
+	why do I try and send an interac e-transfer and it doesn't work |
+	why can not pay bill |
+	why can't I send e-transfers |
+	why cant I send e-transfer |
+	why is e-transfer not working |
+	why is the money transfer disabled;
+
+//chatbot_faq_111: Ajouter un nouveau destinataire
+public <chatbot_faq_111> =
+	how can I add interac recipient |
+	how do I add a new recipient |
+	how do I add someone to send them money |
+	what do  I do if I want to send someone money |
+	why can't I create new recipient;
+
+//chatbot_faq_112: Modifier ou supprimer un destinataire
+public <chatbot_faq_112> =
+	what is the procedure to take out someone from your list of sending money or the edit voice |
+	can I edit a recipient's email address |
+	can I remove someone from my list of recipients |
+	can you tell me please how can I edit my send money list |
+	how can I change a recipient's information |
+	how can I change a recipients e-mail address when sending money |
+	how can I change a recipients e-mail when sending money |
+	how can I delete the recipients from my account once money was sent to them |
+	how can I remove someone I sent money to |
+	how can people in the recipient column of e-transfers be deleted |
+	how do I add an email to existing recipient |
+	how do I amend or delete the email address for a recipient on |
+	how do I cancel a recipient in the send money section |
+	how do I cancel a recipient that I sent money to |
+	how do I change a recipient's e-mail address to send money online |
+	how do I change a recipient's information for e-transfer |
+	how do I change infor for a recipient on my list of interac payments |
+	how do I correct an email in the send money list |
+	how do I correct email address of recipient on the send money feature |
+	how do I delete a interact recipient |
+	how do I delete a recipient |
+	how do I delete a recipient from my etransfer  list |
+	how do I delete a recipient from my list of persons for money transfer |
+	how do I delete a recipient from the list |
+	how do I delete a recipient in money transfer |
+	how do I delete a recipient that a previously sent money to |
+	how do I delete a recipients name |
+	how do I delete an e-transfer recipient |
+	how do I delete an interact recipient |
+	how do I delete an old recipient from my email transfer list |
+	how do I delete list of senders |
+	how do I delete names on e-transfer list |
+	how do I delete or make changes to a recipient email transfer |
+	how do I delete some of the recipients names on my e-transfer list |
+	how do I delete someone off my interact send money list |
+	how do I deletea e-transfer recipent |
+	how do I edit a recipient |
+	how do I edit an existing e-transfer recipient |
+	how do I edit recipents for e-transfers |
+	how do I edit recipients |
+	how do I erase peoples names on e-transfer |
+	how do I modify an interac recipient |
+	how do I modify an interac transfer recipient |
+	how do I modify my interac recipients |
+	how do I modify or delete a recipient |
+	how do I remove a recipient |
+	how do I remove a recipient form |
+	how do I remove a recipient from e-transfer list |
+	how do I remove a recipient from send money |
+	how do I remove interac email recipients |
+	how do modify an existing interac recipient |
+	how do you delet recipients for etransfers |
+	how do you delete a receiptant |
+	how do you delete a recipient under e-transfers |
+	how do you delete recipient from send money |
+	how do you modify a recipient |
+	how do you remove a paye from the e-transfer list |
+	how to cancel a recipient |
+	how to change recipients email address in send money |
+	how to correct recipients information |
+	how to delete a recipient |
+	how to delete a recipient from my list |
+	how to delete a recipient from send money or edit |
+	how to delete an etranfer recipient |
+	how to delete an interac recipient from the list |
+	how to delete recipients in send money |
+	how to edit an etransfer contact |
+	how to manage my recipients |
+	how to remove a recipient |
+	how to remove a recipient for my list |
+	how to remove a recipient from money transfer |
+	how to remove recipient |
+	how to remove recipients |
+	I added a recipient to my send money and I want to edit it how do I do that |
+	I need to know how to remove a recipients from my list of e-transfer |
+	I want to remove someone from my recipient list what do I do |
+	in the send money option how can we delete a recipient |
+	in the send money screen how do I delete a recipient |
+	under send money how can I delete a recipient from my list;
+
+//chatbot_faq_113: Annuler un Virement Interac
+public <chatbot_faq_113> =
+	can I cancel an e-transfer without fees |
+	do I have to pay cancellation fees if the e-transfer expired |
+	how can I cancel an e-transfer made from my personal account | 
+	how can I cancel an interac money transfer |
+	how can I cancel an inters transfert |
+	how can I cancel my e-transfer |
+	how do I cancel an e-transfer |
+	how do I cancel an interac e-transfer |
+	how do I cancel an interac transfer |
+	how do I cancel the transaction |
+	how do I close a current e-transfer before it goes through |
+	how do I reverse an interact payment |
+	how do I reverse the e-transfer |
+	how do undo an interac e-transfer |
+	how do you cancel a e-transfer that did not go through |
+	how to cancel an e-transfer |
+	how to stop transfer to another person |
+	if I cancel a one-time money transfer do I get the money back right away |
+	is there an option to cancel a oney transfer |
+	what are cancellation fees for e-transfer for me |
+	why do I have to pay $ 3,50 when it's the recipients that didn't accept it |
+	why do I pay $ 3,50 if the e-transfer expired |
+	why is there cancellation fees when I have a big banking package |
+	will there be fees if a cancel my interac transfer;
+
+
+//chatbot_faq_114: Accepter ou refuser un Virement Interac
+public <chatbot_faq_114> =
+	can I accept a transfer via bill payment from another bank | 
+	can I receive any interact e-transfer | 
+	how can I accept the e-transfer today | 
+	how can I receive money via e-transfer | 
+	how can I receive e-transfer at my account at NBC | 
+	how do I accept or reject an interac e-transfer | 
+	how do I collect a e-transfer | 
+	how do I receive an interact paiment | 
+	how do I receive e transfers | 
+	how do I receive money from a e-transfer | 
+	how to accept e-transfer | 
+	how to get the e-transfer money | 
+	how to refuse an e-transfer | 
+	how to set up to receive an interac transfer | 
+	how toget my e-transfer | 
+	someone sent me a transfer how do I accept it;
+
+//chatbot_faq_115: Payer une facture en ligne
+public <chatbot_faq_115> =
+	can I pay a bill from my computer |
+	can I pay a bill online |
+	can you help me add another bill paying |
+	when will bill payment be solved |
+	how can I pay a bill |
+	how can I schedule a future payment |
+	how do I add a bill |
+	how do I pay a bill |
+	how do I pay a bill online |
+	how do I pay bills on this new website for national bank |
+	how do I set up a bill payment |
+	how to have recurring bill payments |
+	how to pay a bill |
+	how to pay my bill |
+	how to pay drivers licence |
+	is there any issue with bill payments;
+
+//chatbot_faq_116: Ajouter un nouveau fournisseur pour payer une facture
+public <chatbot_faq_116> =
+	how can I add a new supplier to my list |
+	how to add a supplier I dont see that option |
+	how can I add the bell account so that I can pay it online |
+	how do I add a new supplier to pay a bill |
+	how do I add a payee so I can pay the bill online |
+	how do I find a supplier so I can pay the bill online |
+	how to add CIBC as a payee |
+	how to add a new biller;
+
+//chatbot_faq_121: Envoyer un rappel pour un virement en attente
+public <chatbot_faq_121> =
+	how can I remind someone of an interac transfer |
+	how can I send a reminder for money I sent |
+	if someone didn't accept the transfer I sent will they receive a reminder |
+	someone didn't accept the money I sent can I send a reminder;
+
+//chatbot_faq_122: Voir si mon destinataire a accepté mon virement
+public <chatbot_faq_122> =
+	how do I know if the recipient has accepted my transfer |
+	I sent someone money how do I know if they accepted it |
+	I sent someone a transfer how do I know if it was accepted |
+	do I get a notification when someone accepts the interac transfer I send them |
+	I sent someone a transfer will I know when they accept it;
+
+//chatbot_faq_124: Les frais de virement
+public <chatbot_faq_124> =
+	does it always costs money to send money to someone |
+	does my account charge for interac transfers |
+	how much does it cost to transfer money to another person |
+	I have a banking package do I still have ot pay for sending money to someone |
+	is there a fee to send money |
+	why I have to pay fee for e-transfer;
+
+//chatbot_faq_127: Modifier ou supprimer une facture en ligne
+public <chatbot_faq_127> =
+	can I change a bill online |
+	can I delete a programmed bill |
+	can I edit my bill online |
+	how can I remove a payee from my list of bills |
+	how do I cancel a supplier from pay |
+	how do I change a bill online |
+	how do I delete a bill from payment list |
+	how do I delete one of my payee |
+	how do I modify a bill online |
+	how do I modify or delete a bill online |
+	how to edit upcoming bill payment |
+	I want to delete an upcoming bill how do I do that |
+	I want to stop a monthly payment to a bill |
+	my bill information changed how can I change it;
+
+//chatbot_faq_130: Modifier une facture déjà payée
+public <chatbot_faq_130> =
+	can a bill payment be modified |
+	can the $ 20 payed extra on my hydro bill be transferred back to my account |
+	can I modify that payment |
+	how can I correct the amount for a bill I paid online |
+	how do I correct an amount of a bill I just paid online |
+	how do I reverse a bill payment |
+	how to modify I bill payment I made yesterday |
+	I overpaid a bill how can I correct that |
+	I paid the wrong bill online what can I do |
+	is there a way to correct that mistake |
+	is there a way to change the amount I sent to pay my phone bill |
+	need to modify a bill I paid online is it possible |
+	what do I need to do to correct wrong bill payment information |
+	what to do if I pay the wrong bill online;
+
+//chatbot_faq_137: Voir le détail de ma carte de crédit en ligne
+public <chatbot_faq_137> =
+	are the details of my credit card available online |
+	can I see more information about my credit card online |
+	can you direct me to my mastercard balance |
+	can you show me how much I spent on my mastercard |
+	how can I get a print of my balance |
+	how can I check my credit card statements |
+	how can I check the balance of my mastercard credit card online |
+	how can I view my credit card statements |
+	how can I view my current master card statement |
+	how do I find my credit card statement |
+	how do I find my monthly statement to pay have not received it in the mail |
+	how do I see my credit card details on my account |
+	how do I see my list of transactions for my credit card |
+	how many points my credit card have now |
+	how many points on mastercard |
+	how to check credit card statements online |
+	how to see details of credit card payments |
+	what is my balance due |
+	what is the balance for the national bank mastercard |
+	when will the statement for april be available |
+	where can I find my mastercard points |
+	where do I find details about my credit card online |
+	where do I see my credit card |
+	where to find credit card account |
+	where to find my credit card balance |
+	why is my credit card balance still $ 0;
+
+//chatbot_faq_142: Utiliser les points de ma carte de crédit
+public <chatbot_faq_142> =
+	can I pay my mastercard balance with my reward points |
+	how can I access to my rewards |
+	how can I exchange my mastercard points |
+	how can I use the points from my credit card |
+	how do I connect to the rewards centre |
+	how do I get to mc rewards |
+	how do I redeem mastercard rewards |
+	how do I see my rewards points |
+	how do I transfer my cashback rewards |
+	how do I use my points to pay my credit card balance |
+	how I can check my points |
+	I want to pay my credit card with my points how do I do this |
+	where can I see my points |
+	where can I see rewards |
+	where do I go if I want to pay my credit card with my points;
+
+//chatbot_faq_143: Utiliser la remise en argent de carte Echo
+public <chatbot_faq_143> =
+	can I use my cashback to help pay my credit card balance |
+	cash back program how do collect |
+	how do I use my echo's cashback |
+	I want to use my cashback for my mastercard how do I do this |
+	where do I find echo rewards |
+	where do I find my cash back status |
+	where do I find where to move cashback |
+	where do I go if I want to use my cashback to help pay my credit card balance |
+	where on site do I find my cashback amount;
+
+//chatbot_faq_144: Voir la limite de ma carte de débit
+public <chatbot_faq_144> =
+	are the withdrawal limit and the sending limit the same thing |
+	can I know the maximum withdrawal amount at the counter |
+	is there a maximum amount for a payment made by debit card |
+	how do I know what is my daily limits for buying with my debit |
+	how do I know what my debit card limit is |
+	how do I see my daily limits |
+	how much can I withdraw at ATM a day |
+	how much can I withdraw in a day |
+	how much is my ATM withdrawal limit |
+	how much you can withdraw with ATM card |
+	how to check debit card daily limit |
+	what are my spending limits |
+	what is daily maximum for debit card |
+	what is my ATM withdrawal limit |
+	what is my daily limit on my debit card |
+	what is my daily spending limit |
+	what is my daily withdrawal amount |
+	what is my purchase limit with my debit card |
+	what is the daily spnding limit allowed with the debit card |
+	what is the limit of my client card |
+	what is the maximum purchase limit with my client card in one day |
+	where do I go to see my limit for my debit card |
+	where do I see my client card limit online;
+
+//chatbot_faq_160: Retirer des fonds de mon CPG en ligne
+public <chatbot_faq_160> =
+	can I transfer money from my GIC account to my checking account |
+	how do I cash in my GIC |
+	how do I withdraw funds from my GIC online |
+	I need money from my GIC how can I do it;
+
+//chatbot_faq_190: Voir les détails d'une transaction
+public <chatbot_faq_190> =
+	what did I buy on july 15th at proxi extra worth $ 50 |
+	which transaction details can I see and how can I access them online |
+	what kind of information can I access for individual transactions |
+	are there any details for an expense I did |
+	what kind of information do I have access to for transactions |
+	can I see the date and time of a transaction |
+	can I see the full name of the shop I bought from with my mastercard;
+
+//chatbot_faq_191: Chercher une transaction précise en ligne
+public <chatbot_faq_191> =
+	can I have a look at a specific transaction |
+	can I look for a specfic expense I did in the past |
+	can I search for a specific transaction online |
+	how can I find a precise transaction |
+	how can I find a specific transaction |
+	how can I see transaction from two years |
+	is it possible to see a payment I made in the past |
+	is there a possibility to filter for a specific transaction |
+	is there a search for transactions |
+	is there a search to explore my past transactions |
+	is there a way to get details on a transaction I completed a while ago |
+	is there a way to search for one transaction I made |
+	is there a way to see one past transaction |
+	is there some way to filter my transactions and find the one i'm looking for |
+	where can I find a transaction I made in the past |
+	where can I find one specific payment I paid in the past |
+	where can I look for a specific transaction;
+
+//chatbot_faq_192: En savoir plus sur une transaction douteuse
+public <chatbot_faq_192> =
+	can I report a fraudulent credit card transaction |
+	how do I block a person taking money from my credit card without authorization |
+	how do I dispute charge on my credit card |
+	how long do I have to report a fraudulent purchase |
+	how many days do I have to report a fraudulent purchase |
+	I don't recognize a transaction what should I do |
+	I don't know what the apple charge is on my credit card $ 29,88 can you tell me what the charge is for |
+	I don't reconized a purchase made on may 20th to canadian tire for $ 250 can you provide me the details please |
+	am I able to somehow find out that information online |
+	I see some transactions on my mastercard bill that I did not do can these be cancelled |
+	i've been charged for a flight by KLM airlines why |
+	what is that charge on my credit card;
+
+//chatbot_faq_212: Virement Interac non réclamé
+public <chatbot_faq_212> =
+	how do I reclaim an e-transfer |
+	how to deposit an expired e-transfer |
+	how to redeposit a denied e-transfer |
+	how do I reclaim my money back |
+	I have a refused e-transfer how do I get it back into my account |
+	I have an e-transfer being returned where do I find this transaction |
+	when will the money come in the account for a declined money transfer;
+
+//chatbot_faq_217: Acheter des fonds communs de placement avec BNI
+public <chatbot_faq_217> =
+	how to buy national bank investments |
+	how to get an investment |
+	what types of funds can I buy |
+	which funds can I can I buy |
+	is there a list of funds I can buy |
+	where can I find a list of funds I can buy |
+	which funds are available to purchase |
+	why I can't buy funds |
+	how to buy mutual funds |
+	how to buy national bank investments |
+	how to buy investments |
+	how to get an investment |
+	can I buy funds online |
+	how do I open an investment account |
+	how do I get a mutual fund;
+
+//chatbot_faq_229: Vendre des fonds de mon REER
+public <chatbot_faq_229> =
+	can I sell funds from my RRSP |
+	can I withdraw money from my RRSP |
+	how can I take out my RRSP |
+	how do I redeem RRSP |
+	how do I sell funds from my RRSP |
+	how do I withdraw funds from RRSP |
+	I want to sell my RRSP funds how do I do that |
+	I wish to cash in part of my RRSP what number do I call |
+	if I take money from RRSP acount how long does it take to get money |
+	why can't I sell funds from my RRSP;
+
+//chatbot_faq_230: Vendre des fonds de mon CRI
+public <chatbot_faq_230> =
+	can I sell funds from my LIRA |
+	how do I sell funds from my LIRA |
+	why can't I sell funds from my LIRA |
+	I want to sell my LIRA funds how do I do that;
+
+//chatbot_faq_231: Acheter des fonds de mon FERR/FRV
+public <chatbot_faq_231> =
+	can funds be bought in a LIF |
+	can funds be bought in a RRIF |
+	can funds detained in a LIF be invested in a mutual funds |
+	can funds detained in a RRIF be invested in a mutual funds |
+	can I add funds to my LIF in order to invest more |
+	can I add funds to my RRIF in order to invest more |
+	can I buy funds from my LIF |
+	can I deposit funds in my LIF to buy more funds in it |
+	how do I buy funds from my LIF |
+	how do I buy funds from my RRIF |
+	how to buy funds in my LIF account |
+	how to buy investment products in my LIF |
+	how to buy investment products in my RRIF |
+	why funds cannot be bought in it |
+	how to buy funds with the cash that's in my LIF |
+	why can't I buy funds for my RRIF |
+	why can't I buy funds through my LIF |
+	why can't I buy funds through my RRIF;
+
+//chatbot_faq_273: Mastercard – Assurance paiement carte de crédit
+public <chatbot_faq_273> =
+	is there a way to cover my mastercard payment if I get sick |
+	is there a payment insurance for mastercard |
+	is it possible to be insured in regards to my credit card payments |
+	is it possible to contract an insurance to pay my mastercard if I get sick |
+	what are the credit card payment insurance offers |
+	do you offer credit card payment insurance |
+	can I get an insurance for my credit card payments |
+	can I get info on credit card payment insurance |
+	does it apply for my mastercard credit card payment insurance;
+
+//chatbot_faq_274: Payer ma carte de crédit
+public <chatbot_faq_274> =
+	how can I pay for my credit card balance |
+	how can I pay my credit card |
+	how do I pay my credit card |
+	how do I pay my master card on line |
+	how do I pay my mastercard |
+	how do I pay my mastercard through online banking |
+	how do I pay my national bank mastercard |
+	how to pay a credit card balance |
+	how to pay credit card |
+	how to pay my credit card |
+	how to pay my matercard online;
+
+//chatbot_faq_275: Dépôt direct – Suivi de ma demande
+public <chatbot_faq_275> = 
+	how can I confirm that I'm signed up for direct deposit |
+	how do I know my application for direct deposit has been processed |
+	can you follow up on my direct deposit with the CRA |
+	can you follow up on my direct deposit with the canada revenue agency;
+
+//chatbot_faq_306: À propos du virement international
+public <chatbot_faq_306> =
+	can I send some cash to the us with my online bank |
+	can I send funds in russia using this website |
+	can I send money to someone in china trough my online banking |
+	do I have to go to the bank to transfer funds to someone in finland |
+	what are the conditions of an online international transfer |
+	is it possible to e-transfer money to someone in europe |
+	is it possible to send euros to a friend in europe |
+	online international transfers what is it |
+	online international transfers what is that |
+	what are online international transfers |
+	what is an online international transfer |
+	where can I send money using the online international transfer |
+	which countries can accept international transfers |
+	why can't I send money to any country |
+	why can I only send money to certain countries;
+
+//chatbot_faq_309: Faire un virement international
+public <chatbot_faq_309> =
+	can I do an international tranfer online |
+	can I do international bank transactions |
+	can I make a international transaction |
+	can I make international transfers from the national bank app |
+	can I send etransfer to nigeria |
+	can I send money to trinidad |
+	can I transfer money from national bank to another country |
+	can I use the send interac transfer option to wire money to family that is overseas |
+	can you pelase provide some guidance for an international wire transfer |
+	how can I send money to cuba |
+	how can I send money to sweden |
+	how can I transfer for international |
+	how can I transfer money to an account in china |
+	how do I make an international transfer |
+	how do I make international fund transfer |
+	how do I send an international money transfer to south africa |
+	how do I send international transfers from the app |
+	how do I send money international |
+	how do I send money to mexico |
+	how do I send money to my home country |
+	how do I send money to someone in another country |
+	how do I transfer funds internationally |
+	how do I transfer money to someone in the united states |
+	how to do a international transfer |
+	how to do an international transfer |
+	how to do international transfer with the mobile app |
+	how to make a donation to lebanon |
+	how to make a transfer to france |
+	how to make an international transfer |
+	how to make international transfer |
+	how to make overseas money transfer |
+	how to send money internationally |
+	how to send money to belgium |
+	how to send money to trinidad |
+	how to transfer money to united states using the app |
+	is it possible to do an international bank transfer online |
+	is it possible to do an international wire transfer with your app |
+	what are the steps to send an international transfer |
+	what do I do if I want to send an international transfer |
+	what's the fee to wire money overseas |
+	where is the international money transfer option on the app;
+
+//chatbot_faq_327: Retirer de l'argent de mon CELI
+public <chatbot_faq_327> =
+	can I withdraw money from my TFSA account |
+	can I withdrawal from TFSA |
+	could I transfer money from TFSA to my account |
+	how can I take money out of my TFSA |
+	how can I transfer money from my TFSA account to my checking account |
+	how can I transfer some money from TFSA to my chequing account |
+	how can I withdraw money from TFSA |
+	how do I move my money from a TFSA to my chequing |
+	how do I transfer money out of my TFSA account |
+	how do I transfer the money from my TFSA to my chequing account |
+	how do I transfer the TFSA account money to my chequing account |
+	how do I withdraw  from my TFSA |
+	how do I withdraw money from my TFSA |
+	how do transfer money out of my TFSA |
+	how to take money out of TFSA account |
+	how to transfer money from TFSA to chequing account |
+	how to transfer withdraw money from TFSA |
+	how to withdraw funds from TFSA |
+	how transfer money from CELI to my account;
+
+//chatbot_faq_332: Débits préautorisés sur une carte de crédit bloquée
+public <chatbot_faq_332> =
+	are the preauthorized debits on a blocked mastercard automaticly cancel |
+	do I have to modify my preauthorized debit if my credit card is currently blocked |
+	do I have to stop myself the preauthorized payment on my credit card if you blocked it or will you do it automatically |
+	do you know if my automatic bell payment will go through when my credit card is locked |
+	I dont have the same number on my credit card is it necessary to update the preauthorized debit |
+	I replace my credit card do I have to reprogram my preauthorized debit |
+	I unlocked my credit card do I have to reactivate my preauthorized debit |
+	if I blocked my mastercard will my pre-authorized debits stil go through |
+	if I unblock my credit card will the upcoming preauthorized payment go through |
+	if my mastercard number changed do I have to update my pre-authorized debit |
+	my mastercard is now blocked what will happen to my preauthorized payment |
+	should I update my scheduled bill payment on my credit card if you locked it |
+	what happens to my automatic payment on my credit card if my card is blocked |
+	what to do with upcoming payments that are suppose to be paid from my credit card if you blocked it |
+	what will happen to the payment of my netflix subscription if my mastercard is blocked |
+	will I be charged for blocked payments if an automatic payment go through my blocked credit card |
+	will my automatic preauthorized bill payments go through even through you locked my credit card for something else |
+	will the bill thats paid automaticly on my credit card be blocked if my credit card is blocked |
+	you locked my mastercard will my amazon subscription still go through;
+
+//chatbot_faq_337: Impossible d'ajouter un destinataire
+public <chatbot_faq_337> =
+	can you unlock the add a recipient function |
+	why is it locked and how do I unlock it |
+	how can unlock my add recipient option in e-transfers |
+	how do I unlock a recipient for a e-transfer |
+	how to unlocked add a recipient |
+	why am I not able to add this recipient |
+	why can I not add a e-transfer recipient |
+	why can I not add a new recipient for e-transfer |
+	why can't I add more recipients |
+	why is my add recipient button not working;
+
+//chatbot_faq_361: Remplacer ma carte de crédit bloquée 
+public <chatbot_faq_361> =
+	how to request another credit card to replace the one I have that doesn't work |
+	how to unlock my mastercard |
+	my credit card has been replaced when will I get the new one |
+	why does my card not work in online shop |
+	why I can't use my credit card when shopping |
+	why my credit card payment declined;
+
+//chatbot_faq_372: Prendre un rendez-vous
+public <chatbot_faq_372> =
+	can a representative call me at 123 111 1111 |
+	can I get a call back |
+	can I get an appointment |
+	can I get in touch with one of your bankers to discuss my financial situation |
+	can I make an appointment in branch |
+	can I make an appointment to speak with a mortgage advisor |
+	can I meet someone over the phone or at the bank to get financial advice |
+	can they call me since there is long hold time |
+	can someone call me on that matter |
+	how can I make an appointment |
+	how do book appointment |
+	how do I book an appointment with a financial advisor |
+	is it possible to book a meeting with someone to discuss the specifics of my debt repayment plan |
+	is it possible to meet an adviser to talk about my financial future;
+
+//chatbot_faq_398: Taux des marges de crédit
+public <chatbot_faq_398> =
+	how do I know my interest rate on my all-in-one |
+	what is my current mortgage line of credit rate |
+	what is my line of credit rate |
+	what is my margin interest rate |
+	what is our interest rate on the line of credit |
+	what is the current interest rate on my line of credit |
+	what is the interest rate of my line of credit |
+	what is the interest rate on my all-in-one home equity line of credit | 
+	what is the interest rate on my line of credit |
+	what is the interest rate on my LOC |
+	what is the interest rate on the line of credit |
+	where do I find our line of credit interest rate |
+	where to find my personal margin rate;
+
+//chatbot_faq_401: Taux de change des devises
+public <chatbot_faq_401> =
+	how much is the US exchange rate |
+	what are the BNC's foreign exchange rates currently |
+	what is the current exchange rate for euro |
+	what is the exchange rate |
+	what is the exchange rate at the moment |
+	what is the exchange rate for converting canadian money to US money |
+	what is the exchange rate of us money to canadian |
+	what is the online currency exchange rate |
+	where are the bank's exchange rates on their website |
+	where can I find the exchange rates to buy mexican pesos |
+	where to find currency exchange rate;
+
+//chatbot_faq_402: Taux d'intérêt d'un CPG
+public <chatbot_faq_402> =
+	what is the rate for GIC at this time short and long term |
+	my GIC expires soon what is the interest rate on this GIC |
+	what is the rate for investing in a GIC |
+	what is the rate for a one-year GIC investment |
+	where do I see the rates for GICs |
+	what are the investment rates for GICs |
+	what is the interest rate for a GIC today;
+
+//chatbot_faq_405: Annuler le renouvellement de mon CPG
+public <chatbot_faq_405> =
+	I don't want to renew my GIC what can I do |
+	how do I cancel the renewal of my GIC |
+	my GIC has been renewed automatically how can I cancel it;
+
+//chatbot_faq_406: Les cartes de crédit Banque Nationale
+public <chatbot_faq_406> =
+	are there any avantages to the synchro mastercard |
+	are there any fees to the or ovation mastercard |
+	benefits of a national bank credit card |
+	do I need to have a national bank credit card |
+	does my mastercard charge interest right when I spend money |
+	does my mastercard charge interest |
+	how a credit card works |
+	how do I use a credit card |
+	how do I use my credit card |
+	how does a credit card work |
+	how does my credit card work |
+	how does my mastercard work |
+	how does the NBC credit card work |
+	how to decide which credit card is best for me |
+	what can I use a national bank credit card for |
+	what is a national bank credit card |
+	what's special about the allure mastercard |
+	what's the deal with credit cards |
+	what's the difference between the world and world elite cards |
+	when do I pay for my purchases when I use a national bank credit card |
+	when do I start to pay interest on my credit card |
+	when is interest applied to my mastercard |
+	which credit card should I choose;
+
+//chatbot_faq_407: Renouveler mon CPG
+public <chatbot_faq_407> =
+	can I renew a GIC that is about to expire |
+	can I renew my GIC online |
+	GIC will expire soon what to do |
+	hello is it possible to renew a GIC online |
+	how can a I renew my GIC |
+	how to deal with a GIC that is about to expire |
+	how to renew a GIC in an RRSP |
+	how to renew a GIC that is about to expire |
+	how to renew a GIC that matures soon |
+	how to renew GIC |
+	I have a GIC can I renew it |
+	if my GIC expires can I renew it |
+	one of my GIC will expire soon can I renew it;
+
+//chatbot_faq_408: Frais de marge de crédit
+public <chatbot_faq_408> =
+	are there any management fees for a line of credit |
+	are there any management fees on the line of credit |
+	are there fees on the line of credit |
+	are there transactions fees on my line of credit |
+	do I have to pay my line of credit fees upfront |
+	do I pay interest on a line of credit |
+	does my line of credit have fees |
+	how much does my line of credit cost |
+	what are my line of credit fees |
+	what are the fees associated with a personal line of credit |
+	what are the fees for lines of credit |
+	what are the fees for the different lines of credit |
+	what fees are part of your line of credit |
+	what is the fee on my line of credit statement |
+	what kind of fees are on a line of credit |
+	with a line of credit can I expect fees;
+
+//chatbot_faq_409: Connaître les frais de mon compte
+public <chatbot_faq_409> =
+	can you tell me how much transaction can I make without paying fees |
+	how do I know what fees are associated with my account |
+	how much are the account fees at NBC |
+	how much do I have to pay for my account fees |
+	how much do I have to pay for my bank accounts |
+	how much do I have to pay for my NBC account fees |
+	how much does my account cost |
+	how to lower monthly fees |
+	I didn't not have any fees before why am I paying them right now |
+	is it possible to reduce admin fees ont my account they are of $ 5,95 right now |
+	is my checking account free from fees |
+	is my checking account free |
+	there are added fees what are they |
+	USD account without fees how much do I need in it |
+	what are program fees |
+	what is the may 11th fixed monthly fee |
+	what is the mimum amount I have to keep to avoid banking fees |
+	why do I get fees |
+	why am I charged fees |
+	why do I have banking fees |
+	why do I have monthly fees of $ 10,95 since october |
+	why do I pay bank fees |
+	why have I paid fees on my savings account |
+	why monthly fees of $ 5;

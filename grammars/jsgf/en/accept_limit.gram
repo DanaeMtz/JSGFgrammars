@@ -1,0 +1,11 @@
+#JSGF V1.0;
+grammar accept_limit;
+import <common.products.*>;
+import <common.generic.*>;
+import <dicts.REF_THING.*>;
+
+public <accept_limit> = <accept>;
+
+<accept> = [<request_to> | I ] accept the [credit] limit increase (on my (<card> | <loc>) | on (the|my) card | on <card_ref>| on <loc_ref>);
+
+

@@ -1,0 +1,39 @@
+#JSGF V1.0;
+grammar place_order;
+import <common.generic.*>;
+import <common.products.*>;
+import <dicts.CARD.*>;
+import <dicts.ORDER.*>;
+import <dicts.CARDINAL.*>;
+
+
+public <place_order> = (
+    <passer_commande> [pour <number> <cheque>]   |
+    <je_veux> <number> <cheque> |
+    <je_veux> une nouvelle <card>   |
+    <je_veux> (<mon>|<mes>) <statement_all> |
+    (j'ai | j'aurais) besoin de <number> <cheque>   |
+    (j'ai | j'aurais) besoin (de mon|du|de mes|des) <statement_all>   |
+    (j'ai | j'aurais) besoin d'une nouvelle <card>  |
+    [<je_voudrais>] <order_cheques> |
+    [<je_voudrais>] <order_statement>   |
+    [<je_voudrais>] <order_card>
+) [<svp>];
+
+<order_cheques> = <get_cheques> (des|mes) <cheque>;
+<order_statement> = <get_statement> (<mon>|<mes>) <statement_all>;
+<order_card> = <get_card> une nouvelle <card>;
+
+<get_cheques> = commander | recevoir | avoir;
+<get_statement> = voir | avoir | recevoir | trouver;
+<get_card> = recevoir | avoir;
+
+<passer_commande> = <je_voudrais> (passer|faire) une commande;
+<statement_all> = <statement> | <statement_ind> de (<INVESTMENT_account>|<TRANSACTIONAL_account>);
+
+//// ENTITY ////
+
+<cheque> = <CHEQUE>{ORDER};
+<statement_ind> = <STATEMENT_ind>{ORDER};
+<statement> = <STATEMENT>{ORDER};
+<number> = <CARDINAL>{CARDINAL};

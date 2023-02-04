@@ -1,0 +1,95 @@
+#JSGF V1.0;
+grammar dicts.PAYEE;
+
+//chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://wfcu.ca/SharedContent/documents/BillPaymentVendors/BillPaymentSuppliers.pdf
+public <PAYEE> = 
+
+	(Hydro-Quebec){Hydro-Quebec}|
+	(Hydro-Ottawa){Hydro-Ottawa}|
+	(Energy Ottawa){Energy Ottawa}|
+	(Rogers){Rogers}|
+	(Bell){Bell}|
+	(Virgin){Virgin}|
+	(Fido){Fido}|
+	(Telus){Telus}|
+	(Koodoo){Koodoo}|
+	(Videotron){Videotron}|
+	(Capital One){Capital One}|
+	(Fairstone){Fairstone}|
+	(Videotron){Videotron}|
+	(School Board){School Board}|
+	(city hall){city hall}|
+	(town){town}|
+	(township){township}|
+	(municipality){municipality}|
+	(Canadian Revenue Agency|CRA){CRA}|
+	(alarm){alarm}|
+	(telecom){telecom}|
+	(Avon){Avon}|
+	(power){power}|
+	(energy){energy}|
+	(telephone){telephone}|
+	(mobility){mobility}|
+	(mobile){mobile}|
+	(telecommunication|telecommunications){telecommunication}|
+	(consultant|consultants){consultant}|
+	(hydro){hydro}|
+	(Canada Life){Canada Life}|
+	(Beneva){Beneva}|
+	(insurance){insurance}|
+	(Canadian Tire){Canadian Tire}|
+	(Canada Border Service Agency){Canada Border Service Agency}|
+	(CBSA){CBSA}|
+	(university){university}|
+	(taxes){taxes}|
+	(government){government}|
+	(tax){tax}|
+	(property taxes town){property taxes town}|
+	(property tax){property tax}|
+	(Costco){Costco}|
+	(Dell){Dell}|
+	(tax){tax}|
+	(tuition){tuition}|
+	(tuition fees){tuition fees}|
+	(FedEx){FedEx}|
+	(DHL){DHL}|
+	(UPS){UPS}|
+	(college){college}|
+	(Best Buy){Best Buy}|
+	(Freedom Mobile){Freedom Mobile}|
+	(Freedom){Freedom}|
+	(Honda){Honda}|
+	(Ford){Ford}|
+	(GM){GM}|
+	(General Motors){General Motors}|
+	(VW){VW}|
+	(Volkswagen){Volkswagen}|
+	(Toyota){Toyota}|
+	(Mercedes-Benz){Mercedes-Benz}|
+	(Ikea){Ikea}|
+	(Impact Telecom){Impact Telecom}|
+	(Impact){Impact}|
+	(John Deere){John Deere}|
+	(London Hydro){London Hydro}|
+	(London Life){London Life}|
+	(water and gas){water and gas}|
+	(water){water}|
+	(Manulife){Manulife}|
+	(propane){propane}|
+	(Outdoor Gear){Outdoor Gear}|
+	(petro){petro}|
+	(Proxair){Proxair}|
+	(Primus){Primus}|
+	(Primus Telecom){Primus Telecom}|
+	(Royal Bank of Canada|RBC){RBC}|
+	(Scotiabank){Scotiabank}|
+	(Bank of Montreal|BMO){BMO}|
+	(Desjardins){Desjardins}|
+	(TD){TD}|
+	(National Bank [of Canada]|NBC){National Bank}|
+	(Rona){Rona}|
+	(Sun Life){Sun Life}|
+	(Wise|Transferwise){Wise}|
+	(Wells Fargo){Wells Fargo}|
+	(club){club}
+;

@@ -1,0 +1,48 @@
+#JSGF V1.0;
+grammar dicts.DATE;
+
+public <DATE> = (
+	today |
+	yesterday |
+	day before yesterday |
+	last week |
+	next week |
+	this week |
+	last month |
+	this month |
+	next month |
+	weekend |
+	january 15 |
+	february 20 |
+	march 10 |
+	april 4 |
+	may 1st |
+	june 27 |
+	july 30 |
+	august 18 |
+	september 22 |
+	october 25|
+	november 15 |
+	december 24 |
+	monday |
+	tuesday |
+	wednesday |
+	thursday |
+	friday |
+	saturday |
+	sunday |
+	next monday |
+	next tuesday |
+	next wednesday |
+	next thursday |
+	next friday |
+	next saturday |
+	next sunday |
+	last monday |
+	last tuesday |
+	last wednesday |
+	last thursday |
+	last friday |
+	last saturday |
+	last sunday 
+);

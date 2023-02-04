@@ -1,0 +1,15 @@
+#JSGF V1.0;
+grammar follow_up;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+import <dicts.REF_THING.*>;
+
+
+public <follow_up> = (<faire_suivi> | <verifier_transaction>);
+
+<faire_suivi> = [<je_voudrais>] faire ( un | le ) suivi (d'une transaction | d'une confirmation | d'une opération)  
+                ( ( (sur ma | de ma) <card> | sur <card_ref> ) | de mon (<INVESTMENT_account> | <TRANSACTIONAL_account>) | sur <account_ref> );
+
+<verifier_transaction> = [<je_voudrais>] <verifier>
+             ([le statut d'] une transaction | une confirmation | une opération | ma <card> | <card_ref> | mon (<INVESTMENT_account> | <TRANSACTIONAL_account>) | <account_ref>);

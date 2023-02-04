@@ -1,0 +1,13 @@
+#JSGF V1.0;
+grammar globals.explain;
+import <dicts.COMMAND.*>;
+
+public <explain> = <interrogative> | <imperative>;
+
+<interrogative> = (pouvez-vous <explain_infinitive> {COMMAND} [s'il vous plaît] |
+peux-tu <explain_infinitive> {COMMAND} [s'il te plaît]);
+
+<imperative> = ( <explain_imperative> {COMMAND} [moi] ça [s'il vous plaît] |
+<explain_conjugated>{COMMAND} [ça] [s'il te plaît]);
+
+// SAMPLES UNDER NO_INTENT

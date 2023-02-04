@@ -1,0 +1,8 @@
+#JSGF V1.0;
+grammar open_account;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+
+public <open_account> = [<request_to> | [<could_you>] [please]] <open> <an_account>;

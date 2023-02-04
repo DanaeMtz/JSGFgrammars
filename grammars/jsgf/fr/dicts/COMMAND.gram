@@ -1,0 +1,106 @@
+#JSGF V1.0;
+grammar dicts.COMMAND;
+
+
+public <AGENT> = (<AGENT_masc> | <AGENT_fem>);
+
+public <AGENT_masc> = (
+	(agent) {AGENT} |
+	(humain) {AGENT} |
+	(opérateur) {AGENT} |
+	(représentant) {AGENT}
+);
+
+public <AGENT_fem> = (
+	(personne) {AGENT}
+);
+
+
+public <MAIN_MENU> = (<main_menu_object> | <main_menu_verb>);
+
+public <main_menu_verb> = (
+	(recommencer) {MAIN_MENU}|
+	(reprendre) {MAIN_MENU}
+);
+
+public <main_menu_object> = (
+	(menu) {MAIN_MENU} |
+	(menu principal) {MAIN_MENU}
+);
+
+
+public <EXPLAIN> = (<explain_infinitive> | <explain_imperative> |  <explain_conjugated> );
+
+public <explain_infinitive> = (
+	(expliquer) {EXPLAIN} |
+	(éclaircir) {EXPLAIN} |
+	(clarifier) {EXPLAIN}
+);
+
+public <explain_imperative> = (
+	(expliquez) {EXPLAIN} |
+	(clarifiez) {EXPLAIN}
+);
+
+public <explain_conjugated> = (
+	(expliques) {EXPLAIN} |
+	(clarifies) {EXPLAIN}
+);
+
+
+public <cancel_infinitive> = (
+	(annuler) {CANCEL_TRANSACTION} |
+	(supprimer) {CANCEL_TRANSACTION} |
+	(canceller) {CANCEL_TRANSACTION} |
+	(abandonner) {CANCEL_TRANSACTION}
+);
+
+
+public <OPTIONS> = (
+	(choix){OPTIONS} |
+	(options){OPTIONS}
+);
+
+
+public <REPEAT> = (<repeat_infinitive> | <repeat_imperative>);
+
+public <repeat_infinitive> = (
+	(répéter){REPEAT} 
+
+);
+
+public <repeat_imperative> = (
+	(répétez) {REPEAT} |
+	(encore) {REPEAT}
+);
+
+
+public <WAIT> = (<wait_infinitive> | <wait_imperative> );
+
+public <wait_infinitive> = (
+	(attrendre){WAIT} |
+	(patienter){WAIT} 
+);
+
+public <wait_imperative> = (
+	(attendez){WAIT} |
+	(attends){WAIT} |
+	(juste une minute){WAIT} |
+	(juste un instant) {WAIT} |
+	(patientez){WAIT} 
+);
+
+
+public <WAKE> = (
+	(je suis de retour){WAKE} |
+	(je suis là){WAKE} |
+	(je suis revenu){WAKE} |
+	(je l'ai){WAKE}
+);
+
+
+public <UNAVAILABLE_INFO> = (
+	(je ne sais pas){UNAVAILABLE_INFO} |
+	(je ne l'ai pas){UNAVAILABLE_INFO} |
+	(je ne suis pas certain[e]){UNAVAILABLE_INFO}
+);

@@ -1,0 +1,13 @@
+#JSGF V1.0;
+grammar dicts.CHANGE_FEATURE;
+
+public <CHANGE_FEATURE> = (
+    (add){ADD}|
+	(have){ADD}|
+	(set){ADD}|
+    (remove){REMOVE}|
+	(cancel){REMOVE}|
+	(drop){REMOVE}|
+	(change){CHANGE}|
+	(modify){CHANGE}
+);

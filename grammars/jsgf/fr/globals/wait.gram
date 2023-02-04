@@ -1,0 +1,12 @@
+#JSGF V1.0;
+grammar globals.wait;
+import <dicts.COMMAND.*>;
+
+public <wait> = <interrogative> | <imperative>;
+
+<interrogative> = (pouvez-vous <wait_infinitive> {COMMAND} [s'il vous plaît] |
+peux-tu <wait_infinitive> {COMMAND} [s'il te plaît]);
+
+<imperative> = ( <wait_imperative> {COMMAND} [s'il vous plaît] );
+
+// SAMPLES UNDER NO_INTENT

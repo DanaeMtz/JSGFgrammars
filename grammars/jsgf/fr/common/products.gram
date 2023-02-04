@@ -1,0 +1,36 @@
+#JSGF V1.0;
+grammar common.products;
+import <dicts.INVESTMENT.*>;
+import <dicts.TRANSACTIONAL.*>;
+import <dicts.CARD.*>;
+import <dicts.FINANCING.*>;
+import <dicts.POINTS.*>;
+import <dicts.REF_THING.*>;
+
+
+
+//// PRODUCTS ////
+
+public <credit_card_points> = <points> <sur_carte>;
+public <balance_type> = (disponible | non remboursé | impayé | à payer | due);
+public <systematique> = (périodique | automatique | systématique);
+public <systematiques> = (périodiques | automatiques | systématiques);
+public <inv_systematique> = ( mon épargne systématique | mes dépôts systématiques | ma cotisation automatique | mon prélèvement automatique);
+
+public <limite_de_credit> = limite ( de crédit | de ma (<card> | <loc>) | sur ma <card> | sur ma carte | (sur | de) (<card_ref> | <loc_ref>));
+public <limite_carte> = (la <limite_de_credit> | (ma | la) ( <card> | <loc> | limite | carte) | (<card_ref> | <loc_ref>));
+public <sur_carte> = (sur | dans | de) (ma | la | notre) <card>;
+public <mon_solde> = (le | mon) (solde | montant) | (la | ma) balance;
+public <compte_kw> = compte;
+public <points> = <POINTS>{POINTS};
+
+
+//// ENTITIES ////
+
+public <INVESTMENT_account> = (/1/ <compte_kw> <INVESTMENT_dep>{INVESTMENT} | /2/ [<compte_kw>] <INVESTMENT_ind>{INVESTMENT} | /1/ [<compte_kw>] <INVESTMENT_acronyms>{INVESTMENT});
+public <TRANSACTIONAL_account> = <compte_kw> <TRANSACTIONAL>{TRANSACTIONAL};
+
+public <card> = <CARD>{CARD};
+public <loc> = <LOC>{FINANCING};
+public <mortgage> = <MORTGAGE>{FINANCING};
+public <loan> = <LOAN>{FINANCING};

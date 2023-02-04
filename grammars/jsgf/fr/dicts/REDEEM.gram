@@ -1,0 +1,79 @@
+#JSGF V1.0;
+grammar dicts.REDEEM;
+
+public <REDEEM> = (
+	<GIFTCARD> |
+	<PRODUCT> |
+	<DONATION_noun> |
+	<DONATION_verb> |
+	<TRAVEL_goods>
+);
+
+
+public <GIFTCARD> = (
+	(carte cadeau){GIFTCARD}
+);
+
+public <PRODUCT> = (
+	(produits électroniques){PRODUCT} |
+	(caméra){PRODUCT} |
+	(ordinateur){PRODUCT} |
+	(laptop){PRODUCT} |
+	(tablette){PRODUCT} |
+	(téléphone){PRODUCT} |
+	(téléphone intélligent){PRODUCT} |
+	(écran){PRODUCT} |
+	(imprimante){PRODUCT} |
+	(iphone){PRODUCT} |
+	(ipad){PRODUCT} |
+	(imac){PRODUCT} |
+	(macbook){PRODUCT} |
+	(écouteurs){PRODUCT} |
+	(haut-parleurs){PRODUCT} |
+	(télévision){PRODUCT} |
+	(barre de son){PRODUCT} |
+	(système de son){PRODUCT} |
+	(apple watch){PRODUCT} |
+	(montre){PRODUCT} |
+	(bijou){PRODUCT} |
+	(lunettes [de soleil]){PRODUCT} |
+	(sac à main){PRODUCT} |
+	(sacoche){PRODUCT} |
+	(produits de santé){PRODUCT} |
+	(produits de beauté){PRODUCT} |
+	(parfum){PRODUCT} |
+	(rasoir){PRODUCT} |
+	(sèches-cheveux){PRODUCT} |
+	(produits pour la cuisine){PRODUCT} |
+	(électroménager){PRODUCT} |
+	(machine à café){PRODUCT} |
+	(cafetière){PRODUCT} |
+	(matelat){PRODUCT} |
+	(couverture){PRODUCT} |
+	(coussin){PRODUCT} |
+	(barbecue){PRODUCT} |
+	(aspirateur){PRODUCT} |
+	(outils){PRODUCT} |
+	(valise){PRODUCT} |
+	(produits de sport){PRODUCT} |
+	(sac de golf){PRODUCT} |
+	(jouets){PRODUCT}
+);
+
+public <DONATION_noun> = (
+	(don | donation){DONATION}
+);
+
+public <DONATION_verb> =(
+	(donner){DONATION}
+);
+
+public <TRAVEL_goods> = (
+	(voyage){TRAVEL} |
+	(billet d'avion){TRAVEL}	|
+	(séjour [sur une croisière | dans un hôtel]){TRAVEL}	|
+	(croisière){TRAVEL}	|
+	(chambre d'hôtel){TRAVEL}	|
+	(location d'auto){TRAVEL}	|
+	(location de voiture){TRAVEL}
+);

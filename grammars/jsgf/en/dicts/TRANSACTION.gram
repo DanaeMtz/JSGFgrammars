@@ -1,0 +1,26 @@
+#JSGF V1.0;
+grammar dicts.TRANSACTION;
+
+
+public <TRANSACTION_NOUN> = (
+
+	([wire|interac|money] transfer){TRANSFER} |	
+	([money] withdrawal){DEBIT} |
+	([bill] payment){PAY}
+);
+
+public <TRANSACTION_NOUN_PL> = (
+
+	([wire|interac|money] transfers){TRANSFER} |	
+	([money] withdrawals){DEBIT} |
+	([bill] payments){PAY}
+);
+
+public <TRANSACTION_VERB> = (
+	
+	(transfer [money]){TRANSFER} |	
+	((withdraw|debit) [money]){DEBIT} |
+	(pay [my bill]){PAY} |
+	(pay [my] bills){PAY} | 
+	(add a [new] (payee|biller|supplier)){ADD_PAYEE}
+);

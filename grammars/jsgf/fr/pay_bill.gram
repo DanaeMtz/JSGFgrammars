@@ -1,0 +1,14 @@
+#JSGF V1.0;
+grammar pay_bill;
+import <common.generic.*>;
+import <common.operations.*>;
+import <dicts.PAYEE.*>;
+
+
+
+public <pay_bill> = <je_voudrais> 	(
+										<faire_paiement> (de [la] | d'une) facture |
+										<payer> (une | la) facture
+
+									) [(de | du fournisseur) <PAYEE>];
+

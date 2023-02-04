@@ -1,0 +1,12 @@
+#JSGF V1.0;
+grammar globals.escalate_agent;
+import <dicts.COMMAND.*>;
+import <common.generic.*>;
+
+public <escalate_agent> = ([<request_to>] (talk to | speak with | be transferred to | discuss with) <command_agent> | <agent>) [please];
+
+//entities with tags
+<command_agent> = (an (<AGENT_vowel>){COMMAND} | a (<AGENT_cons>){COMMAND});
+<agent> = <AGENT>{COMMAND};
+
+// SAMPLES UNDER NO_INTENT

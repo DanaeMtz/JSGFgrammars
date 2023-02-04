@@ -1,0 +1,32 @@
+#JSGF V1.0;
+grammar request_available_cash_adv;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+import <dicts.REF_THING.*>;
+
+
+public <request_available_cash_adv> = (<avoir_solde> | <combien_solde> | <combien_solde2> ) [s'il vous plaît];
+
+<avance_des_fonds> = des avancements des fonds|(d'avancement|d'avance) de fonds;
+
+<avoir_solde> = (
+        [<je_voudrais>] (<connaitre> |
+        <voudrais_savoir> )
+    )
+        <avance_des_fonds> <balance_type> (<sur_carte> | (sur | dans | de) <account_ref>)
+    ;
+
+<combien_solde> = [(peux-tu me dire | pouvez-vous me dire)] combien 
+                  <avance_des_fonds> (qu'il reste | que j'ai) 
+                  [à utiliser|utilisé] ( <sur_carte> | (sur | dans) <account_ref>) ;
+
+
+<combien_solde2> =[[<je_voudrais>] (savoir | <verifier>)] 
+		(combien <avance_des_fonds> | quelle est le montant pour retrait)
+		[(qu'il | il) [me] reste] [de (disponible)] ( <sur_carte> | (sur | dans) <account_ref>)
+    ;
+
+
+
+// TODO: add examples using the entities: FINANCING_ENTERPRISE

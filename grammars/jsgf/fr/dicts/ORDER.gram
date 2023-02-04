@@ -1,0 +1,55 @@
+#JSGF V1.0;
+grammar dicts.ORDER;
+
+public <ORDER> = (<CHEQUE> | <STATEMENT_ind> | <STATEMENT>);
+
+
+public <CHEQUE> = (
+	(chèques){CHEQUE}
+);
+
+public <STATEMENT_ind> = (
+	(relevé){STATEMENT} |
+    (relevés){STATEMENT}
+);
+
+public <STATEMENT> = (
+	(relevé bancaire){STATEMENT}	|
+	(relevés bancaires){STATEMENT}	|
+	(relevé de compte){STATEMENT}   |
+	(relevés de compte){STATEMENT}  |
+	(feuillet fiscal){STATEMENT}  |
+	(feuillets fiscaux){STATEMENT}  |
+	((document | relevé) (de taxes | d'impôt)){STATEMENT}    |
+	((documents | relevés) (de taxes | d'impôt)){STATEMENT} |
+	(reçu de cotisation){STATEMENT}    |
+	(relevé (de placement | d'investissement)){STATEMENT} |
+	(relevé [de|de mon] (
+	    compte investissement   |
+	    compte de placements   |
+	    compte enregistré   |
+	    compte non enregistré  |
+	    prêt hypothécaire)){STATEMENT} |
+	(relevé hypothécaire){STATEMENT}    |
+	(relevé [de|de mon] [compte]( CPGLM | CPG)){STATEMENT} |
+	(relevé (
+	    1   |
+	    2   |
+	    3   |
+	    16   |
+	    18)){STATEMENT} |
+	([relevé] (
+	    NR4 |
+	    RL-1    |
+	    RL-2    |
+	    RL-3    |
+	    RL-16   |
+	    RL-18   |
+	    T3  |
+	    T4A |
+	    T4RIF   |
+	    T4RSP   |
+	    T5  |
+	    T5008   |
+	    RC249)){STATEMENT}
+);

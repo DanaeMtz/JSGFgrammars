@@ -1,0 +1,42 @@
+#JSGF V1.0;
+grammar dicts.CURRENCY;
+
+public <CURRENCY> = (
+
+    (Rand Sud-Africain | Rands Sud-Africains){ZAR}|
+    (Dollar australien | Dollars australiens){AUD}|
+    (Réal [brésilien] | Réaux [brésiliens]){BRL}|
+    (Peso chilien | Pesos chiliens){CLP}|
+    (Yuan [chinois] | Renminbi){CNY}|
+    (Peso colombien | Pesos colombiens){COP}|
+    (Couronne tchèque | Couronnes tchèques){CZK}|
+    (Colón [costaricien]){CRC}|
+    (Couronne danoise | Couronnes danoises){DKK}|
+    (Euro | Euros){EUR}|
+    (Livre (anglaise | sterling) | Livres (anglaises | sterling)){GBP}|
+    (Quetzal [guatémaltèque] | Quetzals [guatémaltèques]){GTQ}|
+    ((Dollar | Dollars) de Hong Kong){HKD}|
+    ((Forint | Forints) [hongrois]){HUF}|
+    (Roupie indonésienne | Roupies indonésiennes){IDR}|
+    (Shekel [israélien] | Shekalim){ILS}|
+    ((Dollar jamaïcain | Dollars jamaïcains)){JMD}|
+    (Yen [japonais]){JPY} |
+    (Won [(sud-coréen | sud-coréens)]){KRW}|
+    (Peso mexicain | Pesos mexicains){MXN}|
+    (Couronne norvégienne | Couronnes norvégiennes){NOK}|
+    ((Dollar | Dollars) néo-zélandais){NZD}|
+    ((sol | sols) [du Pérou]){PEN}|
+    (Peso dominicain | Pesos dominicains){DOP}|
+    (Zloty [polonais]){PLN}|
+    (Riyal [saoudien]){SAR}|
+    ((Dollar | Dollars) de Singapour){SGD}|
+    (Couronne suédoise | Couronnes suédoises){SEK}|
+    (Franc [suisse] | Francs [suisses]){CHF}|
+    (Baht [thaïlandais]){THB}|
+    (Nouveau dollar de Taiwan){TWD}|
+    ((Dollar | Dollars) de Taïwan){TWD}|
+    (Dollar canadien | Dollars canadiens | devise canadienne){CAD}|
+    ((Dollar | Dollars) des États-Unis){USD}|
+    (Dollar américain | Dollars américains | devise américaine){USD}
+    
+);

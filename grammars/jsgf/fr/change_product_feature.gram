@@ -1,0 +1,21 @@
+#JSGF V1.0;
+grammar change_product_feature;
+import <dicts.TRANSACTIONAL.*>;
+import <dicts.PRODUCT_FEATURE.*>;
+import <dicts.PACKAGE.*>;
+import <dicts.CHANGE_FEATURE.*>;
+import <dicts.REF_THING.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+public <change_product_feature> = (
+	( (<je_voudrais> | <je_veux>) <change_verb> ( (le | un) (<package> | <feature_masc>) | la <feature_fem> | <package_ref> ) [ (de|dans) (<account_ref> |(mon|notre) compte <TRANSACTIONAL>)]) |
+	( (j'ai | nous avons) un compte <TRANSACTIONAL> et (<je_voudrais> | <je_veux>) <change_verb> (le | un) (<package> | <feature_masc>) | la <feature_fem> ) [<svp>]
+);
+
+<transactional> = <TRANSACTIONAL>{TRANSACTIONAL};
+<feature_fem> = <PRODUCT_FEATURE_fem>{PRODUCT_FEATURE};
+<feature_masc> = <PRODUCT_FEATURE_masc>{PRODUCT_FEATURE};
+<package> = <PACKAGE>{PACKAGE};
+<change_verb> = <CHANGE_FEATURE_verb>{CHANGE_FEATURE};

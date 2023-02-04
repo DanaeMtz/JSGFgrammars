@@ -1,0 +1,39 @@
+#JSGF V1.0;
+grammar dicts.TYPE_AMOUNT;
+
+
+public <TYPE_AMOUNT> = (
+	<MIN_DUE> |
+	<MIN_PAYMENT> |
+	<TOTAL_DUE> |
+	<TOTAL_PAYMENT> |
+	<REM_DUE>
+);
+
+
+public <MIN_DUE> = (
+	minimum [due] amount |
+	minimum [amount] due |
+	minimum
+){MIN_DUE};
+
+public <MIN_PAYMENT> = (
+	minimum payment
+){MIN_DUE};
+
+public <TOTAL_DUE> = (
+	(total|full) [due] amount |
+	total [amount] due |
+	total |
+	full amount due
+){TOTAL_DUE};
+
+public <TOTAL_PAYMENT> = (
+	(total|full) payment |
+	payment in full
+){TOTAL_DUE};
+
+public <REM_DUE> = (
+	remaining [due] amount |
+	remaining [amount] due
+){REM_DUE};

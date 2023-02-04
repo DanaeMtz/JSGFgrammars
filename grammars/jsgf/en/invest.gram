@@ -1,0 +1,24 @@
+#JSGF V1.0;
+grammar invest;
+import <dicts.AMOUNT.*>;
+import <dicts.REF_THING.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+
+public <invest> = [<request_to>] (<make_investment1> | <make_investment2> ) [<please>];
+
+<make_investment1> = <transfer_money> [<from> <TRANSACTIONAL_account>] <to> (<my_investment>|<account_ref>);
+<make_investment2> = <contribute_to> (<my_investment>|<account_ref>);
+
+<transfer_money> = (<transfer> | <deposit>) (<money> | <amount>);
+
+<from> = from [my];
+<to> = to [(put | add) (in | into)] | into | over;
+
+<my_investment> = (my|the) <INVESTMENT_account>;
+
+
+//entities with tags
+<amount> = <AMOUNT>{AMOUNT};

@@ -1,0 +1,35 @@
+#JSGF V1.0;
+grammar request_balance;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+import <dicts.REF_THING.*>;
+
+
+public <request_balance> = (<avoir_solde> | <combien_solde> | <combien_solde2> | <combien_solde3> ) [s'il vous plaît];
+
+<avoir_solde> = (
+        [<je_voudrais>] <connaitre> |
+        <voudrais_savoir> [(c'est quoi| quel est)]
+    )
+    (
+        <mon_solde> ([qui se trouve] dans | de) mon (<INVESTMENT_account> | <TRANSACTIONAL_account> | <compte_kw>) |
+        mon solde [<INVESTMENT_account>] |
+        le ( solde [<balance_type>] | (montant|limite|crédit) <balance_type>) ( <sur_carte> | (sur | dans | de) <card_ref>)
+    );
+
+<combien_solde> = [(peux-tu me dire | pouvez-vous me dire)] combien 
+                  (d'argent il reste | d'argent j'ai | que j'ai) 
+                  (dans mon (<INVESTMENT_account> | <TRANSACTIONAL_account> | <compte_kw>) | 
+                  [de (disponible)] ( <sur_carte> | ( /2/ sur | /1/ dans ) <card_ref>));
+
+<combien_solde2> = [j'ai] combien (d'argent dans | dans | sur) ( mon (<INVESTMENT_account> | <TRANSACTIONAL_account> | <compte_kw>) | <card_ref> );
+
+<combien_solde3> =[[<je_voudrais>] (savoir | <verifier>)] combien [(qu'il | il) [me] reste]
+    (
+        (dans | sur) mon (<INVESTMENT_account> | <TRANSACTIONAL_account> | <compte_kw>) |
+        [de (disponible)] (<sur_carte> | ( /2/ sur | /1/ dans ) <card_ref>)
+    );
+
+
+// TODO: add examples using the entities: FINANCING_ENTERPRISE

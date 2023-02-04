@@ -1,0 +1,8 @@
+#JSGF V1.0;
+grammar activate_card;
+import <common.generic.*>;
+import <common.products.*>;
+import <dicts.REF_THING.*>;
+
+public <activate_card> = ([<request_to> |<could_you>] activate (my [new] (<card>|card)| <card_ref>) |
+		<received> my [new] (<card>|card) <request_to> activate <it_ref>) [<please>];

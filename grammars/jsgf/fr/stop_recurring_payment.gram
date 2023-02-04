@@ -1,0 +1,16 @@
+#JSGF V1.0;
+grammar stop_recurring_payment;
+import <common.generic.*>;
+import <common.operations.*>;
+import <dicts.PAYEE.*>;
+
+
+public <stop_recurring_payment> = (
+    [<je_voudrais>] <arreter> <mon> paiement <recurrent> [de [<ma> facture de] <PAYEE>] |
+    [<je_voudrais>] <arreter> <mon> réglement <recurrent> [de <ma> facture de <PAYEE>] |
+    <je_voudrais_que> <mon> paiement <recurrent> [de [<ma> facture de] <PAYEE>] soit <arreter_pp> |
+    <je_voudrais_que> <mon> réglement <recurrent> [de <ma> facture de <PAYEE>] soit <arreter_pp>
+) [<svp>];
+
+<recurrent> = récurrent | automatique | automatisé | périodique | mensuel | hebdomadaire | annuel;
+<arreter_pp> = arrêté | cancellé | annulé | supprimé | retiré;

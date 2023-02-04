@@ -1,0 +1,45 @@
+#JSGF V1.0;
+grammar dicts.INVESTMENT;
+
+public <INVESTMENT> = (<INVESTMENT_dep> | <INVESTMENT_ind>);
+
+public <INVESTMENT_dep> = (
+	(d'épargne libre d'impôt) {TFSA} |
+	(libre d'impôt) {TFSA} |
+	(d'epargne sans impôt) {TFSA} |
+	(régime-enregistré d'épargne retraite) {RRSP} |
+	(d'épargne-retraite) {RRSP} |
+	(d'épargne pour les études) {RESP} |
+	(de retraite immobilisé) {LIRA} |
+	(épargne pour entreprise){BUSINESS_INVESTMENT_ACCOUNT} |
+	(epargne commercial){BUSINESS_INVESTMENT_ACCOUNT} |
+	(en fidéicommis){BUSINESS_INVESTMENT_ACCOUNT} |
+	(de compagnie d'option){BUSINESS_INVESTMENT_ACCOUNT} |
+	(de placement){BUSINESS_INVESTMENT_ACCOUNT}
+);
+
+
+public <INVESTMENT_ind> = (
+	(régime enregistré d'épargne-études) {RESP} |
+	(régime d'épargne de mes enfants) {RESP} |
+	(fonds de revenu de retraite) {RRIF} |
+	(fonds enregistré de revenu de retraite) {RRIF} |
+	(fonds de revenu viager) {LIF} |
+	(placement affaires) {BUSINESS_INVESTMENT_ACCOUNT} |
+	<INVESTMENT_acronyms>
+);
+
+public <INVESTMENT_acronyms> = (
+	(celi) {TFSA} |
+	(céli) {TFSA} |
+	(reer) {RRSP} |
+	(réer) {RRSP} |
+	(réee) {RESP} |
+	(réée) {RESP} |
+	(reee) {RESP} |
+	(R trois E) {RESP} |
+	(ferr) {RRIF} |
+	(FRV) {LIF} |
+	(cri) {LIRA} |	
+	(CPA) {BUSINESS_INVESTMENT_ACCOUNT}
+);

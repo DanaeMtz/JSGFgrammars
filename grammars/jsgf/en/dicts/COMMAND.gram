@@ -1,0 +1,78 @@
+#JSGF V1.0;
+grammar dicts.COMMAND;
+
+
+public <AGENT> = (<AGENT_vowel> | <AGENT_cons>);
+
+public <AGENT_vowel> = (
+	(agent) {AGENT} |
+	(operator) {AGENT}
+);
+
+public <AGENT_cons> = (
+	(human) {AGENT} |
+	(person) {AGENT} |
+	(representative) {AGENT}
+);
+
+
+public <MAIN_MENU> = (<MAIN_MENU_object> | <MAIN_MENU_verb>);
+
+public <MAIN_MENU_verb> = (
+	(restart) {MAIN_MENU} |
+	(back) {MAIN_MENU}
+);
+
+public <MAIN_MENU_object> = (
+	(menu) {MAIN_MENU} |
+	(main menu) {MAIN_MENU}
+);
+
+
+public <EXPLAIN> = (<explain_infinitive> );
+
+public <explain_infinitive> = (
+	(explain) {EXPLAIN} |
+	(clarify) {EXPLAIN} 
+);
+
+public <cancel_infinitive> = (
+	(annul) {CANCEL_TRANSACTION} |
+	(abort) {CANCEL_TRANSACTION} |
+	(cancel) {CANCEL_TRANSACTION} |
+	(call off) {CANCEL_TRANSACTION} |
+	(abandon) {CANCEL_TRANSACTION}
+);
+
+
+public <OPTIONS> = (
+	(options){OPTIONS}
+);
+
+
+public <REPEAT> = (
+	(say it again){REPEAT} |
+	(repeat){REPEAT}
+);
+
+public <WAIT> = (
+	(wait){WAIT} |
+	(hold on){WAIT} |
+	(just a second){WAIT} |
+	(just a minute){WAIT} |
+	(just a moment){WAIT}
+);
+
+
+public <WAKE> = (
+	(I'm back){WAKE} |
+	(I'm here){WAKE} |
+	(I have it) {WAKE}
+);
+
+
+public <UNAVAILABLE_INFO> = (
+	(I don't know){UNAVAILABLE_INFO} |
+	(I don't have it){UNAVAILABLE_INFO} |
+	(I'm not sure){UNAVAILABLE_INFO}
+);

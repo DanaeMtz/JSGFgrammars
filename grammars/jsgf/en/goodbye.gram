@@ -1,0 +1,4 @@
+#JSGF V1.0;
+grammar goodbye;
+
+public <goodbye> = [(no){OUI_NON} [thank you]] (that was it | that's it | that's all [for today] | it will be all);

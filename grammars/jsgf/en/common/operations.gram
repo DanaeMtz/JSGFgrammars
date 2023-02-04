@@ -1,0 +1,34 @@
+#JSGF V1.0;
+grammar common.operations;
+
+
+
+//// OPERATIONS ////
+
+public <update> = update | change | modify;
+public <cancel> = stop | cancel | terminate | remove;
+public <increase> = increase | raise;
+public <decrease> = decrease | reduce | lower;
+public <transfer> = change | modify | switch | move | get | [make a] transfer;
+public <debit> = withdraw | remove | debit | take;
+public <amend> = <update> | <increase> | <decrease> | <renew>;
+public <renew> = renew | update;
+public <close> = close | cancel | terminate | shut;
+public <open> = ( /3/ open [up] | /2/ create | /2/ get | /1/ start | /1/ set up);
+public <get> = (get | obtain | check);
+public <know> = (know | check | find out | inquire);
+public <verify> = (verify | check | validate);
+public <deposit> = deposit | put;
+public <pay> = pay;
+public <make_payment> = make a payment;
+
+public <opening> = (opening | making | creating | getting | starting | setting up);
+public <getting> = (getting | obtaining);
+
+public <contribute_to> = ((make | perform) [a] contribution | contribute | invest) (to | in | into);
+public <get_an_update> = (get an update | follow up | ask you);
+
+public <following_up> = (I am | I'm) (following up on | inquiring about);
+
+public <tell_me> = (give me an update  (on | about) | tell me [about]);
+

@@ -1,0 +1,53 @@
+#JSGF V1.0;
+grammar PAY_CARD_WITH_POINTS;
+import <common.generic.*>;
+import <common.products.*>;
+import <common.operations.*>;
+import <dicts.CARD.*>;
+import <dicts.AMOUNT.*>;
+import <dicts.TYPE_AMOUNT.*>;
+import <dicts.REF_THING.*>;
+
+
+public <PAY_CARD_WITH_POINTS> = (
+	<payAvecPoints>
+	//<request_points> |
+	//<want_points>
+	)
+	[<svp>];
+
+
+<payAvecPoints> = [<je_voudrais>] <payAmountCard> <avecPoints>;
+
+
+//// RULES <request_points> AND <want_points> ARE COMMENTED OUT IN THE INTENT
+//// BECAUSE THEY CREATE OVERLAPS WITH REDEEM_POINTS. I STILL LEAVE THEM IN THE
+//// GRAMMAR IN CASE THEY ARE USED IN THE FUTURE.
+<request_points> = [<je_voudrais>] (échanger | convertir | utiliser | réclamer) <mes_points> pour <payAmountCard>;
+<want_points> = <je_voudrais_que> <mes_points> soient (échangés | convertis | utilisés | réclamés) pour <payAmountCard>;
+
+<payAmountCard> = (
+	<payer> [<amount> (sur | vers | de)] |
+	<payer> [le <amountDue> (sur | de)] |
+	<faire_paiement> [de <amount>] (sur | vers) |
+	<faire_paiement> [du <amountDue>] (sur | vers) |
+	faire un <amountPayment> (sur | vers)
+	)
+	<target_card>;
+
+<target_card> = (
+	[(le | mon) solde de] <ma> balance |
+	<ma> [balance de <ma>] (<card> | carte) |
+	<card_ref>
+);
+
+<avecPoints> = <avec> <mes> <points>;
+<mes_points> = (<mes> | les) <points>;
+<avec> = avec | en utilisant;
+
+
+//// ENTITIES
+
+<amount> = <AMOUNT>{AMOUNT};
+<amountDue> = (<MIN_DUE> | <TOTAL_DUE> | <REM_DUE>){TYPE_AMOUNT};
+<amountPayment> = (<MIN_PAYMENT> | <TOTAL_PAYMENT>){TYPE_AMOUNT};

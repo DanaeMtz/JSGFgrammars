@@ -1,0 +1,40 @@
+#JSGF V1.0;
+grammar change_limit;
+import <dicts.CARD.*>;
+import <dicts.AMOUNT.*>;
+import <dicts.FINANCING.*>;
+import <dicts.CHANGE_TYPE.*>;
+import <dicts.REF_THING.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+ 
+public <change_limit> = (<increase_verb> | <verb_increase> | <increasing>) [please];
+
+<increase_verb> = <request_to> (<increase> | <decrease> | <update>) <line_limit>;
+
+<verb_increase> = ( <request_for> | get my monthly)
+                [credit] limit (<increase> | <decrease> | <update>) [ (on my <card> | on the card | to <amount>)];
+
+<increasing> = <info_about> increasing <line_limit>;
+
+<line_limit> = (the limit of ( my (<card>|<loc>) | <card_ref> | <loc_ref> (credit line | line of credit))|
+                my credit limit [ <change_type> on ( my <card> | <card_ref> | <loc_ref> ) ] |
+                ( my (<card> | <loc> ) | <card_ref> |  <loc_ref> ) limit <change_type> |
+                ( my (<card>| <loc> | <card_ref> | <loc_ref> ) limit )|
+                (the card | my | the <loc> ) limit |
+                the (<card>| <loc>) limit |
+                the spending limit on ( my (<card>|<loc>) | <card_ref> |  <loc_ref> ) |
+                the amount to <amount> |
+                the (<card> | <loc> | card) of <amount> |
+                the credit line ( [[on my] <card>] | of <card_ref> ) |
+                my line of credit [on ( my <card> | <card_ref> )] );
+
+
+<card> = <CARD>{CARD};
+<amount> = <AMOUNT>{AMOUNT};
+<change_type> = <CHANGE_TYPE>{CHANGE_TYPE};
+
+
+// TODO: add examples using the entities DATE

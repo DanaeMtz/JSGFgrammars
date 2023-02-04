@@ -1,0 +1,15 @@
+#JSGF V1.0;
+grammar accept_limit;
+import <common.generic.*>;
+import <common.products.*>;
+
+public <accept_limit> = <accepter> [s'il vous plaît] | <accept> ;
+
+<accepter> = (
+        <je_voudrais> accepter |
+        est-ce possible d'accepter|
+        êtes-vous capable d'accepter|
+        je me demandais si c'était possible d'accepter
+    ) (une augmentation| l'augmentation) de <limite_de_credit>;
+
+<accept> = j'accepte (l'augmentation de | la nouvelle ) <limite_de_credit>;

@@ -1,0 +1,4 @@
+#JSGF V1.0;
+grammar goodbye;
+
+public <goodbye> = [(non){OUI_NON} [merci]] ((c'est | c'était) tout [pour aujourd'hui] | c'est bon );

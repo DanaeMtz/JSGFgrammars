@@ -1,0 +1,69 @@
+#JSGF V1.0;
+grammar redeem_points;
+import <common.generic.*>;
+import <common.products.*>;
+import <common.operations.*>;
+import <dicts.CARD.*>;
+import <dicts.INVESTMENT.*>;
+import <dicts.REDEEM.*>;
+import <dicts.STORE.*>;
+
+
+public <redeem_points> = (<request_points> | <want_points>) [<svp>];
+
+
+<request_points> = [<je_voudrais>] (
+	échanger <mes_points> [<redeemFor1>] |
+	convertir <mes_points> [<redeemFor2>] |
+	(utiliser | réclamer) <mes_points> [<redeemFor3>] |
+	<transferer> <mes_points> [<redeemFor4>]
+);
+
+<want_points> = <je_voudrais_que> <mes_points> soient (
+	échangés [<redeemFor1>] |
+	convertis [<redeemFor2>] |
+	(utilisés | réclamés) [<redeemFor3>] |
+	transférés [<redeemFor4>]
+);
+
+
+<redeemFor1> = (
+	<baselineFor>	|
+	en (<giftcard>)	|
+	(contre|pour) ((<une_giftcard>|<un_product>) | une contribution à <mon> <INVESTMENT_account>)
+);
+<redeemFor2> = (
+	<baselineFor>	|
+	en (<giftcard>)	|
+	en échange de (<une_giftcard>|<un_product>)
+);
+<redeemFor3> = (
+	<baselineFor>	|
+	en échange de (<une_giftcard>|<un_product>)
+);
+<redeemFor4> = (
+	<pour> (<faire_cotisation>|<cotiser>) <vers_preps> <mon> <INVESTMENT_account>	|
+	vers <mon> <INVESTMENT_account>
+);
+
+<baselineFor> = (
+	<pour_acheter> (<une_giftcard> | <un_product>)	|
+	<pour> (faire <une_donation_noun> | <donation_verb>)	|
+	<pour> réserver <un_travel_goods>	|
+	<pour> (<faire_cotisation>|<cotiser>) <vers_preps> <mon> <INVESTMENT_account>	|
+	<vers_preps> <mon> <INVESTMENT_account>
+);
+
+
+<mes_points> = (mes | les) <credit_card_points>;
+<pour_acheter> = <pour> (avoir | acheter | recevoir | me procurer | commander);
+<pour> = pour;
+
+//// REDEEM entity ////
+
+<giftcard> = <GIFTCARD>{REDEEM} [<store>];
+<une_giftcard> = [une | la] <GIFTCARD>{REDEEM} [<store>];
+<un_product> = [un|une|des] <PRODUCT>{REDEEM};
+<une_donation_noun> = [un | une] <DONATION_noun>{REDEEM} [(à|à la|aux) <org>];
+<donation_verb> = <DONATION_verb>{REDEEM} (à|à la|aux) <org>;
+<un_travel_goods> = [un | une] <TRAVEL_goods>{REDEEM};

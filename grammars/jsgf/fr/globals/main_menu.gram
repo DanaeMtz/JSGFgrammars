@@ -1,0 +1,12 @@
+#JSGF V1.0;
+grammar globals.main_menu;
+import <dicts.COMMAND.*>;
+import <common.generic.*>;
+
+public <main_menu> = [ <je_voudrais> ] (<command_menu_verb> | [revenir au] <command_menu_obj>) [s'il (vous|te) plaît];
+
+//entities with tags
+<command_menu_verb> = (<main_menu_verb>){COMMAND};
+<command_menu_obj> = (<main_menu_object>){COMMAND};
+
+// SAMPLES UNDER NO_INTENT

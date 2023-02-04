@@ -1,0 +1,45 @@
+#JSGF V1.0;
+grammar denounce_fraud;
+import <common.generic.*>;
+import <common.products.*>;
+import <dicts.CARD.*>;
+import <dicts.REF_THING.*>;
+
+
+public <denounce_fraud> = (
+	<report_a_fraud> |
+	<was_frauded> |
+	<suspect_frauded> |
+	<suspect_trans> |
+	<contest_trans>
+) [<please>];
+
+
+<report_a_fraud> = [<request_to>] (<report>|<notify_you> of) a (<fraud> | <fraud_trans>) [on (<my> <card> | <card_ref>)];
+
+<was_frauded> = (
+	([<report_that>] [<i_think>] i <have_been> (<frauded> | victim of a <fraud>) [on (<my> <card> | <card_ref>)]) |
+	([<report_that>] [<i_think>] (<my> <card> | <card_ref>) <has_been> <frauded>)
+);
+
+<suspect_frauded> = [<report_that>] [<i_think>] someone (<frauded> | <tried_fraud>) (me [(using|through) my <card>] | [me on] (<my> <card> | <card_ref>));
+
+<suspect_trans> = [<report_that>] [<i_think>] there (<has_been> | is) a (<fraud> | <fraud_trans>) on (<my> <card> | <card_ref>);
+
+<contest_trans> = [<request_to>] <contest> a <fraud_trans> [on (<my> <card> | <card_ref>)];
+
+
+<fraud> = (fraud | scam) [attempt];
+<fraud_trans> = (fraudulent | suspicious) transaction;
+<frauded> = frauded | scammed;
+<tried_fraud> = tried to (fraud | scam);
+
+<report_that> = <request_to> (report | <notify_you>) that;
+<report> = report | declare | mention | denounce;
+<notify_you> = notify you | let you know;
+
+<contest> = contest | dispute | challenge;
+
+<i_think> = i (think | believe | suspect);
+<have_been> = have been | was;
+<has_been> = has been | was;

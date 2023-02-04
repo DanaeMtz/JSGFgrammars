@@ -1,0 +1,25 @@
+#JSGF V1.0;
+grammar dicts.CARD;
+
+public <CARD> = (
+
+    (carte de crédit){MASTERCARD}|
+    (carte de crédit entreprise){MASTERCARD}|
+    (carte de crédit de l'entreprise){MASTERCARD}|
+    (carte de crédit de la compagnie){MASTERCARD}|
+    (carte de crédit Affaires){MASTERCARD}|
+    (carte de crédit Mastercard Affaires){MASTERCARD}|
+    (carte de crédit pour le travail){MASTERCARD}|
+    (carte Mastercard pour notre entreprise){MASTERCARD}|
+    ([carte] Mastercard){MASTERCARD}|
+    ([carte] Mastercard Platine Affaires){MASTERCARD}|
+    ([carte] Mastercard Affaires){MASTERCARD}|
+    ([carte] Mastercard entreprise){MASTERCARD}|
+    (carte affaires){CLIENT_CARD}|
+    (carte de guichet entreprise){CLIENT_CARD}|
+	(carte de guichet){CLIENT_CARD}|
+	(carte guichet){CLIENT_CARD}|
+    (carte compagnie){CLIENT_CARD}|
+    (carte entreprise){CLIENT_CARD}|
+    (carte client entreprise){CLIENT_CARD}
+);

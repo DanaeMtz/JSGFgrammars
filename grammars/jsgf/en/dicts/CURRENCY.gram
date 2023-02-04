@@ -1,0 +1,43 @@
+#JSGF V1.0;
+grammar dicts.CURRENCY;
+
+public <CURRENCY> = (
+
+    (Australian (dollar | dollars)){AUD}|
+    ([Brazilian] (reals | reais | real)){BRL}|
+    ([Swiss] (franc| francs)){CHF}|
+    (Chilean (peso | pesos)){CLP}|
+    ([Chinese] yuan){CNY}|
+    (Colombian (peso | pesos)){COP}|
+    ([Costa Rican] (colón | colones)){CRC}|
+    (Czech (crown | crowns)){CZK}|
+    (Czech (koruna | korunas)){CZK}|
+    (Danish (krone | kroner)){DKK}|
+    (Dominican (peso | pesos)){DOP}|
+    ((euros | euros)){EUR}|
+    ((pound | pounds) sterling){GBP}|
+    ([British] (pound | pounds)){GBP}|
+    ([Guatemalan] (quetzal | quetzals)){GTQ}|
+    (Hong Kong (dollar | dollars)){HKD}|
+    ([Hungarian] (forint | forints)){HUF}|
+    ([Indonesian] (rupiah | rupiahs)){IDR}|
+    (Sheqel){ILS}|
+    ([Israeli] new shekel){ILS}|
+    (Jamaican (dollar | dollars)){JMD}|
+    ([Japanese] yen){JPY}|
+    ([South Korean] won){KRW}|
+    (Mexican (peso | pesos)){MXN}|
+    (Norwegian (krone | kroner)){NOK}|
+    (New Zealand (dollar | dollars)){NZD}|
+    ([Peruvian] [Nuevo] sol | [Peruvian] soles){PEN}|
+    ([Polish] Zloty){PLN}|
+    ([Swedish] (krona | kronor)){SEK}|
+    ([Saudi] (riyal | riyals)){SAR}|
+    (Singapore (dollar | dollars)){SGD}|
+    ([Thai] baht){THB}|
+    (New Taiwan (dollar | dollars)){TWD}|
+    ([South African] rand){ZAR}|
+    (Canadian (dollar | dollars)){CAD}|
+    (US (dollar | dollars)){USD}
+    
+);

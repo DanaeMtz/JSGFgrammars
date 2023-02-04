@@ -1,0 +1,14 @@
+#JSGF V1.0;
+grammar warn_lost_card;
+import <dicts.CARD.*>;
+import <dicts.DATE.*>;
+import <common.generic.*>;
+import <common.products.*>;
+
+public <warn_lost_card> =(
+	[<i_want> to <notify> [that]] my (card|<card>) (was | got) (lost | stolen) [[on] <date>] |
+	(I (can't (find | locate)) ((I|I've) (lost|missed)) my (card|<card>) [[since|on|around] <date>])
+	) [(can I|I want to) cancel it];
+
+//entities with tags
+<date> = <DATE>{DATE};

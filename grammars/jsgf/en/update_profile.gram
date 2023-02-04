@@ -1,0 +1,32 @@
+#JSGF V1.0;
+grammar update_profile;
+import <dicts.CARD.*>;
+import <dicts.PROFILE_ITEM.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+public <update_profile> = ( /2/ <to_change> | /2/ <a_change> | /2/ <get_changed> | /1/ <changed> |  /1/ <do_change>) [please];
+
+<to_change> = (<request_to>|<notify> (to|and)) <update> (my| the)
+                (<profile_general>|<profile_names>|<profile_numbered> number) [( on file | you have on file | with you | with the bank | (on my | for my) (<card> | <business_account>) )];
+
+<a_change> = (<request_to>|<notify> (to|and)) (make | do | notify)
+              (a change of (<profile_general>|<profile_names>|<profile_numbered> number) [(on my <card> | on my <business_account> )] | 
+              (the | an) (<profile_general>|<profile_names>|<profile_numbered> number));
+
+<get_changed> = [<request_to> get|<notify> that] (my | the) (<profile_general>|<profile_names>|<profile_numbered> number) changed;
+
+<changed> = [I want to (tell you that | let you know | <notify> that)] (I | we) changed (my | the) (<profile_general>|<profile_names>|<profile_numbered> number);
+
+<do_change> = ([do the] change of | <update>) [(<business_account> | <card>)] (<profile_general>|<profile_names>|<profile_numbered> number);
+ 
+<card> = <CARD>{CARD};
+<business_account> = <TRANSACTIONAL_account>{TRANSACTIONAL};
+<profile> = <PROFILE_ITEM>{PROFILE_ITEM};
+<profile_numbered> = <PROFILE_ITEM_NUMBERS>{PROFILE_ITEM};
+<profile_names> = <PROFILE_ITEM_NAMES>{PROFILE_ITEM};
+<profile_general> = <PROFILE_ITEM_GENERAL>{PROFILE_ITEM};
+
+// TODO: add examples with the entities : NUMBER, POSTAL_CODE, ORDINAL_NUMBER, YESNO
+// 2nd pass: added profile items based on discussions with Ahmed and audio listening 

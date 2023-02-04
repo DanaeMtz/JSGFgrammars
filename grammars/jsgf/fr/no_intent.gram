@@ -1,0 +1,75 @@
+#JSGF V1.0;
+grammar no_intent;
+import <dicts.AMOUNT.*>;
+import <dicts.CARDINAL.*>;
+import <dicts.CARD.*>;
+import <dicts.CHANGE_TYPE.*>;
+import <dicts.CURRENCY.*>;
+import <dicts.FINANCING.*>;
+import <dicts.INVESTMENT.*>;
+import <dicts.PACKAGE.*>;
+import <dicts.TRANSACTIONAL.*>;
+import <dicts.PAYEE.*>;
+import <common.generic.*>;
+import <globals.main_menu.*>;
+import <globals.escalate_agent.*>;
+import <globals.cancel_transaction.*>;
+import <common.products.*>;
+import <globals.explain.*>;
+import <globals.repeat.*>;
+import <globals.options.*>;
+import <globals.wait.*>;
+import <globals.wake.*>;
+import <globals.unavailable_info.*>;
+
+
+public <no_intent> = <global_commands>| [<donne_moi>] <fragments> | <correction> | <cardinal> | <payee>;
+
+<fragments> =
+    (
+        <fragments_acct> |
+        [<donne_moi>] <amount> |
+        <credit_product> |
+        <change_type> |
+        <package_value>
+    ) [s'il (vous|te) plaît] ;
+
+<global_commands> = <escalate_agent> | <main_menu> | <cancel_transaction> | <explain> | <repeat> | <options> | <wait> | <wake> | <unavailable_info>;
+
+<correction> =
+    (
+        /3/ non |
+        /2/ non <jai_dit> |
+        /1/ [[non] (c'est | ce n'est)] pas (ça | ce | cela) [que <jai_dit>] <jai_dit>
+    )
+    (<fragments> | <global_commands>)
+;
+
+<credit_product> =
+    [<dans_preps>] [<ma>|<mon>] (<card> | <financing>)
+;
+
+<package_value> =
+    [celui qui s'appelle | le] <package>
+;
+
+<fragments_acct> = [<dans_preps>] <mon> (
+        <compte_kw> <investment_dep> |
+        <compte_kw> <transactional> |
+        [<compte_kw>] <investment_ind> |
+        <compte_kw> en <currency>
+    );
+
+
+//entities with tags
+<amount> = <AMOUNT>{AMOUNT};
+<cardinal> = <CARDINAL>{CARDINAL};
+<card> = <CARD>{CARD};
+<change_type> = <CHANGE_TYPE>{CHANGE_TYPE};
+<currency> = <CURRENCY>{CURRENCY};
+<financing> = <FINANCING>{FINANCING};
+<investment_ind> = <INVESTMENT_ind>{INVESTMENT};
+<investment_dep> = <INVESTMENT_dep>{INVESTMENT};
+<package> = <PACKAGE>{PACKAGE};
+<payee> = <PAYEE>{PAYEE};
+<transactional> = <TRANSACTIONAL>{TRANSACTIONAL};

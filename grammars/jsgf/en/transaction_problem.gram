@@ -1,0 +1,15 @@
+#JSGF V1.0;
+grammar transaction_problem;
+import <dicts.TRANSACTION.*>;
+import <common.generic.*>;
+import <common.products.*>;
+
+
+public <transaction_problem> = 	(	
+									<unable> <transaction_verb> |
+									<unable> make a <transaction_noun>
+								) [(with|using) my (<card>|card)];
+
+<transaction_noun> = <TRANSACTION_NOUN>{TRANSACTION};
+<transaction_verb> = <TRANSACTION_VERB>{TRANSACTION};
+

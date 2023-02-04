@@ -1,0 +1,85 @@
+#JSGF V1.0;
+grammar redeem_points;
+import <common.generic.*>;
+import <common.products.*>;
+import <common.operations.*>;
+import <dicts.CARD.*>;
+import <dicts.INVESTMENT.*>;
+import <dicts.REDEEM.*>;
+import <dicts.STORE.*>;
+
+
+public <redeem_points> = (<request_points> | <want_points>) [<please>];
+
+
+<request_points> = [<request_to>] (
+	(redeem | claim | convert | trade) <my_points> [<redeemFor1>] |
+	use <my_points> [<redeemFor2>] |
+	exchange <my_points> [<redeemFor3>] |
+	transfer <my_points> (in <my_INV_acc> | <to_INV> <my_INV_acc> | <to> <contribute_to> <my_INV_acc>)
+);
+
+<want_points> = <i_want> <my_points> [to be] (
+	(redeemed | converted | traded | exchanged) [<redeemFor1>] |
+	claimed [<redeemFor2>] |
+	used [<beUsedFor>] |
+	transferred (in <my_INV_acc> | <to_INV> <my_INV_acc> | <to> <contribute_to> <my_INV_acc>)
+);
+
+
+<redeemFor1> = (
+	<baselineFor>	|
+	(in | into) (<a_giftcard>)	|
+	in <my_INV_acc>
+);
+<redeemFor2> = (
+	<baselineFor>
+);
+<redeemFor3> = (
+	<to> <receive> <goods> |
+	[in | into] (<a_giftcard>)	|
+	for (<goods> | <a_donation_noun>)	|
+	<to> (make <a_donation_noun> | <donation_verb>) |
+	<to_INV> <my_INV_acc>	|
+	<to> <contribute_to> <my_INV_acc>
+);
+<beUsedFor> = (
+	<baselineFor>	|
+	in <my_INV_acc>
+);
+
+<baselineFor> = (
+	<to> <receive> <goods>	|
+	[in exchange] for (<goods> | <a_donation_noun>)	|
+	<to> (book | reserve) <a_travel_goods>	|
+	<to> (make <a_donation_noun> | <donation_verb>) |
+	<to_INV> <my_INV_acc>	|
+	<to> <contribute_to> <my_INV_acc>
+);
+
+
+<to> = [in order] to;
+<to_INV> = (
+	<to> (put | add) (in | into | towards) |
+	into | over to | towards | to
+);
+
+<receive> = receive | get | buy;
+
+<goods> = (
+	<a_giftcard> |
+	<a_product> |
+	<a_travel_goods>
+);
+
+<my_points> = [my | the] <credit_card_points>;
+<my_INV_acc> = [my | the] <INVESTMENT_account>;
+
+
+//// REDEEM entity ////
+
+<a_giftcard> = [a | an | the] [<store>] <GIFTCARD>{REDEEM};
+<a_product> = [a | an | the] <PRODUCT>{REDEEM};
+<a_donation_noun> = [a] <DONATION_noun>{REDEEM} [(to the|to) <org>];
+<donation_verb> = <DONATION_verb>{REDEEM} (to the|to) <org>;
+<a_travel_goods> = [a] <TRAVEL_goods>{REDEEM};

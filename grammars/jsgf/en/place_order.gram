@@ -1,0 +1,33 @@
+#JSGF V1.0;
+grammar place_order;
+import <common.generic.*>;
+import <common.products.*>;
+import <dicts.CARD.*>;
+import <dicts.ORDER.*>;
+import <dicts.CARDINAL.*>;
+
+
+public <place_order> = (
+    <make_order> [(for|to get|to receive|to obtain) <number> <cheque>]   |
+    <i_want> [<number>] <cheque> |
+    <i_want> a new <card>   |
+    <i_want> my <statement_all> |
+    [<request_to> | <i_want> to] <get_cc> [<number>] <cheque> |
+    [<request_to> | <i_want> to] <get_cc> a new <card> |
+    [<request_to> | <i_want> to] <get_statement> my <statement_all> |
+    <request_for> new <card>  |
+    <request_for> <statement_all>
+) [<please>];
+
+<get_cc> = get | order | receive | have | obtain;
+<get_statement> = get | receive | have | obtain | see | find;
+
+<make_order> = [<request_to> | <i_want> to] (place|make) an order;
+<statement_all> = <statement> | (<INVESTMENT_account>|<TRANSACTIONAL_account>) <statement_ind>;
+
+//// ENTITY ////
+
+<cheque> = <CHEQUE>{ORDER};
+<statement_ind> = <STATEMENT_ind>{ORDER};
+<statement> = <STATEMENT>{ORDER};
+<number> = <CARDINAL>{CARDINAL};

@@ -1,0 +1,18 @@
+#JSGF V1.0;
+grammar dicts.POSTAL_CODE;
+
+public <POSTAL_CODE> = (
+	H3B 2C1|
+	H3B 2G7|
+	H3B 4S9|
+	H5A 1E4|
+	H2Z 1Z3|
+	H3A 1M6|
+	J5B 2E5|
+	J5A 2J4|
+	G1R 1S1|
+	G1K 3C3|
+	G1R 2K2|
+	J1G 1B5|
+	J1H 4B5
+);

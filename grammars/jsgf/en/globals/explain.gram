@@ -1,0 +1,8 @@
+#JSGF V1.0;
+grammar globals.explain;
+import <common.generic.*>;
+import <dicts.COMMAND.*>;
+
+public <explain> = [<could_you>] <explain_infinitive>{COMMAND} [that][please];
+
+// SAMPLES UNDER NO_INTENT

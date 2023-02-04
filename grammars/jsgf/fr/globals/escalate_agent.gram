@@ -1,0 +1,12 @@
+#JSGF V1.0;
+grammar globals.escalate_agent;
+import <dicts.COMMAND.*>;
+import <common.generic.*>;
+
+public <escalate_agent> = [ <je_voudrais> ] (parler à | discuter avec) <command_agent> [s'il (vous|te) plaît] | <agent>;
+
+//entities with tags
+<agent> = <AGENT>{COMMAND};
+<command_agent> =  un (<AGENT_masc>){COMMAND} | une (<AGENT_fem>){COMMAND};
+
+// SAMPLES UNDER NO_INTENT

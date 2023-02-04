@@ -1,0 +1,42 @@
+#JSGF V1.0;
+grammar dicts.PROFILE_ITEM;
+
+public <PROFILE_ITEM> = (
+	<PROFILE_ITEM_NUMBERS> |
+	<PROFILE_ITEM_NAMES> |
+	<PROFILE_ITEM_GENERAL> 
+)
+;
+
+public <PROFILE_ITEM_NUMBERS> = 
+	(SIN){SIN}|
+	(phone){PHONE}|
+	(telephone){PHONE}|
+	(cell phone){PHONE}|
+	(mobile){MOBILE}|
+	(mobile phone){MOBILE}|
+	(mobile telephone){MOBILE}|
+	(PIN){PIN}
+;
+
+public <PROFILE_ITEM_NAMES> = 
+	(name){LEGAL_NAME}|
+	(legal name){LEGAL_NAME}|
+	(authorized signers){LEGAL_NAME}
+;
+
+public <PROFILE_ITEM_GENERAL> = 
+	(social insurance){SIN}|
+	(gender){GENDER}|
+	(legal name){LEGAL_NAME}|
+	(profession){PROFESSION}|
+	(employer){EMPLOYER}|
+	(investor profile){INVESTOR_PROFILE}|
+	(access){ACCESS}|
+	(address){ADDRESS}|
+	(travel indication){TRAVEL_INDICATION}|
+	(email){EMAIL}|
+	(personal identification number){PIN}|
+	(client card password){PIN}|
+	(internet banking password){DBS_PIN}
+;

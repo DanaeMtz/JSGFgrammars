@@ -1,0 +1,27 @@
+#JSGF V1.0;
+grammar close_account;
+import <dicts.CARD.*>;
+import <dicts.FINANCING.*>;
+import <dicts.REF_THING.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+
+public <close_account> = (
+	[<request_to>] <close> <my_account> [<please>] |
+	[<could_you>] [please] <close> <my_account> |
+	<i_want> <my_account> [to be] <closed> [<please>] |
+	<request_for> <account_tmp> [to be] <closed> [<please>]
+);
+
+<account_tmp> = (<account_kw> | <INVESTMENT_account> | <TRANSACTIONAL_account> | <card> | <financing>);
+<my_account> = (
+	<my> <account_tmp> |
+	<account_ref> | <card_ref> | <loc_ref> | <mortgage_ref> | <loan_ref> |
+	<it_ref>
+);
+
+<closed> = closed | cancelled | terminated;
+
+<financing> = <FINANCING>{FINANCING};

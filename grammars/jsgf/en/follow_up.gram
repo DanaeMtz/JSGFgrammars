@@ -1,0 +1,23 @@
+#JSGF V1.0;
+grammar follow_up;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+import <dicts.REF_THING.*>;
+
+
+public <follow_up> = [<request_to>] <get_an_update> (about | on) <a_request> |
+                                  <following_up> <a_request>  |
+                                  <verify> <a_request>  |
+                                  [<could_you>] [please] <tell_me> <a_request>;
+
+<get_an_update> = (get an update | follow up | ask you);
+
+<a_request> = (a [transfer] request
+    | my (<INVESTMENT_account> | <TRANSACTIONAL_account> | <card>)
+    | a confirmation
+    | an operation 
+    | <card_ref> 
+    | <account_ref> );
+
+

@@ -1,0 +1,64 @@
+#JSGF V1.0;
+grammar common.generic;
+
+
+
+//// GENERIC/GREETING ////
+
+public <request_to> = (I (was | am) looking to |
+              (I'd | I would) like to |
+              I [just] (want | wanted | need ) to |
+              (I'm | I am | I was) (trying | calling) to|
+              can you help me to);
+
+public <request_for> = (
+    <i_want> a |
+    I called to try to get a |
+    request a |
+    wondering if it is possible to get a |
+    I am calling to have a |
+    I was looking to see if I can (do a | get my ) |
+    I am wondering if I'm eligible for any
+
+);
+
+public <i_want> = I (need | [would] want | wanted | would like);
+
+public <notify> = notify | 
+	warn |
+	inform |
+	tell |
+	say	;
+
+public <asked_for> = (want | wanted | meant | said | asked for);
+
+public <received> = I [just] (received|got);
+
+public <please> = (please | if possible);
+
+public <could_you> = (could | can) you;
+
+public <how_to> = (
+    what are the requirements to |
+    what does it take to |
+    what do I need to do to |
+    what needs to be done to |
+    how to  |
+    is it possible to |
+    is there any way to |
+    are you able to |
+    <how>);
+
+public <how> = ([how] can I | [how] could I | how do you | how do I);
+
+public <info_about> = ((I'm | I am) (calling | inquiring) about [information for] |
+    inquire about [the] |
+    information (for | about) |
+    how to go about |
+    I have a question regarding |
+    looking at
+);
+
+public <unable> = (I'm | I am) (unable| not able) to | I (can't | cannot);
+
+public <my> = the | my | a;

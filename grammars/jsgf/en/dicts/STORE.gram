@@ -1,0 +1,34 @@
+#JSGF V1.0;
+grammar dicts.STORE;
+
+public <org> = (
+    lisa watier foundation |
+	[canadian] red cross |
+	diabetes quebec |
+	food banks [of quebec] |
+	[quebec] breast cancer foundation
+);
+
+public <store> =(
+    costco |
+	IGA |
+	sobeys |
+	metro |
+	president's choice |
+	saq |
+	starbucks |
+	amazon |
+	walmart |
+	wayfair |
+	esso |
+	petro-canada |
+	ultramar |
+	uber |
+	uber eats |
+	apple |
+	best buy |
+	canadian tire |
+	the bay |
+	simons |
+	cineplex
+);

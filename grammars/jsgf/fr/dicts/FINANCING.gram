@@ -1,0 +1,27 @@
+#JSGF V1.0;
+grammar dicts.FINANCING;
+
+
+public <FINANCING> = (
+   <LOC> |
+	<MORTGAGE> |
+	<LOAN>
+);
+
+public <LOC> = (
+	(
+	(marge [de crédit] | ligne de crédit) [étudiant | hypothécaire | REER]
+	){LINE_OF_CREDIT}
+);
+
+public <MORTGAGE> = (
+    (prêt hypothécaire){MORTGAGE}|
+    (hypothèque){MORTGAGE}
+);
+
+public <LOAN> = (
+    (prêt REER){LOAN}|
+    (prêt auto){LOAN}|
+    (prêt){LOAN}|
+    (prêt personnel){LOAN}
+);

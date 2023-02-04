@@ -1,0 +1,13 @@
+#JSGF V1.0;
+grammar dicts.PACKAGE;
+
+public <PACKAGE> = (
+
+    (forfait électronique){E_PACKAGE}|
+    (forfait 20){PACKAGE_20}|
+    (forfait 35){PACKAGE_35}|
+    (forfait 50){PACKAGE_50}|
+    (forfait 75){PACKAGE_75}|
+    (forfait 100){PACKAGE_100}
+
+);

@@ -1,0 +1,18 @@
+#JSGF V1.0;
+grammar dicts.CARD;
+
+public <CARD> = (
+
+    (business [credit card] Mastercard){MASTERCARD}|
+    (business credit card){MASTERCARD}|
+    ([National Bank] Mastercard){MASTERCARD}|
+    (business bank credit card){MASTERCARD}|
+    (Mastercard for the office){MASTERCARD}|
+    (corporate credit card){MASTERCARD}|
+    (credit card){MASTERCARD}|
+    (corporate Mastercard){MASTERCARD}|
+    (business bank card){CLIENT_CARD}| 
+	(atm card){CLIENT_CARD}|
+    (business debit card){CLIENT_CARD}
+
+);

@@ -1,0 +1,43 @@
+#JSGF V1.0;
+grammar PAY_CARD;
+import <common.generic.*>;
+import <common.products.*>;
+import <common.operations.*>;
+import <dicts.CARD.*>;
+import <dicts.AMOUNT.*>;
+import <dicts.TYPE_AMOUNT.*>;
+import <dicts.REF_THING.*>;
+
+
+public <PAY_CARD> = [<request_to>] <payFromTrans> [<please>];
+
+
+<payFromTrans> = <payAmountCard> [<fromTrans>];
+
+<payAmountCard> = (
+	<pay> [<the_amount> (from | off of | on | towards)] |
+	<make_payment> [(of|for) <the_amount>] (on | towards) |
+	make a <amountPayment> (on | towards)
+	)
+	<target_card>;
+
+<target_card> = (
+	<my> balance [of <my_card>] |
+	<my_card> [balance] |
+	<it_ref> |
+	<card_balance_ref>
+);
+
+<fromTrans> = <with> <money> from <my> <TRANSACTIONAL_account>;
+
+<my_card> = <my> (<card> | card);
+<with> = with | using;
+
+<the_amount> = <amount> | the <amountDue>;
+
+
+//// ENTITIES
+
+<amount> = <AMOUNT>{AMOUNT};
+<amountDue> = (<MIN_DUE> | <TOTAL_DUE> | <REM_DUE>){TYPE_AMOUNT};
+<amountPayment> = (<MIN_PAYMENT> | <TOTAL_PAYMENT>){TYPE_AMOUNT};

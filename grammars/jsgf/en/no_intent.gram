@@ -1,0 +1,83 @@
+#JSGF V1.0;
+grammar no_intent;
+import <dicts.AMOUNT.*>;
+import <dicts.CARDINAL.*>;
+import <dicts.CARD.*>;
+import <dicts.CHANGE_TYPE.*>;
+import <dicts.CURRENCY.*>;
+import <dicts.FINANCING.*>;
+import <dicts.PACKAGE.*>;
+import <dicts.REF_THING.*>;
+import <dicts.PAYEE.*>;
+import <common.generic.*>;
+import <common.products.*>;
+import <common.operations.*>;
+import <globals.main_menu.*>;
+import <globals.escalate_agent.*>;
+import <globals.cancel_transaction.*>;
+import <globals.repeat.*>;
+import <globals.explain.*>;
+import <globals.options.*>;
+import <globals.wait.*>;
+import <globals.wake.*>;
+import <globals.unavailable_info.*>;
+
+public <no_intent> = <global_commands> | [<give_me>] <fragments> | <correction> | <cardinal> | <payee>;
+
+<fragments> =
+    (
+        <on_my_investment> |
+        <amount> |
+        <credit_product> |
+        <change_type> |
+        <package_value>
+    ) [please];
+
+
+<global_commands> = (<escalate_agent> | <main_menu> | <cancel_transaction> | <repeat> | <explain> | <options> | <wait> | <wake> | <unavailable_info>);
+
+<correction> =
+    (
+        /4/ no |
+        /3/ no I <asked_for> |
+        /1/ not (that | this | what I <asked_for>) I <asked_for> |
+        /1/ (that's | it's | this is) not (it | what I <asked_for>) I <asked_for>
+    )
+    (<fragments> | <global_commands>)
+;
+
+
+<credit_product> = [<in_preps>] [<my>] (<card> | <financing>);
+
+
+<package_value> =
+    [the] <package> [package] |
+    [the one called] <package>
+;
+
+
+<on_my_investment> = (
+    [<in_preps>] [<my>] (
+        <INVESTMENT_account> |
+        <TRANSACTIONAL_account> |
+        <currency> <account_kw> |
+        <account_kw> in <currency>
+    ) |
+    [<in_preps>] <account_ref>
+);
+
+
+<in_preps> = (in | on | into | towards | for | of | from);
+<give_me> = /3/ <i_want> | /1/ (give|get) me;
+
+
+//entities with tags
+<amount> = <AMOUNT>{AMOUNT};
+<cardinal> = <CARDINAL>{CARDINAL};
+<card> = <CARD>{CARD};
+<change_type> = <CHANGE_TYPE>{CHANGE_TYPE};
+<currency> = <CURRENCY>{CURRENCY};
+<financing> = <FINANCING>{FINANCING};
+<payee> = <PAYEE>{PAYEE};
+<package> = <PACKAGE>{PACKAGE};
+

@@ -1,0 +1,8 @@
+#JSGF V1.0;
+grammar globals.wait;
+import <common.generic.*>;
+import <dicts.COMMAND.*>;
+
+public <wait> = [<could_you>] <WAIT>{COMMAND} [please];
+
+// SAMPLES UNDER NO_INTENT

@@ -1,0 +1,18 @@
+#JSGF V1.0;
+grammar activate_card;
+import <common.generic.*>;
+import <common.products.*>;
+import <dicts.REF_THING.*>;
+
+public <activate_card> = <activer> [s'il vous plaît];
+
+<activer> = (
+      ( <je_voudrais> [faire | pour] (activer | l'activation)|
+        est-ce possible d'activer |
+        êtes-vous capable d'activer |
+        je me demandais si c'était possible d'activer |
+        c'est pour l'activation de
+      ) ( (la | ma) (<card> | [nouvelle] carte) | <card_ref> ) |
+      <je_voudrais> l'activer (celle-là){REF_THING} 
+    );
+

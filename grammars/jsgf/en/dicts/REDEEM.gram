@@ -1,0 +1,90 @@
+#JSGF V1.0;
+grammar dicts.REDEEM;
+
+public <REDEEM> = (
+	<GIFTCARD> |
+	<PRODUCT> |
+	<DONATION_noun> |
+	<DONATION_verb> |
+	<TRAVEL_goods>
+);
+
+
+public <GIFTCARD> = (
+	(gift card){GIFTCARD}
+);
+
+public <PRODUCT> = (
+	(electronics){PRODUCT} |
+	(electronic products){PRODUCT} |
+	(camera){PRODUCT} |
+	(computer){PRODUCT} |
+	(laptop){PRODUCT} |
+	(tablet){PRODUCT} |
+	(phone){PRODUCT} |
+	(smartphone){PRODUCT} |
+	(monitor){PRODUCT} |
+	(printer){PRODUCT} |
+	(iphone){PRODUCT} |
+	(ipad){PRODUCT} |
+	(imac){PRODUCT} |
+	(macbook){PRODUCT} |
+	(headphones){PRODUCT} |
+	(earphones){PRODUCT} |
+	(speaker){PRODUCT} |
+	(television){PRODUCT} |
+	(soundbar){PRODUCT} |
+	(sound system){PRODUCT} |
+	([apple] watch){PRODUCT} |
+	(fashion products){PRODUCT} |
+	(jewellery){PRODUCT} |
+	(sunglasses){PRODUCT} |
+	(handbag){PRODUCT} |
+	(toiletry){PRODUCT} |
+	(health products){PRODUCT} |
+	(beauty products){PRODUCT} |
+	(perfume){PRODUCT} |
+	(trimmer){PRODUCT} |
+	(hairdryer){PRODUCT} |
+	(kitchenware){PRODUCT} |
+	(kitchen products){PRODUCT} |
+	(kitchen appliances){PRODUCT} |
+	(cooking appliances){PRODUCT} |
+	(cooking products){PRODUCT} |
+	(cookware){PRODUCT} |
+	(coffee machine){PRODUCT} |
+	(coffee maker){PRODUCT} |
+	(tableware){PRODUCT} |
+	(utensils){PRODUCT} |
+	(bedding [products]){PRODUCT} |
+	(mattress){PRODUCT} |
+	(duvet){PRODUCT} |
+	(pillow){PRODUCT} |
+	(barbecue [grill]){PRODUCT} |
+	(vacuum){PRODUCT} |
+	(tools){PRODUCT} |
+	(luggage){PRODUCT} |
+	(sporting goods){PRODUCT} |
+	(golf bag){PRODUCT} |
+	(toys){PRODUCT}
+);
+
+public <DONATION_noun> = (
+	(donation){DONATION}
+);
+
+public <DONATION_verb> =(
+	(donate){DONATION}
+);
+
+public <TRAVEL_goods> = (
+	(flight){TRAVEL}	|
+	(flight tickets){TRAVEL} |
+	(plane tickets){TRAVEL}	|
+	(trip){TRAVEL}	|
+	(trip on a cruise [ship]){TRAVEL}	|
+	(hotel room){TRAVEL}	|
+	(car rental){TRAVEL}	|
+	(rental car){TRAVEL}	|
+	(cruise){TRAVEL}
+);

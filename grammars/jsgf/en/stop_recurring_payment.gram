@@ -1,0 +1,15 @@
+#JSGF V1.0;
+grammar stop_recurring_payment;
+import <common.generic.*>;
+import <common.operations.*>;
+import <dicts.PAYEE.*>;
+
+public <stop_recurring_payment> = (
+    [<request_to>] <cancel> <my> [<PAYEE>] <recurrent> payment |
+    [<request_to>] <cancel> <my> <recurrent> payment of <my> [<PAYEE>] bill |
+    <request_for> [<PAYEE>] <recurrent> payment <cancelled> |
+    <request_for> <recurrent> payment of <my> [<PAYEE>] bill <cancelled>
+) [<please>];
+
+<recurrent> = recurrent | recurring | automatic | periodic | monthly | weekly | yearly;
+<cancelled> = cancelled | stopped | terminated | removed;

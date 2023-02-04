@@ -1,0 +1,44 @@
+#JSGF V1.0;
+grammar close_account;
+import <dicts.CARD.*>;
+import <dicts.FINANCING.*>;
+import <dicts.REF_THING.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+
+public <close_account> = (
+	<fermer_compte> |
+	<fermeture_compte> |
+	<compte_ferme> |
+	<on_ferme_compte>
+) [<svp>];
+
+
+<fermer_compte> = [<je_voudrais>] <fermer> <mon_compte>;
+
+<fermeture_compte> = [<je_voudrais>] (
+		faire une demande (de fermeture|d'annulation) de <compte_kw> |
+        faire une demande (de fermeture|d'annulation) <de> <mon_compte>
+    );
+
+<compte_ferme> = <je_voudrais_que> <mon_compte> soit <ferme_pp>;
+
+<on_ferme_compte> = <je_voudrais_que> on <ferme_imp> <mon_compte>;
+
+
+<mon_compte> = (
+	<mon> <INVESTMENT_account> |
+    <mon> <TRANSACTIONAL_account> |
+	<mon> <compte_kw> |
+	<ma> <card> |
+	(<ma>|<mon>) <financing> |
+	<account_ref> | <card_ref> | <loc_ref> | <mortgage_ref> | <loan_ref>
+);
+<ferme_pp> = fermé | fermée;
+<ferme_imp> = ferme | annule | cancelle;
+<de> = (de|pour);
+
+//entities with tags
+<financing> = <FINANCING>{FINANCING};

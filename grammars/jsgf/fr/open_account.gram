@@ -1,0 +1,21 @@
+#JSGF V1.0;
+grammar open_account;
+import <dicts.CURRENCY.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+public <open_account> = ( <ouvrir_compte> | <ouverture> | nouveau <compte> )[s'il vous plaît];
+
+<ouvrir_compte> = [<je_voudrais>] <ouvrir> un <compte>;
+
+<ouverture> = ([[<je_voudrais>] faire (une | la)] demande d'ouverture de
+        | j'appelle pour l'ouverture (d'un|de)) <compte>;
+
+<compte> = (<TRANSACTIONAL_account> | <INVESTMENT_account> | <compte_kw> | <compte_kw> en <currency>);
+
+
+// entities with tags
+<currency> = <CURRENCY>{CURRENCY};
+
+

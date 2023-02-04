@@ -1,0 +1,53 @@
+#JSGF V1.0;
+grammar change_limit;
+import <dicts.CARD.*>;
+import <dicts.CHANGE_TYPE.*>;
+import <dicts.AMOUNT.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+
+public <change_limit> = (<augmentation_limite> | <diminution_limite> | <changer_limite> | <augmenter_limite>)[s'il vous plaît];
+
+<augmentation_limite> = [
+        demande d' |
+        est-ce qu il y aurait une possibilité d' |
+        faire l' |
+        [<je_voudrais>] faire une demande d' |
+        pour l'
+    ] augmentation de <limite_carte>;
+
+<diminution_limite> = [
+        [<je_voudrais>] (avoir|faire) une |
+        est-ce que c'est possible d'avoir une |
+        <comment_faire> pour faire une
+    ] (augmentation | diminution) de <limite_carte> [<change_type>];
+
+<changer_limite> = [
+        comment est-ce que je peux |
+        demande pour |
+        est-ce qu'on peut |
+        est-ce que c'est possible de faire |
+        faire |
+        j'aurais voulu |
+        je pourrais-tu |
+        je voulais juste [pouvoir] |
+        [<je_voudrais>] savoir comment faire pour |
+        [<je_voudrais>] savoir si je peux |
+        <comment_faire> pour
+    ] (<modifier> | <augmenter> | <descendre>) <limite_carte> [<change_type>] [à <amount>];
+
+<augmenter_limite> = [
+        est-ce possible d' |
+        êtes-vous capable d' |
+        <voudrais_savoir> si c'était possible d'|
+        [<dis_moi>] <comment_faire> pour
+    ] augmenter (<limite_carte> | le montant de la <card>) [à <amount>];
+
+
+<card> = <CARD>{CARD};
+<change_type> = <CHANGE_TYPE>{CHANGE_TYPE};
+<amount> = <AMOUNT>{AMOUNT};
+
+// TODO: add examples using the entities DATE

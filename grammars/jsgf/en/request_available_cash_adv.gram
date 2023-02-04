@@ -1,0 +1,21 @@
+#JSGF V1.0;
+grammar request_available_cash_adv;
+import <dicts.CARD.*>;
+import <dicts.REF_THING.*>;
+import <common.generic.*>;
+import <common.products.*>;
+import <common.operations.*>;
+
+
+public <request_available_cash_adv> = 
+    (    <request_to> <know> |
+        [<request_to>] <get> |
+        (can I | could I) <get>
+    )
+    the [current] 
+        [<balance_type>] (cash advance|to withdraw (money|cash)) of ( my <card> | <card_ref>) [please];
+
+
+
+
+// TODO: add examples using the entities: FINANCING_ENTERPRISE

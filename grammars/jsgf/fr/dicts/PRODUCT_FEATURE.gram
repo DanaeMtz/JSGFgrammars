@@ -1,0 +1,27 @@
+#JSGF V1.0;
+grammar dicts.PRODUCT_FEATURE;
+
+public <PRODUCT_FEATURE_fem> = (
+    (protection contre ( [le] découvert | [les] découverts)){OVERDRAFT_PROTECTION}|
+    (protection contre [les] fonds insuffisants){OVERDRAFT_PROTECTION}|
+	(limite de découvert){OVERDRAFT_PROTECTION}|
+	//(femme){ACCOUNT_HOLDER}|
+	//(épouse){ACCOUNT_HOLDER}|
+	//(partenaire){ACCOUNT_HOLDER}|
+	//(blonde){ACCOUNT_HOLDER}|
+	//(chum){ACCOUNT_HOLDER}|
+	(cote de retrait sur dépot){DEPOSIT_WITHDRAWAL}
+);
+
+
+public <PRODUCT_FEATURE_masc> = (
+    (forfait){PACKAGE}|
+ 	(manques de fonds){OVERDRAFT_PROTECTION}|
+	(découverts){OVERDRAFT_PROTECTION}|
+	(découvert){OVERDRAFT_PROTECTION} //|
+	// (mari){ACCOUNT_HOLDER}|
+	// (époux){ACCOUNT_HOLDER}|
+	// (partenaire){ACCOUNT_HOLDER}|
+	// (chum){ACCOUNT_HOLDER}|
+	// (détenteur){ACCOUNT_HOLDER}
+);

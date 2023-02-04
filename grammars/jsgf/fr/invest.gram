@@ -1,0 +1,47 @@
+#JSGF V1.0;
+grammar invest;
+import <dicts.AMOUNT.*>;
+import <dicts.INVESTMENT.*>;
+import <dicts.REF_THING.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+
+public <invest> = [<je_voudrais>] (
+        <make_investment1> |
+        <make_investment2> |
+        <make_investment3> |
+        <make_investment_acheter>
+    )[<svp>];
+
+<make_investment1> = (<cotiser_montant_vers> | <deplacer_montant_dans> ) ( mon <INVESTMENT_account> | <account_ref> )
+    [à partir de mon <TRANSACTIONAL_account>];
+
+<make_investment2> = <deplacer_de_vers> [<money>] de ( mon <TRANSACTIONAL_account>  | <account_ref> )
+    (à | vers | dans) mon <INVESTMENT_account>;
+
+<make_investment3> = (<deplacer_de> | <transferer>) [<money> | <amount>]
+    de mon <TRANSACTIONAL_account> (pour mettre dans | et le mettre dans)
+    ( mon <INVESTMENT_account> | <account_ref> );
+
+<make_investment_acheter> = acheter un <INVESTMENT_acronyms>{INVESTMENT};
+
+
+
+<cotiser_montant_vers> = (
+        (<faire_cotisation> | <faire_transfert>) [<money_de> | de <amount>] |
+        (<cotiser> | <transferer>) ( <money> | <amount> )
+    ) (vers | dans | à) ;
+
+<deplacer_montant_dans> = (<action_dans> <money> |
+               <deplacer_dans> ( <amount> | <money> )) dans ;
+
+<deplacer_de_vers> = <deplacer_dans> | <cotiser>;
+<action_dans> = ( <deplacer_dans> | épargner | faire prélever | investir | placer);
+
+<money> = (de l'argent | un montant | une somme);
+<money_de> = (d'argent | de fonds);
+
+//entities with tags
+<amount> = <AMOUNT>{AMOUNT};

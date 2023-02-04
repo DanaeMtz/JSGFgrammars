@@ -1,0 +1,7 @@
+#JSGF V1.0;
+grammar globals.wake;
+import <dicts.COMMAND.*>;
+
+public <wake> = [( okay | hi | yeah | yes)] <WAKE> {COMMAND};
+
+// SAMPLES UNDER NO_INTENT

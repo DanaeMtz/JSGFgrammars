@@ -1,0 +1,15 @@
+#JSGF V1.0;
+grammar info_open_account;
+import <dicts.FINANCING.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+public <info_open_account> = (<info_opening> | <info_open>);
+
+<info_open> =  (<request_to> | <how_to> ) (<open> <an_account> | <get> a <financing> );
+
+<info_opening> = <info_about> ( <opening> <an_account> | <getting> a <financing> );
+
+//entities with tags
+<financing> = <FINANCING>{FINANCING};

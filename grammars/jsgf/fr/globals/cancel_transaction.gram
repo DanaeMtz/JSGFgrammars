@@ -1,0 +1,8 @@
+#JSGF V1.0;
+grammar globals.cancel_transaction;
+import <dicts.COMMAND.*>;
+import <common.generic.*>;
+
+public <cancel_transaction> = [ <je_voudrais> ] <cancel_infinitive>{COMMAND} [(la transaction | l'opération)] [<svp>];
+
+// SAMPLES UNDER NO_INTENT

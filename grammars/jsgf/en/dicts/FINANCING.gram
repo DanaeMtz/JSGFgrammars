@@ -1,0 +1,23 @@
+#JSGF V1.0;
+grammar dicts.FINANCING;
+
+
+public <FINANCING> = (
+	<LOC> |
+	<MORTGAGE> |
+	<LOAN>
+);
+
+public <LOC> = (
+	(
+	[student | mortgage | RRSP] (credit line | line of credit) 
+	){LINE_OF_CREDIT}
+);
+
+public <MORTGAGE> = (
+    (mortgage [loan]){MORTGAGE}
+);
+
+public <LOAN> = (
+    ([RRSP | personal | car] loan){LOAN}
+);

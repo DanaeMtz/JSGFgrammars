@@ -1,0 +1,8 @@
+#JSGF V1.0;
+grammar globals.repeat;
+import <dicts.COMMAND.*>;
+import <common.generic.*>;
+
+public <repeat> = [<could_you>]<REPEAT>{COMMAND}[please];
+
+// SAMPLES UNDER NO_INTENT

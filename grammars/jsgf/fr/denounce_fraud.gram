@@ -1,0 +1,52 @@
+#JSGF V1.0;
+grammar denounce_fraud;
+import <common.generic.*>;
+import <common.products.*>;
+import <dicts.CARD.*>;
+import <dicts.REF_THING.*>;
+
+
+public <denounce_fraud> = (
+	<signaler_fraude> |
+	<ete_fraude> |
+	<ma_fraude> |
+	<report_fraude> |
+	<contest_trans>
+);
+
+
+<signaler_fraude> = (
+	([<je_voudrais>] (<signaler> | <vous_informer> d') une (<fraude> | <trans_fraude>) [sur (<ma> <card> | <card_ref>)]) |
+	([<je_voudrais>] (<signaler> | <vous_informer>) que(<ma> <card> | <card_ref>) a été fraudée) |
+	([<je_crois> que](<ma> <card> | <card_ref>) a été fraudée)
+);
+
+<ete_fraude> = (
+	(<je_crois> avoir été (fraudé | victime (d'une|de) <fraude>) [sur (<ma> <card> | <card_ref>)]) |
+	([<je_crois> que] j'ai été (fraudé | victime (d'une|de) <fraude>) [sur (<ma> <card> | <card_ref>)]) |
+	([<je_voudrais>] (<signaler> | <vous_informer>) que j'ai été (fraudé | victime (d'une|de) <fraude>) [sur (<ma> <card> | <card_ref>)])
+);
+
+<ma_fraude> = <ma_fraude_prefix> m'a fraudé [[sur](<ma> <card> | <card_ref>)];
+<ma_fraude_prefix> = (
+	(on | quelqu'un) |
+	([<je_voudrais>] (<signaler> | <vous_informer>) (qu'on | que quelqu'un)) |
+	(<je_crois> (qu'on | que quelqu'un))
+);
+
+<report_fraude> = <report_fraude_prefix> une (<fraude> | <trans_fraude>) [sur (<ma> <card> | <card_ref>)];
+<report_fraude_prefix> = (
+	((<je_crois> qu'il | il) y a) |
+	([<je_voudrais>] (<signaler> | <vous_informer>) qu'il y a)
+);
+
+<contest_trans> = <je_voudrais> <contester> une <trans_fraude> [sur (<ma> <card> | <card_ref>)];
+
+<fraude> = [tentative de] fraude;
+<trans_fraude> = transaction (frauduleuse | suspecte | louche | bizarre | qui ne devrait pas être là);
+
+<signaler> = signaler | déclarer | dénoncer;
+<vous_informer> = vous informer;
+<contester> = contester | faire annuler;
+
+<je_crois> = je crois | je soupçonne | je pense | j'ai l'impression;

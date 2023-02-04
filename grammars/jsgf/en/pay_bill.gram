@@ -1,0 +1,15 @@
+#JSGF V1.0;
+grammar pay_bill;
+import <common.generic.*>;
+import <common.operations.*>;
+import <dicts.PAYEE.*>;
+
+
+
+public <pay_bill> = <request_to> 	(
+										<make_payment> of [the|a] bill [from [<the_biller>] <PAYEE>] |
+										<pay> (the|a) bill [from [<the_biller>] <PAYEE>] |
+										<pay> [the|a] <PAYEE> bill
+									);
+
+<the_biller> = the (biller | payee | supplier);

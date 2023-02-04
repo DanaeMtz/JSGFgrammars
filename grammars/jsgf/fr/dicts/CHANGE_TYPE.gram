@@ -1,0 +1,9 @@
+#JSGF V1.0;
+grammar dicts.CHANGE_TYPE;
+
+public <CHANGE_TYPE> = (
+    (temporairement){TEMPORARY} |
+    (de façon temporaire ){TEMPORARY} |
+    (pour toujours | permanent){PERMANENT} |
+    (de façon (permanente | définitive) ){PERMANENT}
+);

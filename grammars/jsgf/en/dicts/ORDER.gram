@@ -1,0 +1,48 @@
+#JSGF V1.0;
+grammar dicts.ORDER;
+
+public <ORDER> = (<CHEQUE> | <STATEMENT_ind> | <STATEMENT>);
+
+
+public <CHEQUE> = (
+	(cheques){CHEQUE}
+);
+
+public <STATEMENT_ind> = (
+	(statement){STATEMENT} |
+    (statements){STATEMENT} |
+    (tax slip){STATEMENT}   |
+	(tax slips){STATEMENT}
+);
+
+public <STATEMENT> = (
+	(bank statement){STATEMENT}	|
+	(bank statements){STATEMENT}	|
+	(account statement){STATEMENT}   |
+	(account statements){STATEMENT}   |
+	(fiscal (documents | statements)){STATEMENT}    |
+	(fiscal (document | statement)){STATEMENT}    |
+	(contribution receipt){STATEMENT}    |
+	(investment statement){STATEMENT} |
+	((investment account   |
+	  registered account   |
+	  non-registered account  |
+	  GIC |
+	  ML GIC  |
+	  mortgage)
+	  (statement | slip)){STATEMENT} |
+	((NR4 |
+	  RL-1    |
+	  RL-2    |
+	  RL-3    |
+	  RL-16   |
+	  RL-18   |
+	  T3  |
+	  T4A |
+	  T4RIF   |
+	  T4RSP   |
+	  T5  |
+	  T5008   |
+	  RC249)
+	  [slip]){STATEMENT}
+);

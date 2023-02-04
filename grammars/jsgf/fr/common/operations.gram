@@ -1,0 +1,37 @@
+#JSGF V1.0;
+grammar common.operations;
+
+
+//// OPERATIONS ////
+
+public <modifier> = (changer | modifier | mettre à jour);
+public <augmenter> = augmenter | monter;
+public <descendre> = descendre | baisser | diminuer;
+
+/* invest vs withdraw vs transfer vs ...
+Distinctions:
+- be mindful of prepositions: déplacer VERS / retirer DE / ajouter DANS -- some verbs you need to specify the target, others the source
+- faire X -> cannot take a direct object
+- investing: transactional -> investment / e.g. ajouter
+- withdrawing: investment -> transactional / e.g. retirer
+- transfer can be used for both investing and withdrawing
+that's a lot of combinations
+*/
+
+public <faire_transfert> =  (faire | effectuer) un transfert;
+public <faire_paiement> =  (faire | effectuer) un paiement;
+public <faire_cotisation> =  (faire | effectuer) (un dépôt | une cotisation | une contribution);
+public <faire_retrait> =  (faire | effectuer) un retrait;
+
+public <transferer> = (faire transférer | transférer);
+public <deplacer_dans> = (déplacer | déposer | faire déposer | mettre | placer);
+public <deplacer_de> = (enlever | prendre | récuperer | retirer | sortir | faire prélever | prélever);
+public <cotiser> = contribuer | cotiser | ajouter | rajouter;
+
+public <fermer> = (annuler | canceller | fermer);
+public <ouvrir> = (créer | obtenir | ouvrir);
+public <verifier> = (vérifier | valider);
+public <payer> = payer;
+public <arreter> = arrêter | canceller | annuler | supprimer | faire canceller | retirer | mettre fin à;
+
+public <connaitre> = (avoir | savoir | consulter | vérifier | voir | connaître);

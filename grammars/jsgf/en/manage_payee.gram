@@ -1,0 +1,35 @@
+#JSGF V1.0;
+grammar manage_payee;
+import <common.generic.*>;
+import <common.products.*>;
+import <dicts.PAYEE.*>;
+
+//I was looking to add a biller 
+//I wanted to set me up for my property taxes as a payee
+//add a new supplier to my list |
+//add a supplier|
+//add a payee so I can pay the bill online |
+//add the bell account so that I can pay it online |
+//add a new supplier to pay a bill |
+//add CIBC as a payee |
+//add a new biller;
+
+//change a bill
+//delete a bill
+//edit my bill
+//remove a payee from my list of bills
+//cancel a supplier
+//change a bill
+//delete a bill from payment list
+//delete one of my payee
+//modify a bill
+//modify or delete a bill
+//my bill information changed
+//change my bill information
+
+public <manage_payee> = ([<request_to> | <request_for> |<could_you>]) (
+		((add | [to] set [me] up) a [new])| 
+		((change|delete|edit|remove|cancel|modify) a)
+	) [<PAYEE>] (bill | biller | payee | supplier) [<please>]
+	| my [<PAYEE>] (bill | biller | payee | supplier) information changed |
+	change my [<PAYEE>] (bill | biller | payee | supplier) information;

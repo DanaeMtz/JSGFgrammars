@@ -1,0 +1,21 @@
+#JSGF V1.0;
+grammar withdrawal;
+import <dicts.AMOUNT.*>;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+
+
+public <withdrawal> = [<request_to>] (<withdrawal1> | <withdrawal2>);
+
+<withdrawal1> = <withdrawal_money> <from> (<INVESTMENT_account> | <cash_balance> | <investment>) [<to> <TRANSACTIONAL_account>];
+<withdrawal2> = (make | perform) a [<INVESTMENT_account>] withdrawal;
+
+<withdrawal_money> = (<transfer> | <debit>) (<money> | <amount>);
+
+<from> = (from | out of) [my];
+<to> = (to [put (in | into)] | into | over) [my];
+
+<cash_balance> = [<INVESTMENT_account>] cash balance;
+
+<amount> = <AMOUNT>{AMOUNT};

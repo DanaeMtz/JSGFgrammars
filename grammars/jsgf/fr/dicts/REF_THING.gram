@@ -1,0 +1,9 @@
+#JSGF V1.0;
+grammar dicts.REF_THING;
+
+public <account_ref> = (ce compte [là] | celui-là){REF_THING};
+public <package_ref> = (ce forfait [là] | celui-là){REF_THING};
+public <card_ref> = ( /2/ cette carte [là] | /1/ celle-là){REF_THING};
+public <loc_ref> = (cette marge [de crédit] [là] | celle-là){REF_THING};
+public <mortgage_ref> = (cette hypothèque [là] | ce prêt hypothécaire [là] | celle-là | celui-là){REF_THING};
+public <loan_ref> = (ce prêt [là] | celui-là){REF_THING};

@@ -1,0 +1,26 @@
+#JSGF V1.0;
+grammar dicts.TRANSACTION;
+
+
+public <TRANSACTION_NOUN> = (
+
+	((transfert|virement|versement) [interac|d'argent]){TRANSFER} |
+	(retrait [d'argent]){DEBIT} |
+	(paiement [de facture|de fournisseur]){PAY}
+);
+
+public <TRANSACTION_NOUN_PL> = (
+
+	((transferts|virements|versements) [interac|d'argent]){TRANSFER} |
+	(retraits [d'argent]){DEBIT} |
+	(paiements [de facture]){PAY}
+);
+
+public <TRANSACTION_VERB> = (
+	
+	([faire] transférer [de l'argent]){TRANSFER} |
+	(retirer [de l'argent]){DEBIT} |
+	(payer [(une|ma) facture]){PAY} |
+	(payer (des|mes) factures){PAY} |
+	(ajouter un [nouveau] fournisseur){ADD_PAYEE}
+);

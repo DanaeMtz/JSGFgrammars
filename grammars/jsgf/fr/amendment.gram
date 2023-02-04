@@ -1,0 +1,16 @@
+#JSGF V1.0;
+grammar amendment;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
+import <dicts.TRANSACTION.*>;
+import <dicts.REF_THING.*>;
+
+public <amendment> = [<je_voudrais>](<modifier_objet_dans_inv> | <augmenter_objets_dans_inv> | <baisser_epargne_dans_inv>) [s'il vous plaît];
+
+<modifier_objet_dans_inv> = <modifier> <object> <systematique> ( (dans mon | de mon) (<INVESTMENT_account> | <TRANSACTIONAL_account>) | (vers | à | de) <account_ref>);
+<augmenter_objets_dans_inv> = (<modifier> | <augmenter>) <object_pl> <systematiques> ( (dans mon | de mon) (<INVESTMENT_account> | <TRANSACTIONAL_account>) | (vers | à | de) <account_ref>);
+<baisser_epargne_dans_inv> = (<modifier> | <descendre>) le montant de <inv_systematique> ( (vers mon | à mon) (<INVESTMENT_account> | <TRANSACTIONAL_account>) | (vers | à | de) <account_ref>);
+
+<object> = (un achat | un investissement | une cotisation | un <TRANSACTION_NOUN>{TRANSACTION} );
+<object_pl> = les <TRANSACTION_NOUN_PL>{TRANSACTION} ;

@@ -1,0 +1,46 @@
+#JSGF V1.0;
+grammar dicts.INVESTMENT;
+
+
+public <INVESTMENT> = (<INVESTMENT_dep> | <INVESTMENT_ind>);
+
+public <INVESTMENT_ind> = (
+	(TFSA) {TFSA} |
+	(celi) {TFSA} |
+	(tax-free savings) {TFSA} |
+	(tax free savings) {TFSA} |
+	(RRSP) {RRSP} |
+	(registered retirement savings) {RRSP} |
+	(retirement savings) {RRSP} |
+	(RESP) {RESP} |	
+	(registered education savings) {RESP} |
+	(education savings) {RESP} |
+	(lif) {LIF} |	
+	(lira) {LIRA} |
+	(rrif) {RRIF} |
+	(investment account for businesses){BUSINESS_INVESTMENT_ACCOUNT} |
+	(bia){BUSINESS_INVESTMENT_ACCOUNT} |
+	(account to do trades){BUSINESS_INVESTMENT_ACCOUNT}
+);
+
+public <INVESTMENT_dep> = (
+	(tax free saving) {TFSA} |
+	(tax free) {TFSA} |
+	(tax-free) {TFSA} |
+	(registered retirement saving) {RRSP} |
+	(retirement saving) {RRSP} |
+	(retirement) {RRSP} |
+	(registered education) {RESP} |
+	(education) {RESP} |
+	(education saving) {RESP} |
+	(life income) {LIF} |
+	(locked-in retirement) {LIRA} |
+	(locked in retirement) {LIRA} |
+	(lockin retirement) {LIRA} |
+	(locked retirement) {LIRA} |
+	(registered retirement income) {RRIF} |
+	(business investors){BUSINESS_INVESTMENT_ACCOUNT} |
+	(business investment){BUSINESS_INVESTMENT_ACCOUNT} |
+	(trading){BUSINESS_INVESTMENT_ACCOUNT} |
+	(investment){BUSINESS_INVESTMENT_ACCOUNT}
+);

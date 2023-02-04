@@ -10,7 +10,7 @@ public <request_balance> = ( <req_bal> | <req_bal_com> | <req_bal_com2>);
 <req_bal_com> = combien (d'argent il reste dans mon | d'argent j'ai dans mon | que j'ai dans mon) <investment_personal>;
 <req_bal_com2> = j'ai combien (d'argent dans mon | dans mon | sur mon) <investment_personal>;
 
-<action> = [<greeting>]( avoir | c'est quoi | consulter | quel est | savoir | vérifier );
+<action> = [<greeting>]( avoir | c'est quoi | consulter | savoir quel est | savoir | vérifier );
 
 <greeting> = (je voulais | je voudrais | j'aimerais | je veux | j'appelle pour | c'est pour | pouvez-vous m'aider à);
 

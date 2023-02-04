@@ -1,0 +1,13 @@
+#JSGF V1.0;
+grammar dicts.REF_THING;
+
+public <account_ref> = <that_ref> [/3/ account | /1/ one];
+public <package_ref> = <that_ref> [/3/ package | /1/ one];
+public <card_ref> = <that_ref> [/3/ card | /1/ one];
+public <card_balance_ref> = <that_ref> [/3/ card | /3/ card balance | /1/ one];
+public <loc_ref> = <that_ref> [/3/ line [of credit] | /3/ credit line | /1/ one];
+public <mortgage_ref> = <that_ref> [/3/ mortgage [loan] | /3/ loan | /1/ one];
+public <loan_ref> = <that_ref> [/3/ loan | /1/ one];
+
+public <it_ref> = (it){REF_THING};
+public <that_ref> = (that | this){REF_THING};

@@ -1,0 +1,8 @@
+#JSGF V1.0;
+grammar globals.options;
+import <dicts.COMMAND.*>;
+import <common.generic.*>;
+
+public <options> = [(what are (my|the) | (tell|give) me | hear the)]<OPTIONS>{COMMAND}[please];
+
+// SAMPLES UNDER NO_INTENT

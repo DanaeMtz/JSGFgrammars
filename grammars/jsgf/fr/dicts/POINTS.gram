@@ -1,0 +1,4 @@
+#JSGF V1.0;
+grammar dicts.POINTS;
+
+public <POINTS> = (points [récompenses | remise | boni]){POINTS};

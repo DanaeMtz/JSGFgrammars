@@ -1,0 +1,35 @@
+#JSGF V1.0;
+grammar manage_payee;
+import <common.generic.*>;
+import <common.products.*>;
+import <dicts.PAYEE.*>;
+
+//Je veux add mes fournisseurs Bell Canada pour payer sur l internet 
+//J'aimerais ajouter un fournisseur pour un paiement 
+//je voulais entrer sur le compte de la clinique un fournisseur mais je ne me souviens plus comment faire
+//Je voudrais ajouter aux factures que je paie déjà dans mon compte affaire
+//je voudrait ajouter une facture
+//J'avais demandé pour faire rajouter un compte pour payer une facture 
+//J'ai un fournisseur que je veux inscrire pour faire un dépôt directe … je trouve pas ce fournisseur la dans ma liste 
+//J'aimerai ça faire un paiement à partir de mon compte commercial  je suppose qui faut que  gerer les fournisseurs j'ajoute le fournisseur….J'aurais aimer juste avoir de l'assitance pour le crééer en tant que fournisseur 
+// J'ai un fournisseur que je veux inscrire pour faire un dépôt directe … je trouve pas ce fournisseur la dans ma liste 
+//J'essaye de rentrer un fournisseur dans le site nternet ça marche pas je suis pas capable de l entrer 
+//Moi j'ai une carte de crédit j'ai un montant du dessus… je voudrais l entrer dans mes dans mes factures ma carte de crédit de compagie 
+//je veux ajouter le nom d'un fournisseur je sais pas trop comment m  y prendre 
+//Je veux ajouter un fournisseur à payer quand je fais un paiement par téléphone 
+
+//	ajout de facture |
+//ajouter saaq |
+//ajouter un fournisseur |
+//ajouter un nouveau fournisseur pour payer une facture |
+//enregistrer une facture |
+//ajouter capital one à ma liste de bénéficiaires |
+//inscrire une facture |
+//ajoute un fournisseur |
+//	ajouter un fournisseur personnel |
+//  enregistrer une nouvelle facture à payer |
+
+
+public <manage_payee> = [<je_voudrais> | <je_veux> ] (ajouter | inscrire | rajouter | rentrer | enregistrer) <facture> [de <PAYEE> ] [à payer | à la liste des béneficiaires ] [<svp>] ;
+
+<facture> = (une | la) facture | (un | le) fournisseur | les fournisseurs | (les | aux) factures; 

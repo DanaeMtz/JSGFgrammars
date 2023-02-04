@@ -1,0 +1,20 @@
+#JSGF V1.0;
+grammar dicts.CHANGE_FEATURE;
+
+public <CHANGE_FEATURE_verb> = (
+    (rajouter){ADD}|
+	(avoir){ADD}|
+	(ajouter){ADD}|
+    (enlever){REMOVE}|
+	(annuler){REMOVE}|
+	(changer){CHANGE}|
+	(modifier){CHANGE}
+);
+
+
+public <CHANGE_FEATURE_noun> = (
+    (ajout){ADD}|
+	(annulation){REMOVE}|
+	(changement){CHANGE}|
+	(modification){CHANGE}
+);

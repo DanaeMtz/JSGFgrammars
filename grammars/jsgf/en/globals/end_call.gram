@@ -1,0 +1,13 @@
+#JSGF V1.0;
+grammar globals.end_call;
+import <common.generic.*>;
+import <dicts.COMMAND.*>;
+
+public <end_call> = (
+	<END_CALL_bye>{COMMAND} |
+    [<i_have_to>] (
+    	<END_CALL_go>{COMMAND} |
+		<END_CALL_leave>{COMMAND} [the call] |
+		<END_CALL_end>{COMMAND} the call
+	) [[right] now]
+);

@@ -1,0 +1,13 @@
+#JSGF V1.0;
+grammar globals.no;
+import <dicts.COMMAND.*>;
+
+
+public <no_global> = (
+       [merci [mais]] ( <NO_command>{COMMAND} | <tout_pour_ajd> ) |
+       <tout_pour_ajd> [merci] |
+       <NO_command>{COMMAND} [merci]
+);
+
+<pour_ajd> = pour aujourd'hui;
+<tout_pour_ajd> = (<CEST_TOUT_command> | <NON_CEST_TOUT_command>){COMMAND} [<pour_ajd>];

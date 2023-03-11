@@ -70,3 +70,6 @@ public <avertir> = avertir | notifier | raconter |  faire un avertissement | fai
 	signaler | faire signe;
 	
 public <incapable> = je (n'arrive pas à | ne peux pas | ne suis pas capable de | suis incapable de);
+
+public <je_dois> = je dois | je veux | j'ai besoin de;
+public <il_faut> = il (faut | faudrait) que;

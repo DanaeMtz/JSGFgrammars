@@ -1,0 +1,10 @@
+#JSGF V1.0;
+grammar globals.yes;
+import <dicts.COMMAND.*>;
+
+public <yes_global> = (
+       [<svp> | merci] <OUI_command>{COMMAND} |
+       <OUI_command>{COMMAND} [<svp> | merci]
+);
+
+<svp> = s'il (vous|te) plaît;

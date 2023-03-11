@@ -1,0 +1,19 @@
+#JSGF V1.0;
+grammar globals.end_call;
+import <dicts.COMMAND.*>;
+import <common.generic.*>;
+
+
+public <end_call> = (
+	/1/ <END_CALL_bye>{COMMAND} |
+	/2/ [<je_dois>] (
+    	<END_CALL_partir>{COMMAND} |
+		<END_CALL_quitter>{COMMAND} [l'appel] |
+		<END_CALL_arreter>{COMMAND} l'appel
+	) [maintenant] |
+    /1/ <il_faut> (
+    	<END_CALL_parte>{COMMAND} |
+		<END_CALL_quitte>{COMMAND} [l'appel] |
+		<END_CALL_arrete>{COMMAND} l'appel
+	) [maintenant]
+);

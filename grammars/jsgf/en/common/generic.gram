@@ -24,6 +24,8 @@ public <request_for> = (
 
 public <i_want> = I (need | [would] want | wanted | would like);
 
+public <i_have_to> = I (/2/ want | /1/ need | /2/ have | /1/ got) to;
+
 public <notify> = notify | 
 	warn |
 	inform |

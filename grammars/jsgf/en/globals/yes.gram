@@ -1,0 +1,8 @@
+#JSGF V1.0;
+grammar globals.yes;
+import <dicts.COMMAND.*>;
+
+public <yes_global> = (
+       [<thank_you>] <YES_command>{COMMAND} |
+       <YES_command>{COMMAND} [<thank_you> | please]
+);

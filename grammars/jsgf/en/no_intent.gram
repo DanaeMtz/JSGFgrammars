@@ -1,28 +1,30 @@
 #JSGF V1.0;
 grammar no_intent;
+import <common.generic.*>;
+import <common.operations.*>;
+import <common.products.*>;
 import <dicts.AMOUNT.*>;
-import <dicts.CARDINAL.*>;
 import <dicts.CARD.*>;
+import <dicts.CARDINAL.*>;
 import <dicts.CHANGE_TYPE.*>;
 import <dicts.CURRENCY.*>;
 import <dicts.FINANCING.*>;
 import <dicts.PACKAGE.*>;
 import <dicts.REF_THING.*>;
-import <dicts.PAYEE.*>;
-import <common.generic.*>;
-import <common.products.*>;
-import <common.operations.*>;
-import <globals.main_menu.*>;
-import <globals.escalate_agent.*>;
 import <globals.cancel_transaction.*>;
-import <globals.repeat.*>;
+import <globals.end_call.*>;
+import <globals.escalate_agent.*>;
 import <globals.explain.*>;
+import <globals.main_menu.*>;
+import <globals.no.*>;
 import <globals.options.*>;
+import <globals.repeat.*>;
+import <globals.unavailable_info.*>;
 import <globals.wait.*>;
 import <globals.wake.*>;
-import <globals.unavailable_info.*>;
+import <globals.yes.*>;
 
-public <no_intent> = <global_commands> | [<give_me>] <fragments> | <correction> | <cardinal> | <payee>;
+public <no_intent> = <global_commands> | [<give_me>] <fragments> | <correction> | <cardinal>;
 
 <fragments> =
     (
@@ -34,7 +36,20 @@ public <no_intent> = <global_commands> | [<give_me>] <fragments> | <correction> 
     ) [please];
 
 
-<global_commands> = (<escalate_agent> | <main_menu> | <cancel_transaction> | <repeat> | <explain> | <options> | <wait> | <wake> | <unavailable_info>);
+<global_commands> = (
+    <cancel_transaction> |
+    <end_call> |
+    <escalate_agent> |
+    <explain> |
+    <main_menu> |
+    <no_global> |
+    <repeat> |
+    <options> |
+    <unavailable_info>|
+    <wait> |
+    <wake> |
+    <yes_global>
+);
 
 <correction> =
     (
@@ -78,6 +93,5 @@ public <no_intent> = <global_commands> | [<give_me>] <fragments> | <correction> 
 <change_type> = <CHANGE_TYPE>{CHANGE_TYPE};
 <currency> = <CURRENCY>{CURRENCY};
 <financing> = <FINANCING>{FINANCING};
-<payee> = <PAYEE>{PAYEE};
 <package> = <PACKAGE>{PACKAGE};
 

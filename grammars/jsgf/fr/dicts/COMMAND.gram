@@ -16,17 +16,42 @@ public <AGENT_fem> = (
 );
 
 
-public <MAIN_MENU> = (<main_menu_object> | <main_menu_verb>);
-
-public <main_menu_verb> = (
-	(recommencer) {MAIN_MENU}|
-	(reprendre) {MAIN_MENU}
+public <cancel_infinitive> = (
+	(annuler) {CANCEL_TRANSACTION} |
+	(supprimer) {CANCEL_TRANSACTION} |
+	(canceller) {CANCEL_TRANSACTION} |
+	(abandonner) {CANCEL_TRANSACTION}
 );
 
-public <main_menu_object> = (
-	(menu) {MAIN_MENU} |
-	(menu principal) {MAIN_MENU}
-);
+
+/*
+Cette règle est pour les commandes qui finissent en "bye" -- donc soit "bye" seul ou une commande avec plusieurs valeurs
+END_CALL avec un verbe suivi de "bye".
+La raison est qu'avec "bye" à la fin on ne peut pas vraiment rajouter de complément comme "l'appel" comme on peut pour
+"arrêter l'appel" dans end_call.gram.
+Les formes simples sans "bye" sous supportées plus bas dans <END_CALL_*>.
+*/
+public <END_CALL_bye> = (
+       <bye> |
+       (<parte> | <partir>) <bye> |
+       (<quitte> | <quitter>) [l'appel] <bye> |
+       (<arreter> | <arrete>) l'appel <bye>
+){END_CALL};
+
+public <END_CALL_quitter> = <quitter>{END_CALL};
+public <END_CALL_arreter> = <arreter>{END_CALL};
+public <END_CALL_partir> = <partir>{END_CALL};
+public <END_CALL_quitte> = <quitte>{END_CALL};
+public <END_CALL_arrete> = <arrete>{END_CALL};
+public <END_CALL_parte> = <parte>{END_CALL};
+
+<bye> = bye | au revoir | bye bye | à la prochaine;
+<quitter> = quitter;
+<arreter> = arrêter | terminer;
+<partir> = partir | y aller | m'en aller;
+<quitte> = quitte;
+<arrete> = arrête | termine;
+<parte> = parte | y aille | m'en aille;
 
 
 public <EXPLAIN> = (<explain_infinitive> | <explain_imperative> |  <explain_conjugated> );
@@ -48,12 +73,30 @@ public <explain_conjugated> = (
 );
 
 
-public <cancel_infinitive> = (
-	(annuler) {CANCEL_TRANSACTION} |
-	(supprimer) {CANCEL_TRANSACTION} |
-	(canceller) {CANCEL_TRANSACTION} |
-	(abandonner) {CANCEL_TRANSACTION}
+public <MAIN_MENU> = (<main_menu_object> | <main_menu_verb>);
+
+public <main_menu_verb> = (
+	(recommencer) {MAIN_MENU}|
+	(reprendre) {MAIN_MENU}
 );
+
+public <main_menu_object> = (
+	(menu) {MAIN_MENU} |
+	(menu principal) {MAIN_MENU}
+);
+
+
+public <NO_command> = (
+       (non){NO} |
+       <pas_pour_ajd>{NO} |
+       (non non){NO} |
+       (<pas_pour_ajd> non){NO} |
+       (non [merci] <pas_pour_ajd>){NO}
+);
+
+public <CEST_TOUT_command> = <cest_tout>{NO};
+
+public <NON_CEST_TOUT_command> = (non [merci] <cest_tout>){NO};
 
 
 public <OPTIONS> = (
@@ -61,6 +104,13 @@ public <OPTIONS> = (
 	(options){OPTIONS}
 );
 
+
+public <OUI_command> = (
+       <oui_simple>{YES} |
+       (<oui_simple> <oui_simple>){YES}
+);
+
+<oui_simple> = ( oui | bien sûr | certainement | d'accord );
 
 public <REPEAT> = (<repeat_infinitive> | <repeat_imperative>);
 
@@ -104,3 +154,10 @@ public <UNAVAILABLE_INFO> = (
 	(je ne l'ai pas){UNAVAILABLE_INFO} |
 	(je ne suis pas certain[e]){UNAVAILABLE_INFO}
 );
+
+
+
+//////// COMMON RULES ////////
+
+<pas_pour_ajd> = pas pour aujourd'hui;
+<cest_tout> = (/3/ c'est | /1/ c'était | /1/ ça va être) (/3/ tout | /2/ beau | /1/ bon);

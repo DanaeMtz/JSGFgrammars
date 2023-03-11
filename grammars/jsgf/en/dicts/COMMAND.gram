@@ -1,7 +1,6 @@
 #JSGF V1.0;
 grammar dicts.COMMAND;
 
-
 public <AGENT> = (<AGENT_vowel> | <AGENT_cons>);
 
 public <AGENT_vowel> = (
@@ -13,6 +12,45 @@ public <AGENT_cons> = (
 	(human) {AGENT} |
 	(person) {AGENT} |
 	(representative) {AGENT}
+);
+
+
+public <cancel_infinitive> = (
+	(annul) {CANCEL_TRANSACTION} |
+	(abort) {CANCEL_TRANSACTION} |
+	(cancel) {CANCEL_TRANSACTION} |
+	(call off) {CANCEL_TRANSACTION} |
+	(abandon) {CANCEL_TRANSACTION}
+);
+
+
+/*
+Cette règle est pour les commandes qui finissent en "bye" -- donc soit "bye" seul ou une commande avec plusieurs valeurs
+END_CALL avec un verbe suivi de "bye".
+La raison est qu'avec "bye" à la fin on ne peut pas vraiment rajouter de complément comme "l'appel" comme on peut pour
+"arrêter l'appel" dans end_call.gram.
+Les formes simples sans "bye" sous supportées plus bas dans <END_CALL_*>.
+*/
+public <END_CALL_bye> = (
+		<bye> |
+		(<go> | <leave> [the call] | <end> the call) [now] <bye>
+){END_CALL};
+
+public <END_CALL_leave> = <leave>{END_CALL};
+public <END_CALL_go> = <go>{END_CALL};
+public <END_CALL_end> = <end>{END_CALL};
+
+<bye> = bye | goodbye;
+<go> = go | disconnect | hang up;
+<leave> = leave | stop;
+<end> = end;
+
+
+public <EXPLAIN> = (<explain_infinitive> );
+
+public <explain_infinitive> = (
+	(explain) {EXPLAIN} |
+	(clarify) {EXPLAIN} 
 );
 
 
@@ -29,19 +67,18 @@ public <MAIN_MENU_object> = (
 );
 
 
-public <EXPLAIN> = (<explain_infinitive> );
-
-public <explain_infinitive> = (
-	(explain) {EXPLAIN} |
-	(clarify) {EXPLAIN} 
+public <NO_command> = (
+       <NO_token>{NO} |
+       (no no){NO}
 );
 
-public <cancel_infinitive> = (
-	(annul) {CANCEL_TRANSACTION} |
-	(abort) {CANCEL_TRANSACTION} |
-	(cancel) {CANCEL_TRANSACTION} |
-	(call off) {CANCEL_TRANSACTION} |
-	(abandon) {CANCEL_TRANSACTION}
+public <THATS_ALL_command> = (
+       <thats_all>{NO} |
+       (<that_will_be> all){NO}
+);
+
+public <NO_THATS_ALL_command> = (
+       (<NO_token> [<thank_you>] ( <thats_all> | <that_will_be> all)){NO}
 );
 
 
@@ -54,6 +91,14 @@ public <REPEAT> = (
 	(say it again){REPEAT} |
 	(repeat){REPEAT}
 );
+
+
+public <UNAVAILABLE_INFO> = (
+	(I don't know){UNAVAILABLE_INFO} |
+	(I don't have it){UNAVAILABLE_INFO} |
+	(I'm not sure){UNAVAILABLE_INFO}
+);
+
 
 public <WAIT> = (
 	(wait){WAIT} |
@@ -71,8 +116,19 @@ public <WAKE> = (
 );
 
 
-public <UNAVAILABLE_INFO> = (
-	(I don't know){UNAVAILABLE_INFO} |
-	(I don't have it){UNAVAILABLE_INFO} |
-	(I'm not sure){UNAVAILABLE_INFO}
-);
+public <YES_command> = (
+       (yes | yeah | sure | there is) |
+       (yeah | yes) (there is | actually | sure) |
+       there is something actually
+){YES};
+
+
+
+//////// COMMON RULES ////////
+
+
+<thank_you> = thank you | thanks;
+<NO_token> = /3/ no | /1/ nope;
+<thats_all> = (/1/ it's | /3/ that's) all;
+<that_will_be> = (/2/ that | /1/ it) (is|will be);
+

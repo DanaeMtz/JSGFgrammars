@@ -1,0 +1,22 @@
+#JSGF V1.0;
+grammar globals.no;
+import <dicts.COMMAND.*>;
+
+
+public <no_global> = (
+       [<thank_you>] (
+              <NO_command>{COMMAND} |
+              <thats_all_i_need>
+       ) |
+       <thats_all_i_need> [<thank_you>] |
+       <NO_command>{COMMAND} [
+              <thank_you> |
+              <thats_it> [<thank_you>] |
+              [<thank_you>] <thats_it>
+       ]
+);
+
+<thats_all_i_need> = (<THATS_ALL_command> | <NO_THATS_ALL_command>){COMMAND} [<i_need>] [<for_today>];
+<for_today> = for [me] today;
+<i_need> = I (needed | need | want);
+<thats_it> = that's it;
